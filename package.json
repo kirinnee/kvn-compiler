@@ -1,0 +1,61 @@
+{
+    "name": "Project_Sophie",
+    "version": "0.4.2",
+    "description": "Compiler for KVN",
+    "repository": "none",
+    "license": "Copyright Kirinnee97 All Rights Reserverd",
+    "author": "kirinnee97 @ https://bigbulb.studio",
+    "contributors": [],
+    "dependencies": {
+        "eslint": "^4.19.1",
+        "gulp-htmlmin": "^4.0.0",
+        "gulp-plumber": "^1.2.0"
+    },
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "concurrent-transform": "^1.0.0",
+        "cssnano": "^3.10.0",
+        "del": "^3.0.0",
+        "gulp": "github:gulpjs/gulp#4.0",
+        "gulp-babel": "^7.0.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-concat-css": "^3.1.0",
+        "gulp-image": "^4.3.0",
+        "gulp-image-resize": "^0.13.0",
+        "gulp-imagemin": "^4.1.0",
+        "gulp-postcss": "^7.0.1",
+        "gulp-rename": "^1.2.3",
+        "gulp-replace": "^1.0.0",
+        "gulp-strip-comments": "^2.5.2",
+        "gulp-strip-css-comments": "^2.0.0",
+        "merge-stream": "^1.0.1"
+    },
+    "babel": {
+        "minified": "true",
+        "presets": [
+            [
+                "env",
+                {
+                    "targets": {
+                        "browsers": [
+                            "last 2 versions",
+                            "safari >= 7"
+                        ]
+                    }
+                }
+            ]
+        ]
+    },
+    "cssnano": {
+        "preset": [
+            "default",
+            {
+                "discardComments": {
+                    "removeAll": true
+                }
+            }
+        ]
+    }
+}
