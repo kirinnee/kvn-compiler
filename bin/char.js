@@ -163,6 +163,8 @@ module.exports = function(godarr) {
 		changeCover(opacity, color, time, promise, swing, skippable) {}
 		changeBackdrop(opacity, color, time, promise, swing, skippable) {}
 		changeOverlay(opacity, color, time, promise, swing, skippable) {}
+		fadeOutBackground(time,promise,swing,skippable){}
+   		fadeInBackground(time,promise,swing,skippable){}
 		instantChangeBG(src) {}
 		changeBackground(background, opacity, time, promise, swing, skippable) {}
 		backgroundBlur(blur, time, promise, swing, skip) {}
@@ -280,7 +282,7 @@ module.exports = function(godarr) {
     setPreSpeakScale(scale){
         return this;
     }
-    
+
     setPreSpeakTime(time){
         return this;
     }
@@ -433,8 +435,9 @@ module.exports = function(godarr) {
 		heartAttack(xOff, yOff, promise, skip) {}
 		triggered(time, promise, skip, shake, delay) {}
 		glitch(image) {}
-    endSpeak(promise, timing) {}
-    preSpeak(promise, scale, timing) {}
+	    endSpeak(promise, timing) {}
+	    preSpeak(promise, scale, timing) {}
+		interupt(){}
 		fix() {}
 		cycle(sequence) {}
 		backFromCycle() {}
