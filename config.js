@@ -22,5 +22,5 @@ module.exports ={
 	bkgdDir:"kvn/images/bkgd",
 	//the higher you put this, the faster the program will finish. But if you computersucks,
 	//it might explode if you put this too high.
-	concurrentThreads: 20
+	concurrentThreads: 1
 }
