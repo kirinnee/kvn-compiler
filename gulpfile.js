@@ -118,6 +118,7 @@ gulp.task('loadinit', function() {
 	var init = fs.readFileSync('./workspace/kvn/scripts/' + customConfig.initFile).toString();
 	return gulp.src(['bin/char.js'])
 		.pipe(replace('@@HERE@@', init))
+		.pipe(replace('window.','var '))
 		.pipe(gulp.dest('tempclass'));
 });
 gulp.task('executeinit', function(done) {
@@ -356,9 +357,14 @@ gulp.task('one', function(done) {
 			'temp/kvn/backend/initialize.js' //obtain bootstrapper
 		])
 		.pipe(concat('kvn' + add + '.js'))
-		.pipe(strip())
-		.pipe(babel())
+
+		.pipe(babel()).on("error",function(a,b,c){
+			console.log(a);
+			console.log(b);
+			console.log(c);
+		})
 		.pipe(gulp.dest('temp/js'));
+
 })
 //compile to sepearate file for dependecny
 gulp.task('sepDep', function() {
@@ -407,7 +413,7 @@ gulp.task('exportBackground', function() {
 });
 gulp.task('exportSound', copyTo('temp/kvn/sound/**/*.*', 'export/kvn/sound'));
 gulp.task('exportRS', copyTo(
-	['temp/*', '!temp/*.html', '!temp/interpreter', '!temp/node_modules', '!temp/compiler.bat', '!temp/gulpfile.js', '!temp/*.json'], 'export'));
+	['temp/*', '!temp/*.html', '!temp/interpreter', '!temp/node_modules', '!temp/*.bat', '!temp/gulpfile.js', '!temp/*.json','!temp/.gitignore','!temp/.git','!temp/kvn-interpreter'], 'export'));
 gulp.task('exportHTML', function() {
 	var cc = customConfig;
 	//get custom file name

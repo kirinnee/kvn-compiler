@@ -6,8 +6,8 @@ module.exports ={
 	seperate:false,
 	initFile: "init.js",
 	configFile: "config.js",
-	name: "Winery",
-	fileName: "winery",
+	name: "Tristan Death",
+	fileName: "brostika",
 	patch:true,
 	patchDir: "patch/",
 	//if you are going want to use reposnsive images, enable image compression too
@@ -22,5 +22,5 @@ module.exports ={
 	bkgdDir:"kvn/images/bkgd",
 	//the higher you put this, the faster the program will finish. But if you computersucks,
 	//it might explode if you put this too high.
-	concurrentThreads: 1
+	concurrentThreads: 20
 }
