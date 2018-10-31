@@ -3,16 +3,13 @@
     "version": "0.0.3",
     "description": "Compiler for VKN v0.4.4",
     "main": "compile.bat",
-    "bin": {
-        "kvn-production-compiler": "char.js"
-    },
     "dependencies": {
         "babel": "^6.23.0",
         "babel-core": "^6.26.3",
         "babel-preset-env": "^1.7.0",
         "cssnano": "^3.10.0",
         "del": "^3.0.0",
-        "gulp": "github:gulpjs/gulp#4.0",
+        "gulp": "^4.0.0",
         "gulp-babel": "^7.0.1",
         "gulp-concat": "^2.6.1",
         "gulp-concat-css": "^3.1.0",
