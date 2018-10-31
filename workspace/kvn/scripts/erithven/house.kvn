@@ -1,0 +1,536 @@
+declare sophie,yusie,charles,sickchild,mother as character
+declare erithven as stage
+
+scene erithvenHouse erithven_house
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter yusie
+    erithven bringCharacter mother
+    erithven bringCharacter sickchild
+    sophie preMove
+    charles preMove
+    yusie preMove
+    sickchild changeName ???
+    mother changeName ???
+    sickchild setTextColor white
+    mother setTextColor white
+    sophie setTextColor white
+    charles setTextColor white
+    yusie setTextColor white
+    erithven display backgroundAlpha=0 t=0
+        erithven changeBackground background=outsidehouse o=1 t=1000
+            sophie preMove x=-50
+            charles preMove x=-70
+            yusie preMove x=-100
+            yusie flipHorizontally
+
+frame 1
+    charles changeSprite serious
+    sophie changeSprite smile
+    sophie appear
+    yusie appear
+    charles appear
+        sophie move t=850
+        charles move t= 650
+        yusie move x= 80 t= 750
+
+frame 2
+    yusie changeSprite smile_speak
+    yusie preSpeak
+        yusie speak text=This should be the house!
+            yusie changeSprite smile
+
+frame 3
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie speak text=Let's go in to pass the stabilizer!
+            sophie endSpeak
+                yusie,charles,sophie changeSprite surprised
+                sophie wait t=200
+                    sophie,yusie changeSprite stone
+                    sophie move x=10 t=200
+                    charles move x=10 t=200
+                    yusie move x=10 t=200
+                    mother wait t=100
+                        mother setFontSize 2vw
+                        mother changeBold true
+                        mother speak text=You must move to Malidret!
+
+frame 4
+    sickchild speak text=Nooo!
+        sickchild wait t=250
+            sickchild cont text=I want to stay in Erithven with you and Papa!
+
+frame 5
+    mother speak text=Listen to me!
+        mother wait t=200
+            mother cont text=The warm weather in Malidret will only do you good!
+frame 6
+    sickchild speak text=Nooo!
+        sickchild wait t=250
+            sickchild cont text=I don't want to leave you and Papa!
+frame 7
+    mother speak text=Don't you understand?!
+        mother wait t=200
+            mother setFontSize 1.7vw
+            mother setNormalText
+            mother speak text=If you don't move, there's no chance of you getting well.
+                mother wait t=200
+                    mother speak text=Can you just be a good boy and listen to Mama?
+frame 8
+    sickchild speak text=B-But I am dying soon... t=1000 s=false
+        sickchild wait t=700
+            yusie,sophie changeSprite sad
+            charles changeSprite serious
+            sickchild cont text= right? t=800 s=false
+                sickchild wait t=300
+                    sickchild speak text=Why must I leave t=800
+                        sickchild setFontSize 1.4vw
+                        sickchild cont text=Papa and t=800
+                            sickchild setFontSize 1.2vw
+                            sickchild cont text =Mamaa... t=800 s=false
+frame 9
+    erithven displayText msg=...... t=1000 skip=false
+frame 10
+    sophie changeSprite helpless_speak
+    sophie preSpeak
+        sophie speak text=Was that the sick boy and his mother arguing..?
+            sophie changeSprite helpless
+frame 11
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles speak text=It appears so...
+            charles wait t=200
+                charles cont text=We should watch our words when we enter the house later
+                    charles changeSprite worried
+frame 12
+    sophie disappear t=1000
+    charles disappear t=1000
+    yusie disappear t=1000
+    charles endSpeak
+        erithven closeTextBox
+        erithven unDisplay t=1000
+        erithven display backgroundAlpha=0 t=0
+            sophie move x=-50
+            charles move x=-80
+            sophie changeSprite worried
+            sophie appear
+            charles appear
+            mother changeSprite worried
+            mother appear
+            sickchild changeSprite sick
+            sickchild appear
+                    erithven changeBackground bg=house o=0
+                        erithven setAX 0
+                        erithven scale x=1.5
+                            erithven setOpacity 1
+                            erithven animate t=500
+                                sophie move t=650
+                                charles move t=850
+
+frame 13
+    erithven pan left=-50 t=1000 g=swing
+    sophie move x=-40 t=1000 g=swing
+    charles move x=-40 t=1000 g=swing
+    mother move x=-40 t=1000 g=swing
+    sickchild move x=-40 t=1000 g=swing
+        sickchild changeSprite cough_speak
+        sickchild scale x=1.05 y=1.05 t=200 s=false
+            sickchild changeSprite cough
+            sickchild scale t=200 s=false
+                sickchild changeSprite cough_speak
+                sickchild scale x=1.05 y=1.05 t=200 s=false
+                    sickchild changeSprite struggle
+                    sickchild scale t=200 s=false
+                        erithven pan left=50 t=1000 g=swing
+                        sophie move x=40 t=1000 g=swing
+                        charles move x=40 t=1000 g=swing
+                        mother move x=40 t=1000 g=swing
+                        sickchild move x=40 t=1000 g=swing
+                        sickchild changeName
+                        mother changeName
+                        sophie,charles changeSprite sad
+
+frame 14
+    mother changeSprite worried_speak
+    mother preSpeak
+        mother speak text=Hello, you are?
+            mother changeSprite default
+frame 15
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie speak text=Hi, I am Sophie!
+            sophie wait t=200
+                charles changeSprite smile
+                sophie contSay text=They are Charles and #playName
+
+frame 16
+    sophie speak text=We are here to deliver the stabilizer from Brostika
+
+frame 17
+    mother changeSprite surprised_speak
+    mother preSpeak
+        mother speak text=Oh it's here already?
+            mother wait t=200
+                mother changeSprite overjoyed
+                mother contSpeak text=That's great!
+                    mother wait t=200
+                        mother speak text=Thank you so much!
+                            mother wait t=200
+                                mother contSay text=I can't thank all of you enough!
+                                    mother changeSprite smile
+frame 18
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak text=You're welcome!
+            sophie wait t=200
+                sophie speak text=Here's the stabilizer s=false
+                    sophie changeSprite smile
+                    sophie move x=55 t=500 s=false
+                        sophie wait t=100
+                            sophie move x=-55 t=500 s=false
+
+frame 19
+    erithven pan left=-50 t=1000 g=swing
+    sophie move x=-40 t=1000 g=swing
+    charles move x=-40 t=1000 g=swing
+    mother move x=-40 t=1000 g=swing
+    sickchild move x=-40 t=1000 g=swing
+        sickchild changeSprite cough_speak
+        sickchild scale x=1.05 y=1.05 t=200 s=false
+            sickchild changeSprite cough
+            sickchild scale t=200 s=false
+                sickchild changeSprite cough_speak
+                sickchild scale x=1.05 y=1.05 t=200 s=false
+                    sickchild changeSprite struggle
+                    sickchild scale t=200 s=false
+
+frame 20
+    mother flipHorizontally
+    mother move x=25 t=500 s=false
+        mother changeSprite caring_speak
+        mother preSpeak
+            mother speak text=Jakris... t=1000 s=false
+frame 21
+    mother speak Drink this slowly...
+        mother wait 300
+            mother cont You'll feel better
+                sickchild wait 500
+                    mother changeSprite caring
+                    sickchild setFontSize 1.4vw
+                    sickchild changeSprite struggle_speak
+                    sickchild speak Mmmmm
+
+frame 22
+    mother changeSprite caring_speak
+    mother speak text=Alright, close your eyes and rest... t=1000 s=false
+        mother changeSprite caring
+        mother wait t=200
+        sickchild changeSprite sleep
+            mother flipHorizontally
+            mother move x=-25 t=500 s=false
+                erithven pan left=50 t=1000 g=swing
+                sophie move x=40 t=1000 g=swing
+                charles move x=40 t=1000 g=swing
+                mother move x=40 t=1000 g=swing
+                sickchild move x=40 t=1000 g=swing
+
+frame 23
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie speak text=Woahh
+            sophie wait t=200
+                sophie speak text=The stabilizer sure works fast...
+                    sophie changeSprite smile
+                    mother changeSprite smile
+frame 22
+    charles changeSprite explain
+    charles preSpeak
+        charles speak text=I took a look at the stabilizer earlier.
+            charles wait t=200
+                charles speak The sage probably employed morphicology to freeze all activities of the harmful matter within the kid's body
+                    charles wait t=200
+                        charles speak text= Drowsiness is hence probably one of the side effects
+                            charles changeSprite smile
+frame 23
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie speak text=Anyway, sorry for eavesdropping...
+            sophie wait t=200
+                sophie contSpeak text=But we heard something about sending your child to Malidret?
+                charles changeSprite speechless
+frame 24
+    sophie speak text=What was that all about?
+        mother changeSprite sad
+        sophie wait t=200
+            sophie cont text=I'm just curious because we'll be heading to Malidret as well
+                sophie changeSprite awkward
+
+frame 25
+    mother changeSprite sad_speak
+    mother preSpeak
+        mother speak text=Err... t=800 s=false
+            mother wait t=200
+            sophie,charles changeSprite curious
+                mother contSpeak text=Well, I believe you know about my son's condition already
+                    mother wait t=200
+                        mother speak text=The sage had advised me to send my child to Malidret because of the warmer climate there
+frame 26
+    mother speak text=He said that the sea breeze at Erithven would be detrimental for Jakris's condition.
+        mother wait t=200
+            mother cont text=So I knew that no matter how hard it would be for my husband and I to send Jakris all the way to Malidret
+                mother wait 300
+                    mother speak We must do so because it would be for the good of our child
+                        mother changeSprite sad
+frame 27
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak text=Malidret is really far from here... t=1000 s=false
+            sophie wait 400
+            charles changeSprite worried
+frame 27
+    sophie changeSprite curious_speak
+    sophie preSpeak
+        sophie speak text=But why is Jakris so against the plan?
+        charles changeSprite curious
+            sophie wait t=200
+                sophie cont text=Doesn't he want to get well?
+                    sophie changeSprite curious
+frame 28
+    mother changeSprite sad_speak
+    mother preSpeak
+        mother speak text=There are two main reasons for this.
+            mother wait t=200
+                mother speak text=Firstly, both my husband and I are unable to follow him.
+                    mother wait t=200
+                        mother cont text= We have to stay in Erithven to continue fishing to make ends meet.
+frame 29
+    mother speak text=Erithven might be a bustling and prosperous port but fishermen families like ours lead very difficult lives.
+        mother wait t=200
+            mother speak text=Because of the recent encroachment of our fishing areas by the Kapitolian fishermen, the size of our catch has been decreasingly steadily
+frame 30
+    mother speak text=That's why it's important for us to stay behind to safeguard our fishing area and to maintain our source of income to sustain the heavy cost of living at Malidret should Jakris move there
+        sophie wait t=200
+            mother changeSprite sad
+            sophie changeSprite curious_speak
+            sophie preSpeak
+                sophie speak To protect the septras from being taken over by the Kapitolians?
+                    sophie changeSprite curious
+frame 31
+    mother changeSprite surprised_speak
+    mother preSpeak
+        mother speak Are you a local?
+            mother cont How did you know about the septras?
+                mother changeSprite surprised
+frame 32
+    sophie changeSprite shy_speak
+    sophie preSpeak
+        sophie speak My friend here is very knowledgeable
+            sophie changeSprite shy
+            charles changeSprite smile
+frame 33
+    mother changeSprite worried_speak
+    mother preSpeak
+        mother speak Your friend is right
+        sophie,charles changeSprite curious
+            mother wait 300
+                mother speak Nowadays, the encroachment is so bad that the local merchants in Erithven have to step in to redraw and renegotiate the layout of the fishing area so as to ensure Erithven remains conducive enough for traidng and fishing
+                    mother changeSprite worried
+frame 34
+    charles changeSprite thinking_speak
+    charles preSpeak
+        charles speak text=I see... t=1000 s=false
+            charles changeSprite curious_speak
+                charles wait 300
+                    charles speak Oh you mentioned that there was a second reason why Jakris is so upset
+                        charles changeSprite curious
+frame 32
+    mother changeSprite sad_speak
+    mother preSpeak
+        mother speak text= Yes, you see
+            mother wait 300
+                mother cont Jakris knows that it's very unlikely that he will ever get well.
+                    mother changeSprite sad
+frame 31
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie speak text= Huh...?
+            sophie wait 200
+                sophie cont Why is that so?
+frame 32
+    sophie changeSprite curious
+    mother changeSprite sad_speak
+    mother preSpeak
+        mother speak text=The last time the sage came, he told us that he was unable to concoct anything that can cure Jakris
+            mother wait t=200
+                mother speak text=He told us that Jakris didn't have much longer to live
+frame 33
+    mother speak text=The sage mentioned that staying at Malidret might help to make his life more comfortable.
+        mother wait t=200
+            mother cont text= But Jakris kept insisting that it no longer made any difference if he was still going to die at the end
+                mother wait t=200
+                sophie,charles changeSprite sad
+frame 34
+    mother changeSprite cry_speak
+    mother speak text=All he wanted was to stay close with us and be with the family
+        mother wait t=200
+            mother contSpeak text=before he eventually leaves our world...
+                mother wait t=200
+                    mother speak text=I really don't know what to do...
+frame 35
+    mother speak text=He must be in so much agony all the time... t=1000 s=false
+        mother wait 300
+            mother speak text=How I wish I can take his place instead... t=1000 s=false
+                mother changeSprite cry
+frame 35
+    sophie changeSprite comforting_speak
+    sophie preSpeak
+        sophie speak text=Don't worry!
+            sophie wait t=200
+                sophie cont text=We were just informed us that the sage had already managed to come up with an elixir that can cure Jakris!
+                    mother changeSprite surprised
+frame 36
+    sophie changeSprite smile_speak
+    sophie speak text=He passed us a recipe to collect some missing ingredients from the pharmacy in Erithven.
+        sophie wait t=200
+            sophie cont text=The sage himself will be coming shortly
+                sophie wait t=200
+                    sophie speak text=Jakris will be alright in no time! s=false
+                        sophie changeSprite smile
+frame 37
+    mother changeSprite crysmile_speak
+    charles changeSprite smile
+    mother preSpeak
+        mother speak text=I-Is that really true? t=700 s=false
+            mother wait t=200
+                mother contSpeak text=This isn't a dream, is it? t=700 s=false
+                    mother changeSprite crysmile
+frame 38
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie speak text=Of course not!
+            sophie wait t=200
+                sophie cont text=We just came from Brostika, and we have the recipe with us!
+                    sophie changeSprite smile
+frame 39
+    mother setFontSize 2vw
+    mother changeBold true
+    mother changeSprite crysmile_speak
+    mother preSpeak
+        mother speak text= Thank God!
+            mother wait t=200
+                mother setNormalText
+                mother setFontSize 1.7vw
+                mother contSpeak text=I must carve more coconut offerings in return for its mercy!
+frame 40
+    mother speak text=Thank you for bringing such good news to me!
+        mother changeSprite overjoyed
+frame 41
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak text= You're welcome!
+            charles wait t=300
+                charles preSpeak
+                    charles speak text=We should go and check on the pharmacy soon.
+frame 42
+    mother changeSprite overjoyed
+    mother preSpeak
+        mother speak text=That will be great!
+            mother wait t=200
+                mother cont text=Thank you so much!
+                    mother changeSprite smile
+frame 43
+    sophie disappear t=1000
+    charles disappear t=1000
+    mother disappear t=1000
+    sickchild disappear t=1000
+    mother endSpeak
+        erithven closeTextBox
+        erithven unDisplay t=1000
+        erithven display backgroundAlpha=0 t=0
+                erithven changeBackground bg=outsidehouse o=0
+                        erithven setAX 0
+                        erithven scale x=1.5
+                            erithven setOpacity 1
+                            erithven animate t=1000
+                                sophie,charles changeSprite surprised
+                                sophie appear t=1000
+                                charles appear t=1000
+                                yusie changeSprite awkward
+                                yusie appear t=1000
+frame 44
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie speak text=Yusie
+            sophie wait t=200
+                sophie cont text=, you're still around?
+                    sophie changeSprite surprised
+frame 45
+    yusie changeSprite awkward_speak
+    yusie preSpeak
+        yusie speak text=Well...
+            yusie wait t=200
+                yusie changeSprite proud_speak
+                yusie cont text=I figured that all of you might still need my help to locate the pharmacy
+                    yusie wait t=200
+                        yusie speak text=So I decided to wait for you
+                            yusie changeSprite proud
+frame 46
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie speak text=That's so nice of you!
+            sophie wait t=200
+                sophie changeSprite curious_speak
+                sophie cont text=Actually
+                    sophie wait t=200
+                        sophie cont text=, do you want to join us in our travel to Malidret?
+                            yusie changeSprite overjoyed
+frame 47
+    sophie speak It would be good to have one more person aboard!
+        sophie changeSprite smile
+        charles changeSprite upset
+frame 47
+    yusie preSpeak
+        yusie speak text=C-can I?
+            yusie wait t=200
+                yusie cont text=That will be great!
+                    yusie wait t=200
+                        yusie changeSprite proud_speak
+                        yusie speak text=I-I mean I do have work left in Brostika
+                            yusie wait t=200
+                                yusie cont text=But I'm sure my superior can manage alone
+frame 48
+    yusie speak text=Besides, you look like you're bad with directions.
+        yusie wait t=200
+            yusie contSpeak text=As a member of the prestigious Guards,
+                yusie wait t=200
+                    yusie contSpeak text=I cannot leave all of you in the lurch
+                        yusie changeSprite proud
+frame 49
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie speak text=Yayy!
+            sophie wait t=200
+                sophie cont text=Now we have one more person in our team!
+                    sophie changeSprite smile
+frame 50
+    yusie changeSprite proud_speak
+    yusie preSpeak
+        yusie speak text=Of course you should be glad!
+            yusie wait t=400
+                yusie speak text=You just got free navigation and security services!
+                    yusie changeSprite proud
+frame 51
+    yusie changeSprite angry_speak
+    yusie speak Hey Charles, what's with that unhappy look on your face?
+        yusie changeSprite angry
+frame 51
+    charles changeSprite speechless
+    charles preSpeak
+        charles speak text=Never mind...
+            charles wait t=200
+                charles speak text=Let's head to the pharmacy
+                    charles endSpeak
+                    charles changeSprite impatient

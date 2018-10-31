@@ -1,0 +1,424 @@
+declare charles,sophie,yusie,broski,slime,slime2 as character
+declare brostika as stage
+
+scene brostika_constable2 brostika_constable2
+
+frame 0
+    brostika bringCharacter charles
+    brostika bringCharacter sophie
+    brostika bringCharacter yusie
+    brostika bringCharacter broski
+    charles preMove x=-50
+    sophie preMove x=70
+    yusie preMove x=-10
+    sophie setHorizontalFlip true
+    broski preMove x=-100
+    broski setHorizontalFlip true
+    brostika display backgroundOpacity=0 bkdpOpacity=1 t=0
+        brostika changeBackground background=police alpha=1 time=800
+
+frame 1
+    sophie,charles,yusie,broski setTextColor white
+    yusie setFontSize 1.7vw
+    sophie changeSprite default
+        yusie changeSprite serious
+        sophie changeSprite worried
+        yusie appear 500
+        sophie appear 500
+            broski changeSprite thankful_speak
+            broski appear 0
+                broski move x=30 t=1000 g=easeOut
+            charles changeSprite serious
+            charles appear 0
+                charles wait 200
+                charles move t=1000 g=easeOut
+frame 2
+    sophie,yusie changeSprite surprised
+    broski preSpeak
+        broski speak Yusie, thank you for dispatching these adventurers to free me.
+            sophie changeSprite smile
+            yusie changeSprite awkward
+            broski wait 400
+                broski cont If not for them, I would still be tied up in my old shed.
+                    broski changeSprite thankful
+                    charles changeSprite disgusted
+frame 3
+    yusie changeSprite awkward_speak
+    yusie preSpeak
+        yusie speak Ahh,
+            yusie wait 300
+                yusie contSpeak you're...
+                    yusie wait 700
+                        yusie contSpeaking welcome...
+                            yusie changeSprite awkward
+                            charles changeSprite impatient
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak I suppose this should be sufficient to prove our innocence?
+            charles changeSprite impatient
+frame 4
+    yusie changeSprite awkward_speak
+    yusie speak Yes...
+        yusie wait 700
+            yusie changeSprite serious_speak
+            yusie speak Sorry for the suspicion, but it was a necessary precaution.
+frame
+    yusie speak I will release Sophie as promised.
+        yusie changeSprite serious
+frame 5
+    broski changeSprite anxious
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie speak Thank you, Yusie!
+            sophie wait 400
+                sophie say Don't worry about what happened earlier,
+                    sophie wait 200
+                        sophie contSpeak you were just doing your job.
+                            sophie changeSprite smile
+frame 6
+    broski changeSprite anxious_speak
+    broski preSpeak
+        broski speak Yusie, now that we've confirmed the matter, you should take your men to arrest those thugs!
+            broski changeSprite anxious
+            charles,sophie changeSprite serious
+frame 7
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak Of course!
+            yusie wait 200
+                yusie say I will round them up immediately.
+                    yusie flipHorizontally
+                        yusie move x=50 t=500
+                        yusie changeSprite serious
+frame 8
+    charles changeSprite curious_speak
+    charles preSpeak
+        charles speak Sophie,
+            sophie changeSprite surprised
+            charles wait 300
+                charles contSpeak are you alright?
+
+frame
+    charles speak They didn't mistreat you,
+        charles wait 300
+            charles contSpeak did they?
+frame 9
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie speak I'm fine,
+            sophie wait 300
+                sophie contSpeak though a bit hungry...
+                sophie changeSprite shy_speak
+frame
+    sophie changeSprite shy
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak Oh,
+            charles wait 300
+                charles contSpeak I thought you might be, so I brought-
+                    charles wait 200
+                        sophie move x=-30 t=500
+                            charles changeSprite mildtakenaback
+                            sophie changeSprite smileexclaim_speak
+                            sophie interrupt
+                                sophie speak Is it prasines?
+                                    sophie changeSprite smile
+frame
+    broski move x=80 t=1500
+    charles changeSprite awkward_speak
+    charles preSpeak
+        charles speak No...
+            charles wait 400
+                charles speak Brostika doesn't have prasines remember?
+                    charles changeSprite explain
+frame
+    sophie changeSprite sad_speak
+    sophie preSpeak
+        sophie speak Oh...
+        broski flipHorizontally 200
+            sophie changeSprite sad
+frame
+    sophie changeSprite smile_speak
+    sophie speak Thanks for buying me something anyway!
+        sophie changeSprite smile
+frame
+    broski flipHorizontally 200
+        broski changeSprite smileexclaim_speak
+        broski speak Ah,
+            sophie,charles changeSprite surprised
+            broski wait 300
+                broski contSpeak how rude, I haven't introduced myself!
+                    broski changeSprite smile
+frame
+    sophie flipHorizontally 200
+        charles changeSprite smile
+        sophie changeSprite smile_speak
+        sophie speak Hi Mr Broski,
+            broski flipHorizontally 200
+            sophie wait 300
+                sophie contSpeak I'm Sophie, Charles and #playName 's travelling companion!
+                    sophie changeSprite smile
+frame
+    broski changeSprite smile_speak
+    broski preSpeak
+        broski speak Nice to meet you, Sophie!
+
+frame
+    broski changeSprite thankful_speak
+    broski speak Once again,
+        broski wait 300
+            broski contSpeak thank you kind folks for saving me!
+                broski changeSprite thankful
+frame 16
+    charles changeSprite awkward_speak
+    charles preSpeak
+        charles speak No problem, if you would excuse us now, we have to-
+            charles wait 200
+                charles changeSprite mildtakenaback
+                broski changeSprite smile_speak
+                broski interrupt
+                    broski speak I believe I haven't properly introduced myself yet.
+
+frame 17
+    charles changeSprite impatient
+    sophie changeSprite awkward
+    broski speak I'm Broski, the 16th generation head of the Brostikine winery family.
+
+frame 18
+    broski speak Our family has a long history, making wine for Brostika for many centuries.
+
+frame 19
+    broski speak Last year, we sold, erm...
+        broski changeSprite awkward
+        broski wait 200
+            charles preSpeak
+                charles wait 200
+                    broski preSpeak
+                        broski changeSprite smilexclaim_speak
+                        broski speak Ah yes, seventy thousand barrels! We sold seventy thousand barrles of wine last year!
+frame 20
+    sophie cycle
+        sophie changeSprite drowsy
+            sophie wait 800
+                sophie changeSprite sleep
+                sophie rotateClockwise angle=5 t=800
+                    sophie wait 800
+                        sophie changeSprite drowsy
+                        sophie rotateClockwise t=200
+                            sophie wait 800
+                                sophie changeSprite sleep
+                                sophie rotateClockwise angle=10 t=1400
+                                    sophie wait 800
+                                        sophie changeSprite drowsy
+                                        sophie rotateClockwise t=200
+                                            sophie endOfCycle
+    charles cycle
+            charles changeSprite impatient
+            charles wait 1400
+                charles flipHorizontally 200
+                    charles move x=-20 t=800
+                            charles changeSprite angry
+                            charles wait 400
+                                charles changeSprite sad
+                                charles flipHorizontally 200
+                                    charles move x=20 t=800
+                                        charles endOfCycle
+
+
+    mod brostika.textbox.speed = 1/2.5
+    broski changeSprite smile_speak
+    broski speak That was the best record we ever had in the history of our winery!
+        broski speak I can still remember how my father used to question if I could actually outdo him.
+            broski wait 200
+                broski speak I was so proud of what we have achieved last year.
+                    broski wait 200
+                        broski changeSprite worried_speak
+                        broski speak It was not easy, honestly.
+                            broski wait 200
+                                broski speak While my lineage had the ability to significantly speed up the speed of fermentation of the wine, it was not quite enough to distinguish our wine from others.
+                                    broski wait 200
+                                        broski speak Because this is not only about the quality of the product.
+                                            broski wait 200
+                                                broski speak It is also about the marketing.
+                                                    broski wait 200
+                                                        broski speak You must have known by now that our wine has been rebranded by many other manufacturers outside of Brostika as their own product.
+                                                            broski wait 200
+                                                                broski speak This used to impede our sales tremendously since a long time back.
+                                                                    broski wait 200
+                                                                        broski changeSprite smile_speak
+                                                                        broski speak However, I was able to employ certain tactics to safeguard our brand.
+                                                                            broski wait 200
+                                                                                broski speak Though there is still plenty of room for improvement, I must say I have done an incredible job when it comes to increaisng sales.
+                                                                                    broski wait 200
+                                                                                        broski changeSprite impatient_speak
+                                                                                        broski speak But this increase in sales have also gotten unwanted attention.
+                                                                                            broski wait 200
+                                                                                                broski speak The M Revolutionists, wanting to take advantage of the newly increased popularity of our product, began to infiltrate our winery with its men before wresting the winery from my hands.
+                                                                                                    broski wait 200
+                                                                                                        broski speak My beloved baby, the winery, was stolen from me right under my nose.
+                                                                                                            broski wait 200
+                                                                                                                broski speak Their conspiracy is really frightening but the method which they have chosen to take is even worse.
+                                                                                                                    broski wait 200
+                                                                                                                        broski speak It is undoubtedly clever but definitely immoral -
+                                                                                                                            broski wait 200
+frame
+    mod brostika.textbox.speed=1
+    sophie stopCycle 100
+    charles stopCycle 200
+        charles setFontSize 1.2vw
+        charles changeItalic
+        brostika changeOverlay o=0.55 color=black t=0
+            charles bringAboveOverlay
+                sophie bringAboveOverlay
+                    charles move x=10 t=200
+                        charles changeSprite impatient_speak
+                        charles preSpeak
+                            charles speak Sophie...
+frame
+    charles speak Sophie...
+frame
+    charles changeSprite angry_speak
+    charles speak Sophie!
+        sophie wait 100
+            sophie move x=5 t=100
+                sophie move x=-5 t=100
+                    sophie changeSprite default
+                    sophie rotateClockwise
+                        sophie rotateClockwise angle=3 t=100
+                            sophie rotateClockwise angle =-6 t=200
+                                sophie rotateClockwise angle=6 t=200
+                                    sophie rotateClockwise t=100
+                                        charles move x=-20 t=200
+                                            sophie flipHorizontally t=200
+                                                sophie bringAboveOverlay
+                                                sophie changeSprite curious
+frame
+    charles changeSprite explain
+    charles speak We should find a way to leave soon.
+        charles wait 200
+            charles contSpeaking We shouldn't waste any more time here.
+                charles changeSprite serious
+frame
+    sophie setFontSize 1.2vw
+    sophie changeBold true
+    sophie changeSprite curious_speak
+    sophie preSpeak
+        sophie speak Where is Yusie?
+            sophie wait 200
+                sophie cont Are they back yet?
+                    sophie changeSprite worried
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles say No...
+            charles changeSprite impatient
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak Doesn't that mean that they've been gone for a really long time?
+            sophie wait
+                sophie cont I'm starting to get really worried for them...
+                    sophie changeSprite scared
+frame
+    charles changeSprite disgusted_speak
+    charles preSpeak
+        charles speak I'm sure that the guards will manage fine on their own,
+            charles wait 200
+                charles cont We should focus on getting to Malidret as soon as possible!
+                    charles changeSprite impatient
+frame
+    sophie changeSprite sad_speak
+    sophie preSpeak
+        sophie speak But you promised to help me...
+            sophie wait 200
+                sophie cont We need to make sure that Brostika is safe before we leave!
+                    sophie changeSprite worried
+frame
+    charles changeSprite speechless
+    charles preSpeak
+        charles speak msg=... t=600 s=false
+frame
+   charles changeSprite impatient_speak
+   charles speak Alright,
+        charles wait
+            charles cont alright...
+                charles changeSprite impatient
+frame
+    charles move y=0 t=200
+        brostika changeOverlay 0
+            sophie changeSprite worried_speak
+            sophie preSpeak
+                sophie speak Mr Broski,
+                    sophie wait 200
+                        sophie cont don't you think Yusie and the rest has been gone for too long?
+                            sophie changeSprite worried
+                            broski changeSprite mildtakenaback
+frame
+    sophie flipHorizontally 200
+    broski changeSprite mildtakenaback_speak
+    broski preSpeak
+        broski speak Huh?
+            broski wait
+                broski cont Yusie?
+frame
+    broski speak Now that you mention it,
+frame
+    broski changeSprite anxious_speak
+    broski cont they have been gone for far too long!
+frame
+    broski speak They should have returned by now,
+        broski wait 200
+            broski cont perhaps something happened to them?
+frame
+    broski changeSprite impatient_speak
+    broski speak I'm sure hope not, I need my winery to be safe!
+frame
+    broski speak You'd better go take a look!
+        broski changeSprite impatient
+frame
+    brostika closeTextBox
+        sophie,charles,broski disappear
+            charles move x=-70
+            sophie move x=-50
+            brostika display backgroundAlpha=0 t=0
+                brostika setAnchorX 0
+                brostika setAnchorY 0
+                brostika setWidth 150
+                brostika changeBackground opacity=1 background=winery t=800
+frame
+    yusie,slime,slime2 setDefGraph easeOut
+    brostika bringCharacter slime
+        brostika bringCharacter slime2
+                slime,slime2 move 30
+                yusie changeSprite angryhurt
+                slime,slime2,yusie appear
+                    yusie,slime,slime2 move x=-50
+                    slime,slime2,yusie setDefGraph easeOut
+                    slime cycle
+                        slime wait 250
+                            slime move x=-8 t=200
+                                slime move x=8 t=200
+                                    yusie scale x=1.05 y=1.05 t=100
+                                        yusie scale t=100
+                                            slime endOfCycle
+                    slime2 cycle
+                        slime2 wait 300
+                            slime2 move x=-5 t=200
+                                slime2 move x=5 t=200
+                                    slime2 endOfCycle
+    broski wait 2000
+        sophie move x=-30
+        charles setHorizontalFlip
+        charles move x=-30
+        sophie flipHorizontally
+            sophie changeSprite worried
+            charles changeSprite serious
+            charles,sophie appear
+                charles,sophie move t=700
+                    slime2,slime stopCycle 300
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak Hurry! Let's go help her!
+            sophie changeSprite worried

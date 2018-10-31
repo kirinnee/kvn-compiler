@@ -1,0 +1,322 @@
+declare yusie,charles,sophie,chief,halley,june as character
+declare boriolsis as stage
+
+scene boriolsis_lab boriolsis_lab
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis display backgroundAlpha=0 t=0
+        june preMove x=-50
+        boriolsis changeBackground background=lab o=1 t=1000
+frame
+    june changeSprite shy_speak
+    charles changeSprite smile
+    charles appear 1000
+    june appear 1000
+        june preSpeak
+            june say As you can see, the laboratory has gotten a lot more cluttered over the years...
+                june changeSprite shy
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak No worries!
+            charles wait 300
+                charles changeSprite serious_speak
+                charles say Well,
+                    charles wait 400
+                        charles cont shall we begin?
+                            charles changeSprite serious
+frame
+    june changeSprite serious_speak
+    june preSpeak
+        june speak Okay!
+frame
+    june move x=-10 t=300
+        june speak Before my father passed me the fur just now, he has also previously collected some of the scales which the beast had shedded in the forest
+frame
+    june speak I tried to identify the beast using the scales collected but it doesn't seemed to tally with any of the creatures documented in the Beast Lore
+frame
+    june speak In fact, it seemed to be an animal of an entirely new species.
+        june changeSprite serious
+frame
+    charles changeSprite curious_speak
+    charles preSpeak
+        charles speak Does Helmuth remember the structure of the monster?
+            charles changeSprite curious
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june speak Not really...
+frame
+    june speak The monster sneaked up on them from the back
+        june wait 300
+            june speak He could only recall how they were unable to penetrate the scaly hide of the beast as well and the existence of a long, scaly and pointy tail
+                june changeSprite worried
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles speak That's not a lot of information for us to work with
+            charles changeSprite thinking
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june speak That's why I've yet to arrive at any meaningful conclusion...
+            june wait 300
+                june speak If it's both an undocumented species and a monster which we don't know how it looks like, it's going to be quite hard to decode it
+                    june changeSprite worried
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak Why not we try working with this in a different way?
+            charles wait 300
+                charles speak Instead of trying to identify the beast and using the lore to find out its weakness, let's try to do some materials testing on the scale
+frame
+    charles changeSprite explain
+    charles speak If we're able to find the right material which would allow us to penetrate through the scale, it would be considerable progress for us
+        charles changeSprite serious
+frame
+    june changeSprite serious_speak
+    june preSpeak
+        june speak You're right
+            june wait 300
+                june changeSprite worried_speak
+                june speak I have been too reliant on established knowledge
+frame
+    june changeSprite serious_speak
+    june speak We need to perform this research at a more fundamental level
+        june changeSprite serious
+frame
+    charles changeSprite thinking
+    charles speak text=...... t=2000 s=false
+        charles wait 300
+            charles changeSprite surprised
+            charles preSpeak
+                charles scale x=1.1 y=1.1 t=150
+                    charles scale x=1/1.1 y=1/1.1 t=150
+                        charles changeSprite surprised_speak
+                        charles say Quick!
+                            charles wait 300
+                                charles cont Pass me the fur and the scale!
+                                    charles changeSprite serious
+frame
+    june changeSprite surprised_speak
+    june preSpeak
+        june speak You've got an idea?
+            june wait 300
+                june move x=10 t=100
+                    june changeSprite serious_speak
+                    june speak Okay! Here you go!
+                        june move x=-10 t=100
+                        june changeSprite serious
+frame
+    charles changeSprite explain
+    charles preSpeak
+        charles speak If you take a look at these scales, they are all tessellatable
+            charles wait 300
+                charles speak Since Helmuth had mentioned that both the hide and the tail is scaly, this means that the entire hide and the tail has a largely uniform exterior
+frame
+    charles speak From this, we can roughly ascertain that at least the lower half of the body should be covered in scales
+        charles wait 300
+            charles changeSprite thinking_speak
+            charles say But then again, are we able to conclude roughly where the scales end on its body?
+frame
+    charles speak If I remember correctly, Helmuth did comment on its incredible agility
+        charles wait 300
+            charles cont and he did mention how he found the fur at a height of roughly ten meters
+frame
+    charles changeSprite serious_speak
+    charles speak Right now, we can eliminate both possibilities of it either being a two legged animal or a legless creature
+frame
+    charles changeSprite explain
+    june changeSprite serious
+    charles speak Two legged animals would not be able to display incredible agility because it would be harder for them to accelerate or decelerate
+        charles wait 300
+            charles speak It can't be a legless animal either because it would mean that it has to be humongous to get its fur caught up on a branch ten meters high
+                charles wait 200
+                    charles speak It would be near impossible for something so huge to sneak up on Helmuth
+frame
+    june changeSprite smile
+    charles speak Hence, the animal should be something similar to a four legged animal, granting it agility and the ability to leap to a height of ten meters
+frame
+    charles changeSprite smile_speak
+    charles speak If we were to continue and dig at the concept of agility,
+        charles wait 200
+            charles cont it would also usually require a rather flexible midbody in order for a Knight to deem its agility as a threat
+frame
+    charles say This would mean that the hard scales on its rear would be unlikely to extend beyond the midbody region
+frame
+    charles changeSprite explain
+    june changeSprite serious
+    charles speak Lastly, it doesn't make sense for the fur to be on the paws, especially when they are so long
+        charles wait 300
+            charles say This means that the fur probably came from the upperbody region
+frame
+    charles changeSprite serious_speak
+    charles speak The monster which we are dealing is probably not too humongous and it should be covered in fur from the head to the midbody region and then scales from the midbody region to the tail
+        charles changeSprite serious
+frame
+    june changeSprite serious_speak
+    june preSpeak
+        june speak text=And if we try to assemble a rough shape of the animal using the fur and scales which we have over here,
+            june wait 300
+                june cont msg=this is what we get... t=1000 s=false
+frame
+    june changeSprite worried_speak
+    charles changeSprite smile
+    june speak text=Doesn't this look like the... t=3000 s=false
+        june changeSprite overjoyed
+        june interupt
+            june speak Charles, you're really a genius!
+frame
+    june say Wait!
+        june wait 300
+            june speak Let me go and get something!
+frame
+    june changeSprite smile_speak
+    june flipHorizontally
+        june move x=40 t=500
+            june flipHorizontally
+                june move x=-40 t=500
+                    june speak Doesn't it look like this the-
+                        june changeSprite worried
+                        charles changeSprite curious_speak
+                        charles interupt
+                            charles wait 400
+                                charles speak msg=Chimeras...? t=1500 s=false
+                                    charles changeSprite curious
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june speak It looks exactly like the Chimeras in my mother's notebook, isn't it?
+            june changeSprite worried
+frame
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak But the chimeras don't exist, right?
+frame
+    charles changeSprite thinking_speak
+    charles speak They only exist in our parents' research sketches...
+        charles wait 300
+            june changeSprite serious
+            charles speak text=Then... t=1000 s=false
+                charles wait 300
+                    charles say Could it be
+                        charles wait 400
+                            charles cont the failed experiment which broke free and killed our parents?
+                            charles,june changeSprite worried
+frame
+    charles changeSprite worried_speak
+    charles speak msg= But t=1000
+        charles wait 500
+            charles cont it's been so long...
+                charles wait 300
+                    charles changeSprite curious_speak
+                    charles speak Why did it wait until now to start attacking humans?
+                        june,charles changeSprite curious
+frame
+    june changeSprite curious_speak
+    june preSpeak
+        june speak If it really were the same beast, it should have been in our woods for a good fifteen years or so
+            june changeSprite curious
+frame
+    charles changeSprite thinking_speak
+    charles preSpeak
+        charles speak There must be some changes in the forest environment which resulted in a change in its behavior
+            charles wait 400
+                charles changeSprite curious_speak
+                charles speak Did anything change in the hunters' practices recently?
+                    charles changeSprite curious
+frame
+    june changeSprite serious_speak
+    june preSpeak
+        june speak text=...... t=1000 s=false
+            june wait 300
+                june speak Now that you mention it, my father did introduce a new hunting device to improve the hunting efficiency for our local hunters
+frame
+    june speak Before the attacks began, our hunters have been bringing a lot more of the animal carcasses back home
+        june changeSprite worried
+        charles changeSprite thinking_speak
+        charles interupt
+            charles say Could it be that the monster has started to venture out of its previous territory to find food after the hunters had begun to explete its food source?
+frame
+    charles changeSprite worried_speak
+    june changeSprite scared
+    charles wait 700
+        charles say It seems like this matter is more urgent than I have expected
+frame
+    charles say If we don't find a way to stop it soon, it might discover the existence of the entire village, putting all the lives here at risk
+        charles changeSprite worried
+frame
+    june changeSprite surprised_speak
+    june preSpeak
+        june speak I think I read something from my mother's notes about the methods which can be employed to subjugate the monster
+frame
+    june changeSprite serious_speak
+    june speak msg=Let me take a look...... t=1500 s=false
+        june wait 1000
+            june speak It seems like wiping the tip of a metallic object with Sacremental extract would allow one to inflict some sort of pain that can be used to control the beast
+                june changeSprite serious
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak Then the problem is solved, isn't it?
+frame
+    charles speak We'd just have to condense the Sacremental extract to a sufficiently high density such that it can penetrate the skin of the monster
+        charles wait 300
+            charles speak We should then be able to slay this wretched monster
+                june changeSprite overjoyed
+                charles wait 800
+                    charles changeSprite sad_speak
+                    charles cont text=and finally avenge our parents... t=3000 s=false
+frame
+    june changeSprite sad_speak
+    june preSpeak
+        june speak msg=I'm really sorry Charles... t=1500 s=false
+            june wait 300
+                june say I-I don-
+                    june changeSprite sad
+                    charles changeSprite explain
+                    charles interupt
+                        charles say You don't have to apologize for anything
+frame
+    charles say It's not your fault or anyone's
+frame
+    charles changeSprite sad_speak
+    charles say I've just been feeling a little dizzy and disoriented after returning to Boriolsis
+        charles wait 300
+            charles say Everything here reminds me of the pain which I felt after I lost my parents
+frame
+    charles changeSprite gazeindistance_speak
+    charles flipHorizontally t=200
+        charles say But somehow, I don't feel that connected to the pain anymore
+            charles wait 300
+                charles say This intermittent connection to the past and the painful memories caused my head to ache a little
+                    charles changeSprite sad
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say text=...... t=1000 s=false
+            june wait 400
+                june say Charles, look here
+                    charles changeSprite surprised
+                    charles flipHorizontally 500
+frame
+    june changeSprite comforting_speak
+    june speak It will all come to a close once we take down that monster
+        june wait 300
+            june changeSprite smile
+            june say The nightmare will finally be over
+                june changeSprite comforting
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say I don't know...
+            june changeSprite sad
+            charles wait 300
+                charles say But regardless of anything, let's get to work on the Sacremental Weapon
+                    charles changeSprite serious

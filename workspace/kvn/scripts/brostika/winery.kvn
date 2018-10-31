@@ -1,0 +1,162 @@
+declare charles,broski,slime,slime2 as character
+declare brostika as stage
+
+scene brostikaWinery brostika_winery
+frame 0
+    brostika bringCharacter charles
+    brostika bringCharacter broski
+    brostika bringCharacter slime
+    brostika bringCharacter slime2
+    charles setTextColor white
+    broski setTextColor white
+    charles preMove x=-60
+    brostika display backgroundAlpha=0 t=0
+        brostika setAnchorX 0
+        brostika setAnchorY 0
+        brostika setWidth 150
+        brostika changeBackground opacity=1 background=winery t=800
+
+frame 1
+    charles changeSprite mildtakenaback
+    charles,slime,slime2 appear
+        charles wait 700
+            charles rotateClockwise angle=23 t=300
+            charles move x=15 t=300
+frame 2
+    charles rotateClockwise t=200
+    charles move x=-15 t=200
+
+frame 3
+    brostika pan t=500 left=-30 g=swing
+    charles move x=-20 t=500
+    slime,slime2 move x=-30 t=500
+        slime wait 400
+            slime flipHorizontally 200
+            slime2 wait 400
+                slime2 flipHorizontally 200
+                    slime wait 600
+                        slime flipHorizontally 200
+                            slime2 wait 500
+                                slime2 flipHorizontally 200
+                                charles changeItalic true
+                                charles setFontSize 1.2vw
+
+frame 4
+    brostika pan left=30 t=500
+    slime,slime2 move x=30 t=500
+        charles wait 400
+            charles move x=60 t=500 s=false
+                charles changeSprite worried_speak
+                charles preSpeak
+                    charles speak That was close!
+                        charles changeSprite serious
+frame 5
+    charles move x=30 t=500
+        charles flipHorizontally 200
+        charles changeSprite serious_speak
+        charles speak We should keep our eyes peeled for the slimes
+            charles flipHorizontally 200
+            charles wait 400
+                charles cont The security here seems to be really tight
+                    charles changeSprite serious
+frame 6
+    charles endSpeak
+    charles changeSprite surprised
+    brostika pan t=500 left=-30 g=swing
+    charles flipHorizontally 100
+        charles move x=-90 t=500
+            charles wait 400
+                slime,slime2 move x=-30 t=500
+                    slime wait 1000 s=false
+                        slime,slime2 flipHorizontally 200
+                            slime,slime2 move x=70 t=700
+
+frame 6
+    charles flipHorizontally
+        brostika pan left=30 t=500
+        charles move x=90 t=500 s=false
+            charles changeSprite worried_speak
+            charles preSpeak
+                charles say Phew...
+                    charles wait 400
+                        charles cont That was scary...
+frame 7
+    charles changeSprite serious_speak
+    charles speak The slimes finally left.
+        charles wait 200
+            charles say It's our chance to find Mr Broski!
+                charles changeSprite serious
+frame 7
+    charles flipHorizontally 200
+        brostika pan left=-40 t=700 g=swing
+            charles wait 500
+                charles flipHorizontally 200
+                    brostika pan left=40 t=700 g=swing
+                        charles wait 500
+                            charles changeSprite mildtakenaback_speak
+                            charles say Wait!
+                                charles wait 200
+                                    brostika pan left=-30 t=700 g=swing
+                                        charles wait 500
+                                            charles changeSprite curious_speak
+                                            charles speak Could that be Mr Broski in the shed?
+                                                charles changeSprite curious
+frame 8
+    brostika setAX 80
+    brostika setAY 50
+    brostika scaleBackground y=2 x=2 t=500 g=swing s=false
+        charles wait 300
+            broski appear t=1000
+            broski changeSprite impatient
+frame 9
+    charles changeSprite curious_speak
+    charles speak Are you Mr Broski?
+        charles changeSprite curious
+frame 10
+    broski changeSprite impatient_speak
+    broski preSpeak
+        broski speak Yes.
+            broski wait 200
+                broski cont What do you want from me?
+frame 11
+    broski say If you're one of those henchmen,
+        broski wait 400
+            broski cont you can forget about it!
+                charles changeSprite mildtakenaback
+frame 12
+    broski say I'll never help you to speed up the fermentation of the wine!
+        broski changeSprite impatient
+frame 11
+    charles changeSprite explain
+    charles preSpeak
+        charles say Rest assure that I'm not one of them
+frame 12
+    charles changeSprite serious_speak
+    charles speak I'm here to save you, Mr Broski.
+        charles wait 200
+            charles say Captain Yusie will help you get back the winery once I bring you back to the constable
+                charles changeSprite serious
+                broski changeSprite mildtakenaback
+frame 12
+    broski changeItalic true
+    broski setFontSize 1.2vw
+    broski changeSprite mildtakenaback_speak
+    broski speak If that's the case, let's hurry and leave before the slimes return!
+        broski changeSprite worried
+frame 13
+    charles changeSprite explain
+    charles preSpeak
+        charles speak Come
+            charles wait 200
+                charles say Let me untie you
+                    charles changeSprite serious
+frame 14
+    charles move x=30 t=200
+        charles triggered t=601 s=false shake=null delay=150
+            charles wait 500
+                charles move x=-30 t=200
+frame 15
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles speak Let's leave!
+            charles changeSprite serious

@@ -1,0 +1,105 @@
+declare yusie,charles,sophie,chief,halley,june,deadBodyCG,deadsophie,slane,wizard as character
+declare boriolsis as stage
+
+scene boriolsis_rejecthelp_2 boriolsis_rejecthelp_2
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter slane
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis bringCharacter deadBodyCG
+    boriolsis bringCharacter deadsophie
+    boriolsis bringCharacter wizard
+    yusie,charles,sophie,chief,halley,june,slane setTextColor white
+    slane changeName ???
+    yusie preMove x=-70
+    yusie setHorizontalFlip true
+    charles preMove x=-13
+    sophie preMove x=27
+    june preMove x=-63
+    wizard preMove x=10
+    june setHorizontalFlip true
+    boriolsis display t=500 bgO=0
+        boriolsis setAY 0
+        boriolsis setAX 0
+        boriolsis scale x=2 y=1 t=0
+                boriolsis changeBackground bg=forest a=1 t=500 s=false
+frame
+    charles,sophie,yusie changeSprite curious
+    june changeSprite serious
+    sophie,wizard,charles,june,yusie appear 1000
+    wizard changeSprite serious_speak
+        wizard preSpeak
+            wizard say I need a rubicram and two dendricorns
+frame
+    wizard say Rubicrams are bright red in color with a clam-like exterior
+    charles changeSprite serious
+        wizard wait 500
+            wizard say Dendricorns are yellow in color and have long tentacles which are very likely to trip you
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie say Don't worry!
+            sophie wait 300
+                sophie say We'll start looking for them right away!
+                    sophie changeSprite smile
+frame
+    sophie,charles,june,wizard disappear 1000
+    boriolsis closeTextBox
+//player proceeds to click to uproot the plants by clicking on illuminated circles
+frame
+    sophie,charles,june,wizard,yusie changeSprite surprised
+    sophie,charles,june,wizard appear 1000
+        wizard changeSprite surprised_speak
+        wizard preSpeak
+            wizard say That was quick!
+frame
+    sophie,yusie,june changeSprite smile
+    charles changeSprite impatient
+    wizard changeSprite awkward_speak
+    wizard say Having more eyes on the job really does make a huge difference,
+        wizard wait 400
+            wizard cont doesn’t it?
+frame
+    wizard say Now that I have everything that I need, I shall take my leave
+        charles changeSprite speechless
+frame
+    wizard changeSprite smile_speak
+    wizard say Just follow this path and it will lead you back to the path that goes to Malidret
+        wizard changeSprite smile
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie say Thank you for helping us earlier!
+            sophie wait 300
+                sophie say I hope your ritual will be successful!
+                    sophie changeSprite smile
+frame
+    wizard changeSprite smile_speak
+    wizard preSpeak
+        wizard say My pleasure
+            wizard changeSprite smile
+            wizard flipHorizontally
+                wizard move x=50 t=500
+                    wizard disappear
+frame
+    june changeSprite shy_speak
+    charles changeSprite smile
+    june flipHorizontally 200
+        june preSpeak
+            june say Since you're already close to Malidret, I think I should take my leave as well
+frame
+    june changeSprite smile_speak
+    june say Take care Father and my dear friends!
+        june changeSprite smile
+frame
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie say Goodbye June!
+            sophie changeSprite smile
+            june flipHorizontally
+                june move x=100 t=1000

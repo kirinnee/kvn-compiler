@@ -1,0 +1,108 @@
+declare yusie,charles,sophie,chief,halley,june,deadBodyCG,deadsophie,slane,wizard as character
+declare boriolsis as stage
+
+scene boriolsis_rejecthelp_3 boriolsis_rejecthelp_3
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter slane
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis bringCharacter deadBodyCG
+    boriolsis bringCharacter deadsophie
+    boriolsis bringCharacter wizard
+    yusie,charles,sophie,chief,halley,june,slane setTextColor white
+    slane changeName ???
+    yusie preMove x=-70
+    yusie setHorizontalFlip true
+    charles preMove x=-13
+    sophie preMove x=27
+    june preMove x=-63
+    wizard preMove x=10
+    june setHorizontalFlip true
+    boriolsis display t=500 bgO=0
+        boriolsis setAY 0
+        boriolsis setAX 0
+        boriolsis scale x=2 y=1 t=0
+                boriolsis changeBackground bg=forest a=1 t=500 s=false
+frame
+    charles,sophie,yusie changeSprite curious
+    june changeSprite serious
+    wizard changeSprite surprised_speak
+    sophie,wizard,charles,june,yusie appear 1000
+        wizard preSpeak
+            wizard say I see...
+                wizard wait 400
+                    wizard cont You’re interested in the ritual
+frame
+    wizard changeSprite smile_speak
+    wizard wait 800
+        wizard say Alright then
+frame
+    wizard changeSprite serious_speak
+    wizard say I'll share with you how to perform the ritual
+frame
+    wizard say But do pay attention to the steps required
+frame
+    wizard changeSprite smile_speak
+    wizard say After all...
+        wizard wait 500
+            wizard say Knowledge transcends time, doesn't it?
+            charles changeSprite speechless
+            yusie changeSprite stone
+frame
+    wizard say You'll never know when you'll need it
+frame
+    wizard changeSprite serious_speak
+    wizard say First, you’ve got to collect all these ingredients written on this note
+        charles,sophie changeSprite curious
+        june changeSprite worried
+frame
+    wizard say Then, you'll boil all of them in a single black cauldron under strong flames for five hours
+        charles changeSprite thinking
+frame
+    wizard say Take note that the cauldron must be matte black
+        wizard changeSprite surprised
+        charles changeSprite thinking_speak
+        charles interupt
+            charles say Because the more light it absorbs, the more effective the ritual will become?
+                charles changeSprite curious
+frame
+    wizard changeSprite smile_speak
+    wizard preSpeak
+        wizard say Exactly
+frame
+    charles changeSprite curious
+    wizard changeSprite serious_speak
+    wizard say Also, the flames must not die off at any point of time during the five hours
+frame
+    wizard say Subsequently, you will then feed a deer with the concoction from the cauldron.
+frame
+    wizard say The catch is that the feeding must be done at the old temples either at Boriolsis or Brostika
+        wizard changeSprite serious
+frame
+    sophie changeSprite amazed
+    sophie preSpeak
+        sophie say Woahhh
+            sophie wait 400
+                sophie say There seems to be a lot of conditions to be fulfilled
+                    sophie changeSprite surprised
+frame
+    wizard changeSprite smile_speak
+    wizard preSpeak
+        wizard say It's actually a relatively easy ritual
+            wizard wait 400
+                wizard say The only restrictive factor is the location requirement
+frame
+    wizard,charles changeSprite serious
+    wizard changeSprite serious_speak
+    wizard say Anyways, that's all
+        wizard wait 400
+            wizard say And the ritual is considered complete
+//You have gained a skill: Ancient Ritual!
+frame
+    wizard say Any other questions?
+        wizard changeSprite serious

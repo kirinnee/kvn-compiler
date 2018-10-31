@@ -1,0 +1,493 @@
+declare sophie,yusie,charles,sophieslippedCG,halley as character
+declare erithven as stage
+
+create option youOkay msg=I-I'm fine... I don't think it's a serious cut...
+create option stopSophie msg=Why not we head back instead? It's too dangerous...
+scene cliff erithven_cliff
+
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter yusie
+    erithven bringCharacter halley
+    erithven bringCharacter sophieslippedCG
+    yusie,sophie,charles,halley setTextColor white
+    sophie preMove x=30
+    erithven display backgroundAlpha=0 t=0
+        erithven changeBackground background=cliff a=1 t=1000
+            sophie changeSprite tired_speak
+            sophie appear 1000
+frame 1
+    sophie preSpeak
+        sophie speak msg=Pant... Pant... Pant... t=2000 s=false
+            sophie wait 400
+                sophie say L-Lucky we managed to get away...
+frame 2
+    sophie changeSprite worried_speak
+    sophie say They were calling for reinforcements...
+        sophie wait 300
+            sophie say Any delay and we'd really be gone...
+frame 3
+//screen starts to flicker from time to time to show blurring visioon
+    sophie blur t=800 blur=0.7 g= easeIn
+    erithven blur t=800 blur=0.7 g=easeIn
+        sophie blur t=500 blur=0 g= easeOut
+        erithven blur t=500 blur=0 g=easeOut
+        sophie changeSprite scared
+        sophie changeItalic true
+        sophie setFontSize 1.4vw
+        sophie wait 700
+        sophie changeSprite curious_speak
+        sophie say Hellooo...?
+                sophie wait 300
+                    sophie setNormalText
+                    sophie setFontSize 1.7vw
+                    sophie changeSprite worried_speak
+                    sophie say #playName , are you okay?!
+                        sophie wait 400
+                            sophie changeSprite surprised_speak
+                            sophie say I-Is that blood on your body...?!
+                                erithven displayOption [youOkay]
+frame 4
+//screen flickers more seriously
+    sophie blur t=1000 blur=0.9 g= easeIn s=false
+    erithven blur t=1000 blur=0.9 g=easeIn s=false
+        erithven changeOverlay yanse=black a=1 t=1000 s=false
+        sophie changeSprite scared_speak
+        sophie say #playName , don't scare me!
+            sophie wait 600
+                erithven changeOverlay yanse=black a=0 t=1000 s=false
+                    sophie wait 800
+                        sophie blur t=1000 blur=0 g= easeOut s=false
+                        erithven blur t=1000 blur=0 g=easeOut s=false
+                            sophie speak Are you okay?!
+frame 5
+    sophie changeSprite worried_speak
+    sophie speak #playName ,
+        sophie wait 300
+            sophie cont I don't think you're in any shape to go down the cliff...
+frame 6
+    sophie changeSprite smile_speak
+    sophie say You just wait for me up here
+        sophie wait 300
+                erithven displayOption [stopSophie]
+frame 7
+    sophie changeSprite serious_speak
+    sophie say No way!
+        sophie wait 400
+            sophie say Not after we've come so far!
+frame 8
+    sophie say I'm not going back empty-handed when the entire town needs our help to save them!
+        sophie wait 500
+frame 9
+    charles setFontSize 1.3vw
+    charles changeItalic true
+    charles changeName ???
+    charles say Look!
+        charles wait 300
+            charles say Sophie and #playName  are over there!
+frame 9
+    sophie changeSprite scared_speak
+    sophie say Shucks!
+        sophie wait 400
+            sophie say I better go and get the herbs before Charles and the rest get over here!
+frame 10
+    sophie say They'll never let me go down!
+        sophie changeSprite serious
+frame 11
+    charles say Sophie, stay away from the cliff!
+        charles wait 200
+            charles say Don't go down!
+                sophie endSpeak
+                sophie disappear 800
+frame 10
+    charles flipHorizontally
+    charles move x=100
+    yusie move x=50
+    halley move x=20
+    charles,yusie changeSprite worried
+    halley changeSprite serious
+    charles changeName
+    charles setFontSize 1.7vw
+    charles setNormalText
+    charles,yusie,halley appear
+        charles move x=-80 t=850
+        yusie move x=-40 t=850
+        halley move x=-40 t=850
+            charles changeSprite worried_speak
+            charles preSpeak
+                charles changeBold
+                charles setFontSize 2vw
+                charles speak Sophie!
+                    charles wait 200
+                        charles cont Hang on! I'll figure out a way to get you up!
+                            charles changeSprite worried
+frame 11
+    sophie setFontSize 1.4vw
+    sophie say Don't worry about me!
+        sophie wait 600
+            sophie say Wow!
+                sophie wait 400
+                    sophie cont There are so many rigortas here!
+frame 12
+    sophie say It's not as dangerous as it seems up the-
+        sophie wait 200
+            sophie changeBold true
+            sophie setFontSize 1.8vw
+            sophie speak AHHHH!!!
+            sophieslippedCG bringAboveOverlay
+            sophie wait 700
+                erithven closeTextBox
+                sophieslippedCG appear t=1000
+                erithven changeOverlay yanse=black a=1 t=700
+                    sophieslippedCG wait 2000
+frame 25
+    sophieslippedCG disappear t=700
+    erithven changeOverlay yanse=black a=0 t=1000
+            yusie changeSprite scared
+            halley changeSprite surprised
+            yusie changeSprite surprised_speak
+            charles changeSprite surprised_speak
+            charles setFontSize 2vw
+            charles speak text=SOPHIE! t=700 s=false
+                charles wait 400
+                    charles cont text=ARE YOU OKAY?!!! t=700 s=false
+                        charles changeSprite worried
+frame 22
+    sophie wait 800
+    sophie setFontSize 1.4vw
+    sophie setNormalText
+    sophie speak I-I'm alright...
+        sophie wait 200
+            sophie cont It's okay...
+frame 23
+    yusie,charles changeSprite worried
+    halley changeSprite hesitant
+    sophie speak I'm just left with the Meisumptums
+        sophie wait 300
+            sophie speak Just a bit more and I'll be done
+frame 23
+    charles changeSprite worried_speak
+    charles speak Hang on theree!
+frame 24
+    charles speak We'll try to find a way to get you up
+        charles changeSprite mildtakenaback
+        yusie changeSprite surprised_speak
+        halley changeSprite surprised
+        yusie interupt
+            yusie speak AHHHH!!!
+            sophieslippedCG bringAboveOverlay
+            yusie wait 700
+                erithven closeTextBox
+                yusie endSpeak
+                sophieslippedCG appear t=1000
+                erithven changeOverlay yanse=black a=1 t=700
+                    sophieslippedCG move y=20 t=0 g=easeIn s=false
+                        sophieslippedCG wait t=150
+                            sophieslippedCG move y=-20 t=0 g=easeIn s=false
+                                sophieslippedCG wait 2000
+frame 25
+    charles changeSprite worried
+    yusie changeSprite cry
+    halley changeSprite hesitant
+    sophieslippedCG disappear t=700
+    erithven changeOverlay yanse=black a=0 t=1000
+        sophie speak I-I'm okay!
+            sophie wait 200
+                erithven closeTextBox
+                erithven changeBackground opacity=1 background=finalcliff t=1000
+
+frame 31
+    charles endSpeak
+    sophie setFontSize 1.5vw
+    sophie speak It's okay!
+            sophie move x=-30
+            sophie wait 500
+                sophie cont text=I'm a-almost up... t=1200 s=false
+                    sophie changeSprite tired
+                    sophie appear 1000
+frame 33
+    sophie setFontSize 1.7vw
+    yusie,halley,charles setFontSize 1.7vw
+    yusie,halley,charles setNormalText
+    sophie changeSprite tired_speak
+    sophie preSpeak
+        sophie speak text=Pheww... t=1000 s=false
+            sophie wait 500
+                sophie cont That was close!
+                halley changeSprite impressed
+                charles changeSprite worried
+frame 34
+    sophie changeSprite awkward_speak
+    sophie speak At least I've gotten everything we need
+        sophie changeSprite awkward
+        charles changeSprite upset
+frame 34
+    yusie changeSprite crysmile_speak
+    yusie preSpeak
+        yusie speak I'm so glad that you're safe!
+            yusie wait 200
+                yusie cont We were so worried about you!
+                    yusie changeSprite crysmile
+frame 35
+    sophie changeSprite apologetic_speak
+    sophie preSpeak
+        sophie speak Sorry for causing all of you to get so worried...
+            sophie changeSprite apologetic
+frame 36
+    halley changeSprite hesitant_speak
+    halley preSpeak
+        halley speak text=Hey... t=1000 s=false
+            halley wait 200
+                halley cont I'm sorry for not stopping you from attempting such a dangerous thing
+                    halley changeSprite hesitant
+                    charles changeSprite impatient
+frame 37
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak You better be!
+            yusie wait 300
+                yusie cont You were still so reluctant to save Princess Sophie when Charles asked you to do so earlier
+                    halley changeSprite angry
+                    sophie changeSprite awkward
+frame 38
+    yusie speak I've no idea what was going on in your head!
+        yusie changeSprite angry
+frame 39
+    halley changeSprite angry_speak
+    halley preSpeak
+        halley speak Hey!
+        halley wait 300
+            halley cont I've already apologized!
+                halley wait 300
+                    halley speak Can you stop bugging me?
+                        halley changeSprite angry
+                        sophie changeSprite worried
+frame 40
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak I just don't understand what do you hold against the Royal Family...
+            yusie changeSprite angry
+frame 41
+    halley changeSprite angry_speak
+    halley preSpeak
+        halley speak They abandoned me back then in the Great War against Kapitolis
+            charles changeSprite mildtakenaback
+            yusie changeSprite surprised
+            halley wait 300
+                halley speak Is that a good enough reason?
+                    halley changeSprite frustrated
+frame 42
+    charles changeSprite curious_speak
+    charles preSpeak
+        charles speak What do you mean by that?
+            charles changeSprite curious
+            yusie changeSprite curious
+            sophie changeSprite apologetic
+frame 44
+    halley changeSprite explain
+    halley preSpeak
+        halley speak Back then during the Great War, I served as the Royal Ranger who led an elite team of rangers to lay an ambush in the mountains that bordered Kapitolis
+            halley wait 300
+                halley speak text=However, because our ambush plans were compromised by a defeated Novalan Battalion, t=1100 se=false
+                    halley wait 300
+                        halley cont the King and Queen ordered our reinforcements to retreat, leaving us stranded behind the enemy lines
+frame 45
+    halley changeSprite angry_speak
+    halley speak text=In the end, I was the only ranger who made it out alive t=1000 s=false
+        halley wait 300
+            halley speak I lost all of my brothers who had fought along side me because of one command
+                halley wait 300
+                    halley speak One stupid command from the King and the Queen!
+                    yusie changeSprite angryawkward
+                    charles changeSprite gazeindistance
+frame 46
+    halley speak Tell me!
+        halley wait 300
+            halley cont Is it wrong of me to hate them?
+                halley changeSprite angry
+frame 47
+    yusie preSpeak
+        yusie speak text=... t=1000 s=false
+frame 48
+    sophie changeSprite apologetic_speak
+    sophie preSpeak
+        sophie speak text=Halley, I'm so sorry about that... t=1000 s=false
+            sophie wait 400
+                sophie cont I know that there's nothing that I can do to make it up to you...
+frame 49
+    sophie speak But I hope that you can forgive my parents on my behalf!
+        sophie changeSprite apologetic
+frame 50
+    halley changeSprite frustrated_speak
+    halley preSpeak
+        halley speak text=... t=1000 s=false
+            halley wait 300
+                halley speak I don't think that I can ever forgive anyone who treated my life like shit
+frame 51
+    halley changeSprite hesitant_speak
+    halley speak But I must say that I have been quite impressed with you
+        yusie changeSprite surprised
+        halley wait 300
+            halley speak It's been a while since I've seen anyone with this amount of moral courage
+                sophie changeSprite shy
+frame 52
+    halley changeSprite impressed_speak
+    halley speak The kind of selflessness and sense of responsibility which you've shown is really commendable!
+        halley wait 300
+            halley speak Not to mention the agility which you've exhibited when you scaled this cliff
+                halley changeSprite impressed
+frame 53
+    sophie changeSprite shy_speak
+    yusie changeSprite smile
+    charles changeSprite upset
+    sophie preSpeak
+        sophie speak It's really nothing much...
+            sophie wait 300
+                sophie cont My parents always told me that we owe our power to the people
+frame 54
+    sophie changeSprite smile_speak
+    sophie speak And I believe that as long as the tasks are within my means, I should always put in my best to make things right for others
+frame 55
+    sophie changeSprite smileexclaim_speak
+    sophie speak I really hope that this world of ours will learn to help each other more
+        sophie changeSprite shy
+frame 55
+    halley changeSprite smile_speak
+    halley preSpeak
+        halley speak Well said!
+            halley wait 800
+                halley changeSprite curious_speak
+                halley speak If you don't mind me asking, may I know what actually happened back at the castle?
+                    halley wait 300
+                        halley cont Why are both of you on the run?
+                            halley changeSprite curious
+frame 56
+    sophie changeSprite worried
+    charles changeSprite explain
+    charles preSpeak
+        charles speak Minister Mistrassimo launched a coup and ordered a secret force which he had been developing for years to chase after the Royal Family
+            charles wait 300
+                charles speak We broke up with Princess Sophie's parents while escaping and we're now trying to rendezvous with them
+                    charles wait 300
+                        charles speak The King and Queen were last seen in Malidret and that's where we're heading for now
+                            halley changeSprite serious
+frame 57
+    charles changeSprite upset
+    yusie changeSprite worried_speak
+    yusie preSpeak
+        yusie speak text=I see... t=1000 s=false
+            yusie wait 200
+                yusie cont Now everything makes sense!
+                    sophie changeSprite awkward
+                    yusie wait 300
+                        yusie speak I was so confused when Charles called you Princess back then...
+frame 58
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie speak I'm so sorry for not telling you the truth...
+frame 59
+    sophie changeSprite serious_speak
+    sophie speak Mistrassimo's network of underlings is so humongous that we've no choice but to keep a low profile
+        sophie wait 200
+            sophie cont His control over the media makes it even harder for us to progress to Malidret!
+                sophie changeSprite relent
+frame 59
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak Don't you worry, Princess Sophie!
+            yusie wait 200
+                yusie cont I will definitely join your side and help you take down Mistrassimo!
+frame 60
+    sophie changeSprite serious
+    yusie changeSprite curious_speak
+    yusie preSpeak
+        yusie speak What about you Halley?
+frame 61
+    halley changeSprite surprised_speak
+    halley preSpeak
+        halley speak Me?
+            halley wait 300
+                halley changeSprite sneer_speak
+                halley cont I will never help anyone from the Royal Family!
+                    halley changeSprite sneer
+                    sophie changeSprite apologetic
+frame 62
+    yusie changeSprite curious_speak
+    yusie preSpeak
+        yusie speak Charles, why're you so quiet?
+            yusie changeSprite curious
+            halley changeSprite curious
+frame 63
+    erithven displayText msg=... t=1000 s=false
+frame 64
+    sophie changeSprite apologetic_speak
+    sophie preSpeak
+        sophie speak text=Err... t=1000 s=false
+            sophie wait 300
+                sophie cont I'm sorry Charles...
+frame 65
+    sophie speak Can you stop being angry...?
+        sophie changeSprite apologetic
+frame 66
+    charles changeSprite angry_speak
+    charles preSpeak
+        charles speak How do you expect me to be calm about this?
+            yusie,halley changeSprite surprised
+            charles wait 300
+                charles speak Your parents left you in my care and yet you disobeyed my instructions
+frame 67
+    charles speak I can't believe you can't see the big picture...
+        charles wait 200
+            charles speak I understand that you want to save people and make them happy
+                charles changeSprite speechless
+                halley changeSprite hesitant
+                yusie changeSprite sad
+frame 68
+    charles speak But we're talking about your parents and the fate of the entire Kingdom over here
+        charles wait 300
+            charles speak Can you imagine what the other countries would do to us the moment they become aware of our political instability?
+                charles changeSprite angry
+frame 69
+    sophie changeSprite apologetic_speak
+    sophie preSpeak
+        sophie speak B-Bu...
+            sophie wait 200
+                sophie changeSprite relent
+                sophie cont You're right...
+frame 70
+    sophie speak I was too reckless...
+        sophie wait 300
+            sophie cont I should have listened to you and not ran off on my own...
+frame 71
+    sophie changeSprite apologetic_speak
+    sophie speak I p-promise you that I won't do this again...
+        sophie changeSprite apologetic
+frame 72
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak Have you gotten the herbs?
+            charles wait 300
+                charles contSpeak If you've collected them already, let's return to the pharmacy
+                    charles flipHorizontally 200
+                        charles move x=80 t=850
+                        charles changeSprite upset
+frame 73
+    yusie changeSprite worried_speak
+    yusie preSpeak
+        yusie speak Is Charles still angry...?
+            yusie changeSprite worried
+frame 74
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak I think so...
+            sophie wait 500
+frame 75
+    sophie cont Let's catch up with him!
+        sophie changeSprite worried
+frame 76
+    sophie move x=100 t=1050
+    yusie wait 200
+        halley,yusie flipHorizontally t=200
+            halley,yusie move x=100 t=1050

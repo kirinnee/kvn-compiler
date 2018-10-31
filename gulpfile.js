@@ -25,7 +25,7 @@ var cleaner = postcss([autoprefixer({
 	browsers: []
 })]);
 var prefixer = postcss([autoprefixer({
-	browsers: ['last 3 version']
+	browsers: ['>0%']
 })]);
 var cn = postcss([cssnano({
 	zindex: false,

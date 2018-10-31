@@ -1,0 +1,549 @@
+declare sophie,halley,charles,yusie,ruskoff as character
+declare erithven as stage
+
+scene erithvenEnd erithven_end
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter halley
+    erithven bringCharacter yusie
+    erithven bringCharacter ruskoff
+    halley,yusie,ruskoff setTextColor white
+    sophie setTextColor white
+    charles setTextColor white
+    erithven display backgroundAlpha=0 t=0
+        erithven changeBackground background=outsidehouse o=1 t=1000
+            sophie preMove x=12
+            charles preMove x=10
+            halley preMove x=20
+            yusie preMove x=-72
+            ruskoff preMove x=20
+            yusie flipHorizontally
+                sophie,charles,yusie changeSprite smile
+                charles,yusie,sophie appear 1000
+                sophie bringToFront
+frame 1
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak PHEWWW
+            sophie wait 300
+                sophie speak It feels great now that the entire saga is closed
+                    sophie changeSprite smile
+frame 2
+    yusie changeSprite smile_speak
+    yusie preSpeak
+        yusie speak It's good to see that everything is now wrapped up nicely
+frame 3
+    yusie changeSprite curious_speak
+    yusie speak Is it always so exciting to travel with you, Princess Sophie?
+        yusie changeSprite curious
+        charles changeSprite speechless
+frame 4
+    sophie changeSprite shy_speak
+    sophie preSpeak
+        sophie speak Just call me Sophie!
+frame 5
+    sophie changeSprite awkward_speak
+    sophie speak And I sure hope it won't be this exciting all the time
+frame 6
+    sophie speak We've got a mission at hand, right Charles?
+        sophie changeSprite awkward
+frame 7
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak Sophie, you don't have to force yourself to speak like me to stop me from being angry, you know?
+frame 8
+    charles speak I'm really not Mr. Grumpy...
+        sophie changeSprite playful
+        yusie changeSprite laugh
+        charles wait 300
+            charles speak All I ask for is for you to know what's best for Novala and act in its best interest
+                charles changeSprite upset
+frame 9
+    sophie changeSprite playful_speak
+    sophie preSpeak
+        sophie changeItalic true
+        sophie setFontSize 1.2vw
+        sophie speak Yes Mr Grumpy!
+        sophie flipHorizontally
+            sophie wait 700
+                sophie changeSprite playful
+                sophie flipHorizontally
+                sophie setNormalText
+                sophie setFontSize 1.7vw
+frame 10
+    halley changeSprite smile
+    halley appear
+        sophie,yusie,charles changeSprite surprised
+        halley move t=800
+        halley changeSprite impressed_speak
+        halley preSpeak
+            halley speak Hello Princess Sophie and friends!
+            sophie move x=-14 t=100
+            yusie move x=25 t=100
+            yusie bringToFront
+            charles move x=10 t=100
+            yusie,sophie,charles changeSprite serious
+            halley changeSprite impressed
+frame 11
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak What are you up to, Halley?
+            charles changeSprite upset
+            halley changeSprite smile
+frame 12
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak We won't let you do anything to Princess Sophie!
+            yusie changeSprite angry
+frame 13
+    halley changeSprite smile_speak
+    halley preSpeak
+        halley speak Why are all of you so unfriendly?
+            halley wait 300
+                halley changeSprite curious_speak
+                halley speak Do I reek of malicious intent?
+frame 14
+    halley changeSprite smile_speak
+    halley speak I'm just here to pay my greetings that's all
+        halley changeSprite smile
+frame 15
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak He's right
+            sophie wait 300
+                sophie speak He's not here to give us any trouble
+                    sophie changeSprite worried
+                    yusie,charles changeSprite worried
+frame 16
+    halley changeSprite smile_speak
+    halley preSpeak
+        halley speak Being able to read carofles is so useful, isn't it?
+            halley wait 300
+                halley changeSprite serious_speak
+                halley speak Anyway, I just want to let all of you know that I would like to join your team
+                    halley wait 300
+                        halley endSpeak
+                        halley changeSprite serious
+                        yusie,charles,sophie bringAboveOverlay
+                        yusie,charles,sophie setFontSize 1.2vw
+                        yusie,charles,sophie changeItalic true
+                        erithven changeOverlay yanse=black a=0.55 t=0
+                            yusie,charles flipHorizontally
+                            yusie changeSprite serious_speak
+                            yusie preSpeak
+                                yusie speak No! You shouldn't agree to it!
+                                    yusie wait 300
+                                        yusie speak He can't be trusted!
+                                            yusie changeSprite serious
+frame 17
+    sophie changeSprite surprised_s[eak]
+    sophie preSpeak
+        sophie speak His carofle has changed since we last saw him...
+            charles changeSprite thinking
+            sophie wait 300
+                sophie changeSprite worried_speak
+                sophie speak It's a lot more...
+                    sophie wait 500
+                        sophie cont complicated now
+                            sophie changeSprite worried
+frame 18
+    yusie changeSprite curious_speak
+    yusie preSpeak
+        yusie speak What is this carofle thing you're talking about?
+            yusie changeSprite serious
+            yusie wait 300
+                yusie speak What makes you so sure that you can trust him?
+frame 19
+    yusie speak I mean after all, I can't see why you'll trust a man that keeps going on and on about how bad your parents are
+        yusie changeSprite serious
+frame 20
+    charles changeSprite explain
+    charles preSpeak
+        charles speak To explain the carofle, you need to first understand our world a little better
+frame 21
+    charles speak Our world has five different countries governed by five different Royal Families blessed with different special abilities in their different sensory organs
+frame 22
+    charles speak The Royal Family of Novala is blessed with the ability to read carofles with their eyes
+        charles wait 300
+            charles cont or in layman terms, the ability to read the past, the emotions and intentions of others
+                charles changeSprite serious
+frame 23
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak Then why couldn't the King and the Queen stop Mistrassimo before his coup?
+            yusie changeSprite curious
+frame 24
+    sophie changeSprite sad_speak
+    sophie preSpeak
+        sophie speak Mistrassimo is blind
+frame 25
+    sophie speak Our ability only works if we can look into the eyes of the other person
+frame 26
+    sophie changeSprite serious_speak
+    sophie speak As for Halley, he doesn't seem to bear any malicious intent against myself or my parents anymore for now
+        sophie wait 300
+            sophie speak However, he doesn't seem very willing to help us actively either
+                sophie changeSprite worried_speak
+frame 27
+    sophie speak It seems like his intentions are a little muddled
+        sophie changeSprite worried
+frame 28
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak Regardless of what, I still think that he can't be trusted
+            yusie changeSprite serious
+frame 29
+    charles changeSprite default
+    charles preSpeak
+        charles speak Personally, I feel that Halley's special set of skills from his experience as the Royal Ranger in the past might prove to be useful in the future
+            sophie changeSprite curious
+            yusie changeSprite angry
+frame 30
+    charles changeSprite worried_speak
+    charles speak But I can't be sure if he's up to anything funny
+        charles wait 300
+            charles speak To be honest, I really can't tell...
+                charles changeSprite worried
+frame 31
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak Well, I can assure you that with me around, you won't need any additional firepower
+            yusie changeSprite angry
+frame 32
+    charles changeSprite explain
+    charles preSpeak
+        charles speak I'm not questioning your strengths, Yusie
+            charles wait 300
+                charles speak As we get closer to Malidret, we'll probably face more and more of Mistrassimo's men
+frame 33
+    charles changeSprite serious_speak
+    charles speak Additional fighting power will definitely be welcomed then
+        sophie changeSprite serious
+        charles wait 300
+            charles speak Beside, he did manage to sneak away from a huge Kapitolian army back then during the War
+                charles wait 300
+                    charles speak Who knows his experience might come in handy for us?
+                        yusie changeSprite serious
+frame 34
+    sophie changeSprite serious_speak
+    sophie preSpeak
+        sophie speak Alright
+            sophie wait 300
+                sophie speak Let's let him join our team
+frame 35
+    sophie speak We shall keep a close eye over him
+        sophie wait 300
+            sophie speak If anything happens, I'm sure the four of us should be able to pin him down
+                sophie changeSprite serious
+frame 36
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak If he dares to do anything to you, I'll make sure I throw him down the Cliffs of Kusuri!
+            yusie changeSprite serious
+frame 37
+    erithven changeOverlay yanse=black a=0 t=0
+        sophie,yusie,charles bringBelowOverlay
+        sophie,yusie,charles setNormalText
+        sophie,yusie,charles setFontSize 1.7vw
+        sophie,yusie,charles changeSprite serious
+        halley changeSprite smile_speak
+        halley preSpeak
+            halley speak So how did your meeting go?
+            yusie,charles flipHorizontally
+                halley wait 300
+                    halley speak Are you all going to accept me as a member of your team?
+frame 38
+    halley changeSprite sneer_speak
+    halley speak Or did Yusie convince the rest of you that I'm going to kill Princess Sophie?
+        halley changeSprite sneer
+frame 39
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak What did you sa-
+            yusie changeSprite angry
+            sophie changeSprite serious_speak
+            sophie interupt
+                sophie speak Halley, we've discussed and decided to allow you to join our team
+                    yusie changeSprite angryawkward
+frame 40
+    halley changeSprite sneer_speak
+    halley preSpeak
+        halley speak Well, to be honest, I'm not too surprised about that
+            halley wait 300
+                halley speak I mean I do possess a set of special skills
+frame 41
+    halley changeSprite smile_speak
+    halley speak For starters, how about I lead you out of town?
+        halley wait 300
+            halley speak I suppose we'll be heading to Boriolsis?
+            yusie changeSprite serious
+            halley changeSprite smile
+frame 42
+    sophie changeSprite shy_speak
+    sophie preSpeak
+        sophie speak text=Err... t=1000 s=false
+            sophie wait 300
+                sophie speak Before we leave Erithven, is it okay if we pop by somewhere first?
+                    sophie changeSprite shy
+                    yusie,halley changeSprite surprised
+                    charles changeSprite speechless
+frame 43
+    yusie changeSprite curious_speak
+    yusie preSpeak
+        yusie speak Where else do we need to go?
+            yusie,halley changeSprite curious
+frame 44
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie speak Well...
+            sophie wait 500
+                sophie speak You see...
+                    sophie wait 300
+                        sophie cont I really miss prasines and I haven't eaten them for a very long time already
+                            sophie changeSprite awkward
+frame 45
+    yusie changeSprite surprised_speak
+    yusie preSpeak
+        yusie speak Weren't you just eating them not too long ago?
+            yusie changeSprite curious
+frame 46
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie speak Well, I ran out of them already...
+            sophie wait 300
+                sophie speak And there was a news about some promotion going on at the Nevith Bakery in Erithven!
+frame 47
+    yusie changeSprite smile
+    sophie speak Halley, could you bring us to the bakery before we leave for Boriolsis?
+        sophie changeSprite shy
+        charles changeSprite impatient
+frame 48
+    halley changeSprite awkward_speak
+    halley preSpeak
+        halley speak Err... Sure?
+            halley wait 300
+                halley speak I didn't expect myself to lead a revolutionary team to a bakery but I guess it's good for us to stock up some supplies before we head off to Boriolsis
+frame 49
+    halley changeSprite smile_speak
+    halley speak I mean I'm quite sure you won't be able to find any prasines in Boriolsis
+        halley changeSprite smile
+frame 50
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie speak Alright!
+            sophie wait 300
+                sophie cont Let's go!
+                    sophie changeSprite smile
+                    halley flipHorizontally 200
+                        halley,sophie,charles,yusie move x=120 t=1200
+                            halley,sophie,yusie,charles disappear
+                            erithven closeTextBox
+                            erithven changeBackground opacity=1 background=default t=1000
+frame 51
+    charles changeSprite worried_speak
+    charles flipHorizontally
+    charles move
+        charles move x=20
+            charles appear 1000
+                charles preSpeak
+                    charles changeBold true
+                    charles setFontSize 2vw
+                    charles speak Make sure you don't drop any of the money!
+frame 52
+    sophie speak Yes... Yes... I know...
+        sophie wait 300
+            sophie speak And I'll make sure I don't buy too many prasines
+frame 53
+    sophie speak Yusie and Halley will make sure of that, right?
+frame 54
+    yusie speak Err...
+        yusie wait 300
+            yusie speak Ouch!
+                yusie wait 300
+                    yusie cont Oh okay...
+                        yusie wait 200
+                                yusie speak Yes! Yes! Of course!
+                                charles setNormalText
+                                charles setFontSize 1.7vw
+frame 55
+    charles speak Sighhh...
+        charles wait 300
+            charles speak I really hope she doesn't come running back with five or ten bags of prasines just because Halley told her that Boriolsis won't sell any
+frame 56
+    charles changeSprite smile_speak
+    charles speak That aside, I must say I'm actually quite glad that we managed to help the Jakris and his family out
+        charles wait 300
+            charles speak Separation of a child from his parents is always a very painful thing
+                charles changeSprite sad_speak
+frame 57
+    charles flipHorizontally 200
+        charles speak What more could be more painful than the eternal separation of life and death?
+frame 58
+    charles changeSprite smile_speak
+    charles speak It must seem quite funny to watch me speak in such a sentimental manner, isn't it?
+frame 59
+    charles changeSprite explain
+    charles speak Well, I'm not as apathetic as I seem
+        charles wait 300
+            charles speak I just really want to make things right and proper again for Princess Sophie as well as the King and the Queen as soon as possible
+frame 60
+    charles changeSprite sad_speak
+    charles speak I did feel very bad and terrified for the boy earlier when his mother shared with us about all of the possible outcomes before we got the elixir for her
+frame 61
+    charles speak After all, I believe I experienced something similar to what the boy was going through except much worse
+        charles wait 300
+            charles changeSprite curious_speak
+            charles speak I'm not sure if I shared with you before but...
+                charles wait 500
+                    charles changeSprite explain
+                    charles cont I was essentially brought up as an orphan
+frame 62
+    charles changeSprite gazeindistance_speak
+    charles speak When I was six, both of my parents were killed by a hybrid monster called a Manticore
+frame 63
+    charles speak Back then, it was during the Great War and being reputable researchers, my parents were called upon to work under a senior researcher in Boriolsis to create a beast which we could control
+frame 64
+    charles speak Novala was depending on this research to come up with this trump card which would allow us to turn the tides of the war to our advantage
+frame 65
+    charles speak However, due to a lack of manpower in the frontline, the King and Queen removed the security personnel in the laboratory and increased the risks which the researchers had to bear in the laboratory
+frame 66
+    charles changeSprite sad_speak
+    charles speak The experiment went wrong, and the Chimera, which my parents was trying to build, killed my parents before running away into the forest
+frame 67
+    charles speak You'll never be able to understand the shock and pain which I had to learn to bear just because of that fateful night
+        charles wait 300
+            charles speak After that incident, I had to stay at the house of the current Village Chief
+frame 68
+    charles speak While I was well taken care of, the loneliness and depressive feeling which I had to suffer was overwhelming
+frame 69
+    charles changeSprite gazeindistance_speak
+    charles speak I'll never forget that horrible feeling
+        charles wait 300
+            charles speak That's why I can empathize with the family to a certain extent
+frame 70
+    charles speak Separation within a family is really one of the most horrible things which can happen to both the parents and their children
+frame 71
+    sophie speak Charles and #playName , why are both of you still standing there?
+        charles changeSprite surprised
+        sophie wait 300
+            sophie speak Come and help us with the bags!
+                charles flipHorizontally 200
+frame 72
+    charles changeSprite smile_speak
+    charles speak Seems like they're done
+        charles wait 500
+            charles speak More than done, it seems...
+                charles changeSprite upset
+frame 73
+    sophie move
+        sophie move x=-50
+            sophie changeSprite awkward
+            sophie appear
+                charles move x=-12 t=400
+                sophie move t=4000  s=false
+                charles changeSprite upset_speak
+                charles speak Sophie, what did I tell you about not overbuying prasines?
+                    charles,sophie changeSprite surprised
+//NEWS: The Elders have chosen Minister Mistrassimo to assume the throne. He will now be crowned as the King of Novala until the old King returns.
+frame 74
+    sophie changeSprite angry
+    charles changeSprite gazeindistance_speak
+    charles preSpeak
+        charles speak So the news has finally arrived...
+frame 75
+    sophie changeSprite pout_speak
+    sophie preSpeak
+        sophie speak He...
+            sophie wait 600
+                sophie cont He must have bewitched the Elders!
+                    sophie changeSprite angry_speak
+frame 76
+    sophie speak There's no way that they will choose him to become the King!
+frame 77
+    sophie speak He isn't and never will be fitting to be the King!
+        sophie changeSprite pout
+frame 78
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak Let’s not be overly angered by this
+frame 79
+    charles speak This was definitely part of his plan all along
+frame 80
+    charles speak We've no choice but to move on
+        charles changeSprite serious
+frame 81
+    ruskoff appear
+        ruskoff move t=800
+            charles flipHorizontally
+            charles move x=5 t=100
+            charles,sophie changeSprite worried
+                ruskoff changeSprite snigger_speak
+                ruskoff preSpeak
+                    ruskoff speak So you're the brat who has been going around messing with King Mistrassimo’s plans, helping little Sophie and Charles, eh?
+frame 82
+    sophie,charles changeSprite angry
+    ruskoff changeSprite smile_speak
+    ruskoff speak Do you know who I am?
+frame 83
+    ruskoff wait 500
+        ruskoff changeSprite snigger_speak
+        ruskoff speak I'm Ruskoff,
+            ruskoff wait 300
+                ruskoff cont one of the five trusted henchmen of King Mistrassimo
+frame 84
+    ruskoff changeSprite smile_speak
+    ruskoff speak I’ve been tracking your movement for a while
+frame 85
+    ruskoff speak Now that I’ve finally tracked you down, it’s time to end all your lives once and fo-
+        ruskoff changeSprite angry
+        sophie changeSprite angry_speak
+        sophie interupt
+            sophie changeBold true
+            sophie setFontSize 2vw
+            sophie move x=10 t=100
+            sophie speak IN MY EYES, MISTRASSIMO WILL NEVER BE THE KING!
+frame 86
+    sophie speak HE IS NOT FIT TO BE THE KING AT ALL!
+        ruskoff changeSprite angry
+frame 87
+    sophie speak THERE'S ONLY ONE KING IN THIS KINGDOM!
+frame 88
+    sophie speak AND HE'S MY FATHE-
+        sophie changeSprite surprised
+        ruskoff changeSprite angry_speak
+        ruskoff interupt
+            ruskoff changeBold true
+            ruskoff setFontSize 2.2vw
+            ruskoff speak SHUT UP!
+            sophie,ruskoff setNormalText
+            sophie,ruskoff setFontSize 1.7vw
+            sophie changeSprite scared
+frame 89
+    ruskoff speak You're not in a position to talk!
+        ruskoff changeSprite angry
+        charles changeSprite impatient
+
+//Player enters battle
+
+//Player finishes battle
+
+frame 90
+    ruskoff disappear
+    halley disappear
+    halley move
+    halley flipHorizontally
+        halley appear 1000
+            halley preSpeak
+                halley changeSprite serious_speak
+                halley speak Hurry!
+frame 91
+    halley speak We've got to leave soon!
+        sophie,charles changeSprite worried
+frame 92
+    halley speak Ruskoff has contacted his minoins and they'll be here in no time!
+        sophie changeSprite scared
+frame 93
+    halley flipHorizontally
+        sophie,halley,charles move x=200 t=2000

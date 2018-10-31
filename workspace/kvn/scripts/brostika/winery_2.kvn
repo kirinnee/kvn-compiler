@@ -1,0 +1,119 @@
+declare charles,sophie,yusie,slime,slime2,broski as character
+declare brostika as stage
+
+scene wineryscene2 brostika_winery2
+
+
+frame
+    brostika bringCharacter charles
+    brostika bringCharacter sophie
+    brostika bringCharacter yusie
+    brostika bringCharacter broski
+
+    charles preMove -80
+    sophie preMove -50
+
+    brostika display bgO=0 bdA=1 t=0
+      brostika setAnchorX 0
+      brostika setAnchorY 0
+      brostika setWidth 150
+
+      brostika changeBackground bg= winery o=1 t=800
+
+
+frame //frame 1
+    sophie,charles,sophie setTextColor white
+    sophie changeSprite default    //changes the sprite of sophie
+      sophie,charles,slime,slime2 appear
+        sophie move x=32 t=1000 g=easeOut
+        sophie wait 700
+            sophie rotateClockwise angle=23 t=300
+
+        charles appear
+            charles wait 200
+
+
+frame //frame 2
+    sophie rotateClockwise t=200
+
+frame
+    brostika pan x=-30 t=500 g=swing
+    sophie,charles move x=-20 t=500
+    slime,slime2 move x=-30 t=500
+    sophie,charles changeItalic true
+    sophie,charles setFontSize 1.2vw
+//pan to show both sophie, charles and two slimes in the same scree. sophie and charles immediately hide while the slimes flip and patrol away
+
+frame
+    brostika pan x=30 t=500 g=swing
+    sophie move y=0 t=500
+    charles move y=0 t=500
+    sophie preSpeak
+      sophie speak Phew...
+        sophie wait 400
+            sophie contSpeaking That was close!
+frame
+    sophie scale t=200
+      charles preSpeak
+        charles speak We should keep our eyes peeled for the slimes,
+            charles wait 400
+                charles contSpeaking The security here seems to be really tight
+frame
+    slime,slime2 disappear 10
+    charles scale t=200
+      sophie preSpeak
+        sophie speak The slimes finally left.,
+            sophie wait 200
+                sophie contSpeaking It's our chance to find Mr Broski!
+frame
+    brostika pan x=-40 t=500 g=swing
+         sophie move x=-30 t=500 g=swing
+         charles move x=-30 t=500 g=swing
+         brostika pan x=30 t=500 g=swing
+            brostika pan x=-20 t=100
+                sophie speak Isn't that Mr Broski in the shed?
+
+
+frame
+    brostika setAnchorX 80
+    brostika setAnchorY 50
+    brostika scaleBackground x=2 y=2 t=500 s=false g=swing
+        broski appear 1000
+
+frame
+    sophie move x=30 t=500 y=0
+    charles move x=30 t=500 y=0
+      sophie speak Are you Mr Broski?
+
+
+frame
+        broski preSpeak
+            broski speak Yes.
+                broski wait 200
+                    broski contSpeaking What do you want from me?
+
+frame
+    charles preSpeak
+        charles speak We're here to save you Mr Broski
+            charles wait 200
+                charles contSpeaking We will help you get back the winery after bringing you back to the constable
+
+frame
+    broski preSpeak
+        broski speak If that's the case, I think we should get moving now while the slimes are away.
+
+frame
+    charles preSpeak
+        charles speak You're right.
+            charles wait 200
+                charles contSpeaking Let me untie you.
+
+frame
+    charles move x=30 t=200
+        charles triggered t=601 delay=150
+            charles wait 500
+                charles move x=-30 t=200
+frame
+    charles scale t=200
+        sophie preSpeak
+            sophie speak Let's leave!

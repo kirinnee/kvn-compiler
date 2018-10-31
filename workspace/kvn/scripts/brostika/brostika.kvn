@@ -1,0 +1,495 @@
+declare brostika as stage
+declare charles,sophie,chelsea as character
+
+scene brostika_scene brostika_outside
+
+frame
+     let a be 5 as string
+     mod brostikaM.play()
+     brostika bringCharacter charles
+     brostika bringCharacter sophie
+     brostika bringCharacter chelsea
+
+     sophie,charles preMove x=20
+     chelsea preMove x=40
+
+     brostika display bkgdAlpha=1 t=500
+       brostika displayText msg=--Village of Brostika-- t=400 center=true size=2.5vw color=white s=false
+
+frame
+    sophie,charles,chelsea setTextColor white
+    sophie,charles appear t=500
+    sophie,charles changeSprite surprised
+        chelsea changeName ???
+        chelsea preSpeak
+            chelsea speak Welcome to Brostika, travellers!
+
+frame
+    chelsea speak Come, give our locally-produced Brostikine wine a try!
+        chelsea appear
+        chelsea changeSprite smile
+            chelsea move x=-40 t=250
+            charles move x=-20 t=250
+                sophie wait 100
+                    sophie move x=-20 t=300
+                    sophie changeSprite curious
+                    charles changeSprite serious
+frame
+    charles changeSprite serious_speak
+     charles preSpeak
+        charles speak And who might you be?
+            sophie changeSprite smile
+            charles wait 400
+         charles contSpeak Isn’t it a bit unusual to be drinking wine in the middle of the day?
+            charles changeSprite serious
+
+frame
+     brostika changeOverlay o=0.55 yanse=black t=0
+         sophie bringAboveOverlay
+         charles bringAboveOverlay
+             sophie setItalic
+             sophie setFontSize 1.2vw
+             sophie changeSprite
+             sophie preSpeak angry_speak
+                sophie speak Don’t be so mean! She’s offering it out of goodwill!
+                    charles changeSprite upset
+
+frame
+    charles preSpeak
+        charles move x=10 t=300
+           charles wait 100
+             charles flipHorizontally
+                charles changeSprite upset_speak
+               charles setItalic
+               charles setFontSize 1.2vw
+               charles speak And how can you be so sure of that?
+                    charles wait 400
+                        charles contSpeak What if the wine is poisoned?
+                            charles changeSprite upset
+
+frame
+    sophie changeSprite proud_speak
+    sophie preSpeak
+        sophie changeBold
+        sophie setFontSize 1.8vw
+        sophie speak AHEM
+
+frame
+       sophie setFontSize 1.5vw
+       sophie setNormalText
+       sophie speak text=I am Princess Sophie of the Kingdom of Novala. s=false
+            sophie wait 200
+                sophie speak And ~
+
+frame
+       sophie contSpeak I can read the Carofle of any -
+         sophie changeSprite surprised
+         charles changeSprite mildtakenaback_speak
+         charles interupt
+               charles speak Shh! You’re not supposed to say that!
+                charles changeSprite mildtakenaback
+
+frame
+    sophie changeSprite relieved_speak
+    sophie preSpeak
+        sophie speak She's a nice person!
+             sophie wait 400
+               sophie contSpeak I can see it~!
+                charles changeSprite awkward
+
+frame
+    sophie changeSprite smileexclaim_speak
+     sophie speak Oh!
+       sophie wait 700
+           sophie speak Her name is Chelsea by the way!
+            sophie changeSprite smile
+            charles changeSprite speechless
+
+frame
+     brostika changeOverlay o=0 yanse=black t=0
+       sophie bringBelowOverlay
+       charles bringBelowOverlay
+           chelsea changeName Chelsea
+           chelsea changeSprite smile_speak
+           chelsea preSpeak
+                chelsea speak Ah, where are my manners? I'm Chelsea!
+                    chelsea changeSprite smile
+
+frame
+    charles changeSprite speechless
+     charles preSpeak
+       charles speak text=... t=1000 s=false
+       sophie changeSprite laugh
+
+frame
+    charles changeSprite awkward_speak
+     charles speak Alright...
+       charles wait 400
+         charles flipHorizontally
+         charles move x=-10 t=150
+            charles changeSprite awkward
+            sophie changeSprite smile
+frame
+     charles setNormalText
+     charles setFontSize 1.5vw
+     brostika displayText text=You took a sip of this expensive-looking wine and found the flavour to be extremely rich! t=500 center=false size=1.5vw italic=true s=false
+frame
+    sophie changeSprite overjoyed
+    sophie preSpeak
+         sophie speak I want to try it!
+
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie contSpeak Can I have a sip too?
+    charles changeSprite upset
+        sophie changeSprite smile
+
+frame
+         charles flipHorizontally t=150
+         charles changeSprite upset_speak
+         charles move x=10 t=150
+         charles preSpeak
+           charles speak I would suggest otherwise.
+
+frame
+       sophie changeSprite apologetic
+       charles speak Imagine what your father would say!
+frame
+       charles speak You’re much too young to be drinking such things!
+        charles changeSprite upset
+
+frame
+     sophie preSpeak apologetic_speak
+      sophie speak Sorry...
+      sophie changeSprite sad
+
+frame
+    chelsea preSpeak
+        chelsea changeSprite smile_speak
+        chelsea say Don’t worry young miss,
+            chelsea wait 400
+                chelsea cont in a few years, you’ll be able to,
+                sophie changeSprite smile
+                charles flipHorizontally t=400
+                charles move x=-10 t=150
+frame
+    chelsea cont msg=and~ t=450 s=false
+        chelsea wait 400
+            chelsea cont we always appreciate return visitors!
+frame
+    chelsea say Travellers are always welcomed with wine and bread!
+        chelsea changeSprite default
+frame
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie say Oh!
+            sophie wait 400
+                sophie changeSprite curious_speak
+                    sophie say You wouldn’t happen to have any prasines,
+                        sophie wait 400
+                            sophie cont would you?
+                                sophie changeSprite curious
+                                charles changeSprite thinking
+frame
+    charles changeSprite speechless
+    charles preSpeak
+         charles speak Prasines again
+            charles wait 300
+                charles cont , Sophie?
+                sophie changeSprite awkward
+frame
+    chelsea changeSprite smile_speak
+    chelsea preSpeak
+         chelsea speak No,
+            chelsea wait 300
+                sophie changeSprite sad
+                charles changeSprite serious
+                chelsea cont prasines are much too sweet to go along with wine.
+                    chelsea wait 400
+                        chelsea say They would dull your tastebuds.
+                            chelsea changeSprite default
+frame
+    sophie changeSprite pout_speak
+    sophie preSpeak
+        sophie say msg=Aww... t=1000 s=false
+        sophie move y=2 t=700
+            sophie changeName pout
+            chelsea changeSprite
+frame
+     sophie move y=-2
+     charles preSpeak
+         charles say Yes,
+            charles wait 300
+                charles cont that would be a waste of such great wine!
+frame
+     charles say The liquor has so much depth and texture!
+        sophie changeSprite curious
+frame
+    charles changeSprite surprised_speak
+    charles speak Wait, this taste…,
+       charles wait 500
+           charles changeSprite thinking_speak
+           charles cont Is this Crème de Cassis?
+            chelsea changeSprite surprised
+            charles changeSprite thinking
+frame
+    chelsea changeSprite surprised_speak
+    chelsea preSpeak
+        chelsea speak Indeed,
+            chelsea wait 300
+                chelsea cont this is Crème de Cassis
+                    charles changeSprite smile
+                    chelsea wait 300
+                        chelsea cont made from the freshest blackcurrants!
+                            sophie changeSprite pout
+frame
+    chelsea changeSprite smile_speak
+    chelsea say I’m glad you enjoyed it!
+        chelsea changeSprite default
+frame
+    brostika changeOverlay a=0.55 yanse=black t=0
+    sophie bringAboveOverlay
+    sophie preSpeak
+     sophie changeSprite pout_speak
+         sophie changeItalic true
+         sophie setFontSize 1.2vw
+         sophie say All those blackcurrants and not a single prasine?!
+            sophie wait 400
+                sophie say What kind of town doesn’t have prasines?
+                    sophie changeSprite pout
+frame
+    brostika changeOverlay a=0  yanse=black t=0
+        sophie bringBelowOverlay
+        sophie setNormalText
+        sophie setFontSize 1.5vw
+        charles bringToFront
+        chelsea changeSprite smile_speak
+        chelsea preSpeak
+           chelsea speak We Brostikans really take pride in our wines
+                chelsea wait 400
+                    chelsea cont so it is always a joy to find travellers capable of appreciating good wine.
+                        sophie changeSprite smile
+frame
+     brostika backgroundSepia filter=0.1 t=400
+     brostika changeOverlay a=0.05 yanse=#FD5E53 t=400
+       chelsea say Here in Brostika, wine is very deeply ingrained into our culture and dining habits
+        chelsea changeSprite def
+frame
+    charles changeSprite surprised_speak
+    charles preSpeak
+         charles speak Ah, of course!
+frame
+    charles changeSprite thinking_speak
+    charles speak I recall reading that wine actually originated from Brostika,
+        charles wait 400
+            charles cont where villagers first collected alcohol produced from berries.
+                charles changeSprite curious
+                sophie changeSprite curious
+frame
+    chelsea changeSprite surprised_speak
+       chelsea speak I see you’re rather well informed!
+frame
+    brostika backgroundSepia filter=0.2 t=400
+    brostika changeOverlay o=0.1 yanse=#FD5E53 t=400
+        sophie bringAboveOverlay
+        charles bringAboveOverlay
+        chelsea bringAboveOverlay
+        chelsea changeSprite smile_speak
+        chelsea say Yes,
+            chelsea wait 300
+                chelsea cont wine originated from this humble village.
+                    chelsea wait 400
+                        chelsea say It’s been a major part of our culture ever since!
+                            sophie changeSprite smile
+                            charles changeSprite smile
+frame
+     chelsea speak In fact,
+        chelsea wait 300
+            chelsea cont Brostika is home to some of the world’s best vineyards,
+                chelsea wait 300
+                    chelsea cont including the Brostikine Winery!
+frame
+    chelsea changeSprite sad_speak
+    chelsea say Unfortunately, despite having nearly a century of history, Brostikine wine isn’t really famous throughout the kingdom...
+frame
+     chelsea speak The density of our neighbouring forests and the presence of bandits makes it very hard to export our precious wine.
+        sophie changeSprite sad
+        charles changeSprite thinking
+        chelsea changeSprite sad
+frame
+    sophie changeSprite sad_speak
+    sophie preSpeak
+        sophie speak That’s terrible...,
+            sophie wait 300
+                sophie changeSprite worried_speak
+                sophie cont Can’t the law enforcement do anything about it?
+                    charles changeSprite worried
+                    sophie changeSprite worried
+frame
+    chelsea changeSprite sad_speak
+         chelsea speak If only the law enforcement here was that capable…
+frame
+     brostika backgroundSepia sepia=0.3 t=400
+     brostika changeOverlay a=0.15 yanse=#FD5E53 t=400
+       chelsea say Nonetheless,
+           chelsea wait 400
+               chelsea cont we try to support our vineyards and sell as much of our wine as possible to armed merchants that pass through our village.
+frame
+     chelsea say They sell quite well in large towns like Erithven,
+        chelsea wait 300
+            chelsea cont but most of the merchants rebrand our wine.
+                charles changeSprite serious
+                chelsea changeSprite sad
+                sophie changeSprite angry
+frame
+     sophie changeSprite angry_speak
+     sophie preSpeak
+        sophie speak That’s unfair!,
+            sophie wait 300
+                sophie cont Brostika deserves to be recognised for its wine!
+                    sophie changeSprite angry
+frame
+    charles changeSprite serious_speak
+    charles preSpeak
+         charles speak Indeed,
+            charles wait 400
+                charles cont I can imagine many tourists flocking to these parts if they learnt that the wine was produced here.
+                    charles changeSprite serious
+frame
+    chelsea changeSprite sad_speak
+    chelsea preSpeak
+         chelsea speak As of now,
+            chelsea wait 300
+                chelsea cont the wine we sell to the merchants is more than enough to keep our wineries afloat.
+                    sophie changeSprite worried
+frame
+    chelsea changeSprite smile_speak
+         chelsea say Besides,
+            chelsea wait 300
+                chelsea cont we do enjoy the peace we get in Brostika.
+                    chelsea changeSprite default
+                    sophie changeSprite smile
+frame
+     brostika backgroundSepia filter=0.4 t=400
+     brostika changeOverlay a=0.2 yanse=#FD5E53 t=400
+        charles changeSprite curious_speak
+        charles preSpeak
+           charles speak By the way,
+               charles wait 300
+                   charles cont do you know how to get to Brostika from here?
+                       sophie changeSprite curious
+                       chelsea changeSprite surprised
+frame
+    charles say According to the map we should have reached Brostika by now...
+        charles changeSprite curious
+frame
+    sophie changeSprite tired_speak
+    sophie speak Yupp, we've been walking for quite a while
+        charles changeSprite speechless
+        chelsea changeSprite default
+frame
+    chelsea changeSprite smile_speak
+    chelsea speak You're almost there!
+        chelsea wait 400
+            chelsea cont It's just up ahead!
+                chelsea changeSprite default
+                charles,sophie changeSprite smile
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak That's great!
+           charles wait 400
+             charles changeSprite thinking_speak
+             charles say Also,
+                charles wait 300
+                    charles cont I've heard that there's path from Brostika that leads to Erithven.
+                        sophie changeSprite curious
+                        chelsea changeSprite surprised
+frame
+    charles changeSprite curious_speak
+    charles say Would you know anything about it?
+        charles changeSprite curious
+frame
+    chelsea changeSprite smile_speak
+    chelsea speak Once you reach Brostika,
+        chelsea wait 300
+            chelsea cont make a turn at the first alley you see!
+frame
+    chelsea say The path that leads to Erithven will be clear from there
+        chelsea changeSprite def
+        sophie changeSprite smile
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak Alright,
+            charles wait 300
+                charles cont thank you for your help.
+frame
+     charles say We should make our way before the sun sets
+        charles changeSprite smile
+frame
+     brostika backgroundSepia filter=0.5 t=400
+     brostika changeOverlay a=0.25 yanse=#FD5E53 t=400
+          chelsea changeSprite smile_speak
+          chelsea preSpeak
+              chelsea say You're welcome!
+                chelsea wait 300
+                    chelsea cont It's my pleasure to assist travellers like you!
+frame
+     chelsea say I’ve got to get going and prepare dinner for the kids!
+       chelsea wait 300
+         chelsea say Take care!
+           chelsea wait 400
+             chelsea flipHorizontally 200
+                 chelsea move x=40 t=600 s=false
+frame
+     brostika displayText msg=... t=500 fontSize=1.5vw s=false
+frame
+     brostika removeCharacter chelsea
+     charles bringToFront
+     charles move x=30 t=400 s=false
+       charles flipHorizontally 200
+       charles wait 400
+         charles changeSprite smile_speak
+         charles preSpeak
+            charles speak Well,
+                charles wait 300
+                    charles cont I suppose you were right,
+                        charles wait 300
+                            charles cont I was too suspicious
+                                sophie changeSprite proud
+frame
+    charles say It was nice meeting Chelsea
+        charles changeSprite smile
+frame
+    sophie bringToFront
+    sophie changeSprite proud_speak
+    sophie preSpeak
+        sophie say See?!
+            sophie wait 300
+                sophie cont You should rely on me when it comes to judging people!
+                    charles changeSprite speechless
+frame
+    sophie changeSprite surprised_speak
+    sophie speak And poisoned wine?!
+        sophie wait 500
+            sophie cont Where did you get that idea from?
+                sophie changeSprite surprised
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+         charles say Well,
+            charles wait 300
+                charles cont it isn’t totally out of the question now,
+                    charles wait 300
+                        charles cont is it?
+frame
+    charles say Plenty of people are out to get you after all
+        sophie changeSprite awkward
+frame
+    charles speak I suppose we should get going.
+       charles wait 400
+         charles cont  We don’t have much time left to buy supplies before it gets dark
+             sophie bringBelowOverlay
+             charles bringBelowOverlay
+                brostika changeOverlay a=1 yanse=black t=1000

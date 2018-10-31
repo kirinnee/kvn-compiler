@@ -1,0 +1,449 @@
+declare yusie,charles,sophie,chief,halley,june,deadBodyCG,deadsophie,slane,wizard as character
+declare boriolsis as stage
+
+scene boriolsis_rejecthelp_1 boriolsis_rejecthelp_1
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter slane
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter wizard
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis bringCharacter deadBodyCG
+    boriolsis bringCharacter deadsophie
+    yusie,charles,sophie,chief,halley,june,slane setTextColor white
+    slane changeName ???
+    yusie preMove x=-70
+    yusie setHorizontalFlip true
+    charles preMove x=-13
+    sophie preMove x=27
+    halley preMove x=-82
+    halley setHorizontalFlip true
+    june preMove x=-33
+    chief preMove x=-2
+    chief setHorizontalFlip true
+    boriolsis display t=500 bgO=0
+        boriolsis setAY 0
+        boriolsis setAX 0
+        boriolsis scale x=2 y=1 t=0
+                boriolsis changeBackground bg=forest a=1 t=500 s=false
+frame
+    charles,chief,halley changeSprite serious
+    sophie,june changeSprite worried
+    sophie,charles,chief,june,halley appear 1000
+//If Player chooses to continue fighting his way through to Malidret (at any point of time if player chooses to use the dead body method, refer to //If player chooses to accept the alchemist’s offer),
+        charles changeSprite serious_speak
+        charles preSpeak
+            charles say No worries!
+                charles wait 300
+                    charles say We'll trust your judgment
+                        charles changeSprite serious
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say #playName , just don't overexert yourself
+            sophie changeSprite worried
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say I’ll just tag along to see how I can help you all get to Malidret safely
+            june wait 300
+                june say In the event that you change your mind, you can just let me know
+                    june changeSprite worried
+frame
+    chief changeSprite worried_speak
+    chief preSpeak
+        chief say You can just send us to the end of this path
+            chief wait 300
+                chief say You shouldn't leave the village for too long
+                    chief changeSprite worried
+//footsteps sounds
+//enter battle via clicker
+//conclude battle
+frame
+    sophie changeSprite scared_speak
+    sophie preSpeak
+        sophie say It seems that the minions are increasingly difficult to kill
+            sophie changeSprite scared
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say Are you sure you don’t want to just create a dead body that resembles Princess Sophie?
+            june changeSprite worried
+//Player chooses to continue
+frame
+    june changeSprite worried_speak
+    june say Alright
+        june endSpeak
+        june changeSprite worried
+//footsteps sounds
+//enter battle via clicker
+//conclude battle
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say #playName , are you okay?
+            sophie changeSprite worried
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say There's really no need to put yourself through this
+            june wait 300
+                june say Do you want to use the dead body method instead?
+                    june changeSprite worried
+//Player chooses to continue
+frame
+    june changeSprite worried_speak
+    june say Alright
+        june endSpeak
+            june changeSprite worried
+//footsteps sounds
+//enter battle via clicker
+//conclude battle
+frame
+    charles changeSprite impatient
+    halley changeSprite frustrated
+    chief,sophie changeSprite angry
+    sophie changeSprite angry_speak
+    sophie preSpeak
+        sophie say It’s getting really annoying how they keep stopping us in our tracks
+            sophie changeSprite angry
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say I’m always ready to perform the alchemy skill required to make the dead body
+            june wait 300
+                june say Just let me know if you decide to use it
+                    june endSpeak
+                        june changeSprite worried
+//Player chooses to continue
+frame
+    boriolsis displayText color=white fontSize=1.4vw center=false msg=As you carried on with your journey, it didn’t take long before you bumped into another of Ruskoff’s minion.
+//footsteps sounds
+//enter battle via clicker
+//conclude battle
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say I really hope these delays won’t affect our search for my parents
+            sophie changeSprite worried
+frame
+    june changeSprite serious_speak
+    june preSpeak
+        june say The alchemy method is really safe
+            june wait 300
+                june say Do you want to just go for that?
+                    june changeSprite serious
+//Player chooses to continue
+frame
+    june changeSprite worried_speak
+    june say Just let me know if you need my help
+        june endSpeak
+            june changeSprite worried
+
+frame
+    sophie changeSprite relent_speak
+    sophie preSpeak
+        sophie say The ambushes seem to be almost predestined
+            sophie changeSprite relent
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say I really do believe that it will be much more effective to just create a dead body which looks like Princess Sophie.
+            june endSpeak
+                june changeSprite worried
+//Player chooses to continue
+frame
+    boriolsis displayText msg=As you carried on with your journey, it didn’t take long before you bumped into another of Ruskoff’s minion.
+//footsteps sounds
+//enter battle via clicker
+//conclude battle
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say It feels like there's just so many tribulations on the way
+            sophie changeSprite worried
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say This journey is getting quite dangerous, isn't it?
+frame
+    june say Do you really not want to use the dead body method?
+        june endSpeak
+        june changeSprite worried
+//Player chooses to continue
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say Don't push yourself too hard
+            charles wait 300
+                charles say We've still got a long way
+                    charles endSpeak
+                        charles changeSprite worried
+//footsteps sounds
+//enter battle via clicker
+//conclude battle
+frame
+    sophie,june,chief changeSprite scared
+    sophie changeSprite scared_speak
+    sophie preSpeak
+        sophie say Oh my…
+            sophie wait 500
+                sophie cont #playName , the minion almost killed you...
+frame
+    sophie say I really think we should go with the other method
+        sophie changeSprite scared
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say For your safety, I really recommend the alchemy method
+            june endSpeak
+            june changeSprite worried
+//Player chooses to continue
+frame
+    boriolsis displayText msg=As you carried on with your journey, it didn’t take long before you bumped into another of Ruskoff’s minion.
+//footsteps sounds
+//enter battle via clicker
+//conclude battle
+frame
+    sophie,june,chief changeSprite worried
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say It really feels as though everything is working against us
+            sophie changeSprite worried
+frame
+    june changeSprite serious_speak
+    june preSpeak
+        june say Do you want to use the dead body trick instead?
+            june changeSprite serious
+//Player chooses to continue
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say Watch your body, #playName
+            charles endSpeak
+            charles changeSprite worried
+//footsteps sounds
+//enter battle via clicker
+//conclude battle
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say I guess that’s what they mean when they say against all odds
+            sophie changeSprite worried
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say You might want to use the dead body method instead?
+            june endSpeak
+            june changeSprite worried
+//Player chooses to continue
+frame
+    boriolsis displayText msg=As you carried on with your journey, a strange man appeared from the depths of the forest.
+//A SOFTER FOOTSTEP SOUND
+    wizard changeSprite agitated
+    charles,sophie,june,halley,chief changeSprite surprised
+    wizard appear 1000
+    wizard bringToFront
+//Achievement Unlocked: A Strange Encounter with an even Stranger Wizard!
+frame
+    wizard changeSprite agitated_speak
+    wizard preSpeak
+        wizard say Quick!
+            wizard wait 300
+                wizard say I am bringing you all on a secret route that not even the locals know of
+frame
+    charles,sophie,june,halley,chief changeSprite serious
+    wizard say Before you know it, you’ll be out of danger
+        wizard wait 500
+            wizard flipHorizontally
+                june flipHorizontally
+                wizard changeSprite agitated
+                wizard,charles,sophie,chief,june,halley move x=160 t=1600
+                    wizard,charles,sophie,chief,june,halley disappear
+frame
+    boriolsis closeTextBox
+    boriolsis changeBackground opacity=1 background=valley t=1000
+        sophie wait 500
+            wizard,charles,sophie,june move x=-160
+            wizard flipHorizontally
+            wizard move x=10
+            june move x=-30
+
+frame
+    yusie changeSprite worried
+    june changeSprite tired
+    //charles changeSprite tired
+    wizard,charles,sophie,yusie,june appear 1000
+    wizard changeSprite serious_speak
+    wizard preSpeak
+        wizard say We should be safe now
+            wizard wait 300
+                wizard say All that’s left is that straight road out of the valley
+                    wizard wait 300
+                        wizard cont which would bring you straight to Malidret.
+                        wizard changeSprite serious
+                        sophie changeSprite relieved
+                        june changeSprite smile
+                        yusie changeSprite overjoyed
+                        charles changeSprite smile
+frame
+    yusie preSpeak
+        yusie say This valley is very beautiful...
+            yusie wait 300
+                sophie changeSprite overjoyed
+                june changeSprite smile
+                yusie say Who would have imagined that tehre would be such a place beneath the path we were treading on?
+                    yusie changeSprite smile
+//wind sound
+frame
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie say And it feels very windy here as well
+            sophie wait 300
+                sophie changeSprite surprised_speak
+                sophie say Can you hear the sound of the wind?
+frame
+    wizard changeSprite awkward_speak
+    wizard wait 500
+        wizard preSpeak
+            wizard say Erm...
+                wizard wait 500
+                    wizard cont I know it sounds very bad when I put it this way…
+                    sophie,charles,yusie changeSprite curious
+frame
+    wizard say But could you all lend me some help as a way of thanking me for saving your lives?
+        wizard changeSprite awkward
+        charles changeSprite speechless
+        june changeSprite worried
+frame
+    sophie changeSprite smileexclaim_speak
+    yusie changeSprite smile
+    sophie preSpeak
+        sophie say Of course!
+            wizard changeSprite smile
+frame
+    sophie say After all, without your help, we might have been trapped there!
+        charles changeSprite upset
+frame
+    sophie say As long as it’s within our means, we will definitely help you
+        sophie changeSprite smile
+        charles interupt
+            charles endSpeak
+                charles changeSprite speechless
+                charles flipHorizontally
+                yusie bringToFront
+frame
+    wizard changeSprite smile_speak
+    wizard preSpeak
+        wizard say Thank you for not taking my words the wrong way
+frame
+    wizard changeSprite serious_speak
+    wizard say You see...
+        wizard wait 400
+            wizard say I’m actually a Theurgist Mage who belongs to a family lineage with an extremely rich history in wizardry
+frame
+    wizard say There is this ancient ritual that has been passed down to me from my parents, which I really want to try out
+frame
+    charles,sophie changeSprite curious
+    june changeSprite surprised
+    yusie changeSprite curious
+    wizard say However, this ritual can only be done once every ten years
+frame
+    wizard say This means that if anyone casts it, I will have to wait a good ten years before I can cast it again
+frame
+    wizard say Besides, there are certain requirements before the ritual can be performed
+        wizard wait 400
+            wizard say It can only be performed in a special kind of temple built centuries ago
+            charles changeSprite thinking
+frame
+    wizard say As of now, only two such temples exist in Novala
+frame
+    wizard say One of them is at Brostika while the other is over here in Boriolsis
+        yusie changeSprite stone
+frame
+    wizard say Other than the time and location requirement, there is also a fixed list of ingredients that's required for the ritual
+frame
+    charles changeSprite curious
+    wizard say And I’m currently lacking a few final ingredients before I can begin the ritual
+        wizard changeSprite serious
+frame
+    sophie changeSprite curious_speak
+    sophie preSpeak
+        sophie say Ooh...
+            sophie wait 400
+                sophie say What are you lacking?
+                    sophie changeSprite curious
+                    yusie changeSprite curious
+                    june changeSprite worried
+frame
+    wizard changeSprite serious_speak
+    wizard preSpeak
+        wizard say I’m just lacking a rubicram and two dendricorns
+frame
+    wizard changeSprite awkward_speak
+    wizard say I’m pretty sure they’re somewhere around here…
+        charles changeSprite speechless
+frame
+    wizard say My charm indicated that they are very near already
+        wizard changeSprite serious
+frame
+    charles changeSprite impatient_speak
+    charles flipHorizontally
+        charles preSpeak
+            charles say Then, why didn’t you continue to use your charm to find them?
+            sophie changeSprite awkward
+            yusie changeSprite awkward
+            charles changeSprite impatient
+frame
+    wizard changeSprite awkward_speak
+    wizard preSpeak
+        wizard say These ingredients have the ability to shield themselves from any magical prying eyes
+frame
+    wizard say That’s why I need to search for them physically after confirming that they’re just around this vicinity
+        wizard changeSprite serious
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles say Isn’t it a little too coincidental that we’ve stopped our run at this specific area?
+frame
+    charles changeSprite upset_speak
+    charles wait 300
+        charles say You do have a motive for saving us after all, don't you?
+            yusie changeSprite angry
+            june changeSprite worried
+frame
+    charles say Besides, why can't you just get these ingredients at the pharmacy?
+        charles changeSprite upset
+frame
+    wizard changeSprite awkward_speak
+    wizard preSpeak
+        wizard say Err......
+            wizard wait 500
+                wizard say I'm sure what I should say...
+frame
+    wizard say I guess I really need more eyes around to help me...
+frame
+    wizard wait 400
+        wizard say And well, a poor mage like me living in the mountains doesn't have money to buy herbs or any other ingredients
+frame
+    wizard say That's why I've to resort to such measures...
+frame
+    wizard changeSprite serious_speak
+    wizard say Hmm...
+        wizard wait 400
+            wizard cont It seems that you’re not very convinced…
+frame
+    wizard changeSprite surprised_speak
+    wizard say Oh!
+        wizard wait 400
+            wizard changeSprite smile_speak
+            wizard cont How about this?
+frame
+    charles,sophie,yusie changeSprite curious
+    june changeSprite surprised
+    wizard say Before all of you start finding the ingredients, I will answer any question that you have about this ritual
+        wizard changeSprite smile

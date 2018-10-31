@@ -1,6 +1,5 @@
 export/*
 node_modules/
 patch/
-workspace/
 compiler/
 compilethis.bat

@@ -1,0 +1,521 @@
+let playName be Marcus as string
+
+create sound brostikaM soundgroup=VN source=Brostika.mp3 loop=true
+create sound darkAlleyM soundgroup=VN source=Dark_Alley.mp3 loop=true
+create sound edgeOfBoriolsisM soundgroup=VN source=Edge_of_Borolsis.mp3 loop=true
+
+create sound erithvenM soundgroup=VN source=Erithven.mp3 loop=true
+create sound erithvenApothecaryM soundgroup=VN source=Erithven_Apothecary.mp3 loop=true
+create sound malidretM soundgroup=VN source=Malidret.mp3 loop=true
+create sound revelationRevolutionM soundgroup=VN source=Revelation_Revolution.mp3 loop=true
+create sound deathM soundgroup=VN source=Royal_Death.mp3 loop=true
+create sound solemnStrengthM soundgroup=VN source=Solemn_Strength.mp3 loop=true
+create sound sophiesRoomM soundgroup=VN source=Sophies_Room.mp3 loop=true
+create sound titleM soundgroup=VN source=The_Princess_Saviour.mp3 loop=true
+create sound valleyOfKusuriM soundgroup=VN source=Valley_of_Kusuri.mp3 loop=true
+create sound stabM soundgroup=VN source=stab.mp3 loop=true
+create sound xperrorM soundgroup=VN source=error.mp3 loop=true
+create sound footsteps soundgroup=VN source=footstep.wav loop=true
+
+start
+    play brostika_intro
+
+macro com char
+    char setTextColor white
+    char setDefSkip true
+    char setDefGraph swing
+    char complete
+
+macro comBG char
+    char setDefSkip true
+    char setDefGraph swing
+    char complete
+
+macro addSprite charr nible link
+    charr addSprite name=nible path=link
+
+//BASIC CHARACTERS
+create character sophie name=Sophie image=Sophie/sophie.png w=61.2 h=61.2*1.4 x=-35 y=56 aX=50 aY=50
+    addSprite sophie playful Sophie/playful.png
+    addSprite sophie playful_speak Sophie/playful_speak.png
+    addSprite sophie overjoyed Sophie/overjoyed.png
+    addSprite sophie curious Sophie/curious.png
+    addSprite sophie curious_speak Sophie/curious_speak.png
+    addSprite sophie smile Sophie/smile.png
+    addSprite sophie smile_speak Sophie/smile_speak.png
+    addSprite sophie stone Sophie/stone.png
+    addSprite sophie stone_speak Sophie/stone_speak.png
+    addSprite sophie helpless Sophie/helpless.png
+    addSprite sophie helpless_speak Sophie/helpless_speak.png
+    addSprite sophie worried Sophie/worried.png
+    addSprite sophie worried_speak Sophie/worried_speak.png
+    addSprite sophie surprised Sophie/surprised.png
+    addSprite sophie surprised_speak Sophie/surprised_speak.png
+    addSprite sophie awkward Sophie/awkward.png
+    addSprite sophie awkward_speak Sophie/awkward_speak.png
+    addSprite sophie shy Sophie/shy.png
+    addSprite sophie shy_speak Sophie/shy_speak.png
+    addSprite sophie comforting Sophie/comforting.png
+    addSprite sophie comforting_speak Sophie/comforting_speak.png
+    addSprite sophie relent Sophie/relent.png
+    addSprite sophie relent_speak Sophie/relent_speak.png
+    addSprite sophie serious Sophie/serious.png
+    addSprite sophie serious_speak Sophie/serious_speak.png
+    addSprite sophie angry Sophie/angry.png
+    addSprite sophie angry_speak Sophie/angry_speak.png
+    addSprite sophie gazeindistance Sophie/gazeindistance.png
+    addSprite sophie gazeindistance_speak Sophie/gazeindistance_speak.png
+    addSprite sophie tired Sophie/tired.png
+    addSprite sophie tired_speak Sophie/tired_speak.png
+    addSprite sophie apologetic Sophie/apologetic.png
+    addSprite sophie apologetic_speak Sophie/apologetic_speak.png
+    addSprite sophie smileexclaim_speak Sophie/smile_exclaim_speak.png
+    addSprite sophie sad Sophie/sad.png
+    addSprite sophie sad_speak Sophie/sad_speak.png
+    addSprite sophie laugh Sophie/laugh.png
+    addSprite sophie pout Sophie/pout.png
+    addSprite sophie pout_speak Sophie/pout_speak.png
+    addSprite sophie scared Sophie/scared.png
+    addSprite sophie scared_speak Sophie/scared_speak.png
+    addSprite sophie amazed Sophie/amazed.png
+    addSprite sophie hesitate Sophie/hesitate.png
+    addSprite sophie hesitate_speak Sophie/hesitate_speak.png
+    addSprite sophie confused Sophie/confused.png
+    addSprite sophie confused_speak Sophie/confused_speak.png
+    addSprite sophie relieved Sophie/relieved.png
+    addSprite sophie relieved_speak Sophie/relieved_speak.png
+    addSprite sophie chewing Sophie/chewing.png
+    addSprite sophie chewing_speak Sophie/chewing_speak.png
+    addSprite sophie drowsy Sophie/drowsy.png
+    addSprite sophie drowsy_speak Sophie/drowsy_speak.png
+    addSprite sophie proud Sophie/proud.png
+    addSprite sophie proud_speak Sophie/proud_speak.png
+    addSprite sophie sleep Sophie/sleep.png
+    addSprite sophie swallow Sophie/swallow.png
+    com sophie
+
+create character charles name=Charles image=Charles/serious.png w=68 h=68*1.4 x=-15 y=55 aX=50 aY=50
+    addSprite charles disgusted Charles/disgusted.png
+    addSprite charles disgusted_speak Charles/disgusted_speak.png
+    addSprite charles explain Charles/explain.png
+    addSprite charles speechless Charles/speechless.png
+    addSprite charles angry Charles/angry.png
+    addSprite charles angry_speak Charles/angry_speak.png
+    addSprite charles serious Charles/serious.png
+    addSprite charles serious_speak Charles/serious_speak.png
+    addSprite charles smile Charles/smile.png
+    addSprite charles smile_speak Charles/smile_speak.png
+    addSprite charles surprised Charles/surprised.png
+    addSprite charles surprised_speak Charles/surprised_speak.png
+    addSprite charles upset Charles/upset.png
+    addSprite charles upset_speak Charles/upset_speak.png
+    addSprite charles mildtakenaback Charles/mildtakenaback.png
+    addSprite charles mildtakenaback_speak Charles/mildtakenaback_speak.png
+    addSprite charles thinking Charles/thinking.png
+    addSprite charles thinking_speak Charles/thinking_speak.png
+    addSprite charles impatient Charles/impatient.png
+    addSprite charles impatient_speak Charles/impatient_speak.png
+    addSprite charles worried Charles/worried.png
+    addSprite charles worried_speak Charles/worried_speak.png
+    addSprite charles curious Charles/curious.png
+    addSprite charles curious_speak Charles/curious_speak.png
+    addSprite charles sad Charles/sad.png
+    addSprite charles sad_speak Charles/sad_speak.png
+    addSprite charles gazeindistance Charles/gazeindistance.png
+    addSprite charles gazeindistance_speak Charles/gazeindistance_speak.png
+    addSprite charles awkward Charles/awkward.png
+    addSprite charles awkward_speak Charles/awkward_speak.png
+    addSprite charles tiredpanting Charles/tiredpanting.png
+    addSprite charles tiredpanting_speak Charles/tiredpanting_speak.png
+    charles setHorizontalFlip true
+    com charles
+
+////////////////////////////////////////
+//        BROSTIKA CHARACTERS         //
+///////////////////////////////////////
+create character chelsea name=Chelsea image=Chelsea/Chelsea.png width=68 height=58*1.4 x=30.9 y=65 aX=50 aY=50
+    addSprite chelsea sad Chelsea/sad.png
+    addSprite chelsea sad_speak Chelsea/sad.png
+    addSprite chelsea smile Chelsea/sad.png
+    addSprite chelsea smile_speak Chelsea/sad.png
+    addSprite chelsea surprised Chelsea/sad.png
+    addSprite chelsea surprised_speak Chelsea/sad.png
+    chelsea setFontSize 1.5vw
+    com chelsea
+
+//Brostika Alley Scene (Tristan is unique in that his default face is sad_speak, not smile_speak)
+create character tristan name=Tristan image=Tristan/tristan.png width=60 height=60*1.4 x=60.2 y=36 aX=10 aY=10
+    addSprite tristan struggle Tristan/struggle.png
+    addSprite tristan struggle_speak Tristan/struggle_speak.png
+    addSprite tristan painexclaim_speak Tristan/painexclaim_speak.png
+    com tristan
+
+create character yusie name=Yusie image=Yusie/yusie.png width=60 height=60*1.4 x=30 y=55 aX=50 aY=50
+    addSprite yusie overjoyed Yusie/overjoyed.png
+    addSprite yusie sad Yusie/sad.png
+    addSprite yusie sad_speak Yusie/sad_speak.png
+    addSprite yusie angry Yusie/angry.png
+    addSprite yusie angry_speak Yusie/angry_speak.png
+    addSprite yusie awkward Yusie/awkward.png
+    addSprite yusie awkward_speak Yusie/awkward_speak.png
+    addSprite yusie surprised Yusie/surprised.png
+    addSprite yusie surprised_speak Yusie/surprised_speak.png
+    addSprite yusie cry Yusie/crysmile.png
+    addSprite yusie crysmile Yusie/crysmile.png
+    addSprite yusie crysmile_speak Yusie/crysmile_speak.png
+    addSprite yusie smile Yusie/smile.png
+    addSprite yusie smile_speak Yusie/smile_speak.png
+    addSprite yusie stone Yusie/stone.png
+    addSprite yusie stone_speak Yusie/stone_speak.png
+    addSprite yusie pout Yusie/pout.png
+    addSprite yusie pout_speak Yusie/pout_speak.png
+    addSprite yusie proud Yusie/proud.png
+    addSprite yusie proud_speak Yusie/proud_speak.png
+    addSprite yusie worried Yusie/worried.png
+    addSprite yusie worried_speak Yusie/worried_speak.png
+    addSprite yusie curious Yusie/curious.png
+    addSprite yusie curious_speak Yusie/curious_speak.png
+    addSprite yusie explain Yusie/explain.png
+    addSprite yusie explain_speak Yusie/explain_speak.png
+    addSprite yusie laugh Yusie/laugh.png
+    addSprite yusie serious Yusie/serious.png
+    addSprite yusie angryawkward Yusie/angryawkward.png
+    addSprite yusie angryawkward_speak Yusie/angryawkward_speak.png
+    addSprite yusie angryhurt Yusie/angryhurt.png
+    addSprite yusie angryhurt_speak Yusie/angryhurt_speak.png
+    addSprite yusie snigger Yusie/snigger.png
+    addSprite yusie snigger_speak Yusie/snigger_speak.png
+    addSprite yusie thinking Yusie/thinking.png
+    addSprite yusie thinking_speak Yusie/thinking_speak.png
+    com yusie
+
+create character broski name=Broski image=Broski/broski.png width=55 height=55*1.4 x=30 y=55 aX=50 aY=50
+    addSprite broski anxious Broski/anxious.png
+    addSprite broski anxious_speak Broski/anxious_speak.png
+    addSprite broski awkward Broski/awkward.png
+    addSprite broski awkward_speak Broski/awkward_speak.png
+    addSprite broski impatient Broski/impatient.png
+    addSprite broski impatient_speak Broski/impatient_speak.png
+    addSprite broski mildtakenaback Broski/mildtakenaback.png
+    addSprite broski mildtakenaback_speak Broski/mildtakenaback_speak.png
+    addSprite broski nonchalant Broski/nonchalant.png
+    addSprite broski nonchalant_speak Broski/nonchalant_speak.png
+    addSprite broski sinister Broski/sinister.png
+    addSprite broski sinister_speak Broski/sinister_speak.png
+    addSprite broski smile Broski/smile.png
+    addSprite broski smile_speak Broski/smile_speak.png
+    addSprite broski smileexclaim_speak Broski/smileexclaim_speak.png
+    addSprite broski thankful Broski/thankful.png
+    addSprite broski thankful_speak Broski/thankful_speak.png
+    addSprite broski worried Broski/worried.png
+    addSprite broski worried_speak Broski/worried_speak.png
+com broski
+
+create character tristanDeathCG name=CG 1 image=cg1.png width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com tristanDeathCG
+
+create character yusieHelpedCG name=CG 2 image=cg_help.jpg width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com yusieHelpedCG
+
+create character slime name=Slime image=slime.png width=25 height=25 x=60 y=0 aX=50 aY=50
+    com slime
+
+create character slime2 name=Slime image=slime.png width=28 height=28 x=70 y=20 aX=50 aY=50
+    com slime2
+
+////////////////////////////////////////
+//        Erithven CHARACTERS         //
+///////////////////////////////////////
+//Erithven House Scenes (Child is special in that his default face is ill_speak, not smile_speak)
+create character sickchild name=Sick Child image=SickChild/sick.png width=22 height=22*1.4 x=25 y=28 aX=0 aY=100
+    addSprite sickchild sick_speak SickChild/sick_speak.png
+    addSprite sickchild cough SickChild/cough.png
+    addSprite sickchild cough_speak SickChild/cough_speak.png
+    addSprite sickchild struggle SickChild/struggle.png
+    addSprite sickchild struggle_speak SickChild/struggle_speak.png
+    addSprite sickchild sleep SickChild/sleep.png
+    addSprite sickchild surprised SickChild/surprised.png
+    addSprite sickchild surprised_speak SickChild/surprised_speak.png
+    addSprite sickchild overjoyed SickChild/overjoyed.png
+    addSprite sickchild smile SickChild/smile.png
+    addSprite sickchild smile_speak SickChild/smile_speak.png
+    com sickchild
+
+//Erithven House Scenes (Mother is special in that her default face is worry_speak, not smile_speak)
+create character mother name=Mother image=Mother/worried.png width=60 height=60*1.4 x=15 y=30 aX=0 aY=100
+    addSprite mother worried_speak Mother/worried_speak.png
+    addSprite mother surprised Mother/surprised.png
+    addSprite mother surprised_speak Mother/surprised_speak.png
+    addSprite mother overjoyed Mother/worried_speak.png
+    addSprite mother caring Mother/caring.png
+    addSprite mother caring_speak Mother/caring_speak.png
+    addSprite mother sad Mother/sad.png
+    addSprite mother sad_speak Mother/sad_speak.png
+    addSprite mother cry Mother/cry.png
+    addSprite mother cry_speak Mother/cry_speak.png
+    addSprite mother crysmile Mother/crysmile.png
+    addSprite mother crysmile_speak Mother/crysmile_speak.png
+    addSprite mother smile Mother/smile.png
+    addSprite mother smile_speak Mother/smile_speak.png
+    addSprite mother plead Mother/plead.png
+    addSprite mother plead_speak Mother/plead_speak.png
+    com mother
+//Apothecary Scenes
+create character halley name=Halley image=Halley/poorservice.png width=66 height=66*1.4 x=40 y=50 aX=50 aY=50
+    addSprite halley frustrated Halley/frustrated.png
+    addSprite halley frustrated_speak Halley/frustrated_speak.png
+    addSprite halley sneer Halley/sneer.png
+    addSprite halley sneer_speak Halley/sneer_speak.png
+    addSprite halley poorservice_speak Halley/poorservice_speak.png
+    addSprite halley angry Halley/angry.png
+    addSprite halley angry_speak Halley/angry_speak.png
+    addSprite halley hesitant Halley/hesitant.png
+    addSprite halley hesitant_speak Halley/hesitant_speak.png
+    addSprite halley explain Halley/explain.png
+    addSprite halley impressed Halley/impressed.png
+    addSprite halley impressed_speak Halley/impressed_speak.png
+    addSprite halley curious Halley/curious.png
+    addSprite halley curious_speak Halley/curious_speak.png
+    addSprite halley surprised Halley/surprised.png
+    addSprite halley surprised_speak Halley/surprised_speak.png
+    addSprite halley smile Halley/smile.png
+    addSprite halley smile_speak Halley/smile_speak.png
+    addSprite halley awkward Halley/awkward.png
+    addSprite halley awkward_speak Halley/awkward_speak.png
+    addSprite halley serious Halley/serious.png
+    addSprite halley serious_speak Halley/serious_speak.png
+    com halley
+
+create character comet name=Comet image=Comet/Comet.png width=60 height=60*1.4 x=25 y=55 aX=50 aY=50
+    addSprite comet speak Comet/speak.png
+    addSprite comet smile Comet/smile.png
+    addSprite comet smile_speak Comet/smile_speak.png
+    addSprite comet awkward Comet/awkward.png
+    addSprite comet awkward_speak Comet/awkward_speak.png
+    addSprite comet surprised Comet/surprised.png
+    addSprite comet surprised_speak Comet/surprised_speak.png
+    addSprite comet scared Comet/scared.png
+    addSprite comet scared_speak Comet/scared_speak.png
+    addSprite comet angry Comet/angry.png
+    addSprite comet angry_speak Comet/angry_speak.png
+    com comet
+
+create character sophieslippedCG name=CG 3 image=cg_slipcliff.jpg width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com sophieslippedCG
+
+create character childGratitudeCG name=CG 4 image=childGratitudeCG.png width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com childGratitudeCG
+
+////////////////////////////////////////
+//        BORIOLSIS CHARACTERS        //
+///////////////////////////////////////
+
+//Ruskoff Fighting Scene in Boriolsis
+create character ruskoff name=Ruskoff image=Ruskoff/snigger.png width=68 height=68*1.4 x=12 y=12 aX=0 aY=100
+    addSprite ruskoff smile Ruskoff/smile.png
+    addSprite ruskoff smile_speak Ruskoff/smile_speak.png
+    addSprite ruskoff snigger_speak Ruskoff/snigger_speak.png
+    addSprite ruskoff angry Ruskoff/angry.png
+    addSprite ruskoff angry_speak Ruskoff/angry_speak.png
+    com ruskoff
+
+//Boriolsis Town Scene
+create character june name=June image=June/worried_speak.png width=60 height=60*1.4 x=72 y=52 aX=50 aY=50
+    addSprite june surprised June/surprised.png
+    addSprite june surprised_speak June/surprised_speak.png
+    addSprite june smile June/smile.png
+    addSprite june smile_speak June/smile_speak.png
+    addSprite june overjoyed June/overjoyed.png
+    addSprite june shy June/shy.png
+    addSprite june shy_speak June/shy_speak.png
+    addSprite june scared June/scared.png
+    addSprite june scared_speak June/scared_speak.png
+    addSprite june serious June/serious.png
+    addSprite june serious_speak June/serious_speak.png
+    addSprite june worried June/worried.png
+    addSprite june sad June/sad.png
+    addSprite june sad_speak June/sad_speak.png
+    addSprite june guilty June/guilty.png
+    addSprite june guilty_speak June/guilty_speak.png
+    addSprite june cry June/cry.png
+    addSprite june cry_speak June/cry_speak.png
+    addSprite june crysmile June/crysmile.png
+    addSprite june crysmile_speak June/crysmile_speak.png
+    addSprite june tired June/tired.png
+    addSprite june tired_speak June/tired_speak.png
+    addSprite june tiredsmile June/tiredsmile.png
+    addSprite june tiredsmile_speak June/tiredsmile_speak.png
+    addSprite june comforting June/comforting.png
+    addSprite june comforting_speak June/comforting_speak.png
+    com june
+
+create character chief name=Helmuth image=Chief/serious.png width=68 height=68*1.4 x=12 y=53 aX=50 aY=50
+    addSprite chief angry Chief/angry.png
+    addSprite chief angry_speak Chief/angry_speak.png
+    addSprite chief uncertain Chief/uncertain.png
+    addSprite chief uncertain_speak Chief/uncertain_speak.png
+    addSprite chief smile Chief/smile.png
+    addSprite chief smile_speak Chief/smile_speak.png
+    addSprite chief surprised Chief/surprised.png
+    addSprite chief surprised_speak Chief/surprised_speak.png
+    addSprite chief thinking Chief/thinking.png
+    addSprite chief thinking_speak Chief/thinking_speak.png
+    addSprite chief warning Chief/warning.png
+    addSprite chief laugh Chief/laugh.png
+    addSprite chief awkward Chief/awkward.png
+    addSprite chief awkward_speak Chief/awkward_speak.png
+    addSprite chief proud Chief/proud.png
+    addSprite chief proud_speak Chief/proud_speak.png
+    addSprite chief sad Chief/sad.png
+    addSprite chief sad_speak Chief/sad_speak.png
+    addSprite chief sad_smile Chief/sad_smile.png
+    addSprite chief scowl Chief/scowl.png
+    addSprite chief scared Chief/scared.png
+    addSprite chief scared_speak Chief/scared_speak.png
+    addSprite chief worried Chief/worried.png
+    addSprite chief worried_speak Chief/worried_speak.png
+    addSprite chief serious Chief/serious.png
+    addSprite chief serious_speak Chief/serious_speak.png
+    com chief
+
+create character sSophie name=Sophie image=SSophie/sophie_young.png width=35 height=35*1.4 x=28 y=38 aX=50 aY=50
+    addSprite sSophie pain SSophie/pain.png
+    addSprite sSophie pain_speak SSophie/pain_speak.png
+    addSprite sSophie tearangry SSophie/tearangry.png
+    addSprite sSophie tearangry_speak SSophie/tearangry_speak.png
+    addSprite sSophie tearful SSophie/tearful.png
+    addSprite sSophie tearful_speak SSophie/tearful_speak.png
+    addSprite sSophie surprised SSophie/surprised.png
+    addSprite sSophie surprised_speak SSophie/surprised_speak.png
+    addSprite sSophie tearsmile SSophie/tearsmile.png
+    addSprite sSophie tearsmile_speak SSophie/tearsmile_speak.png
+    addSprite sSophie upset SSophie/upset.png
+    addSprite sSophie upset_speak SSophie/upset_speak.png
+    addSprite sSophie smile SSophie/smile.png
+    addSprite sSophie smile_speak SSophie/smile_speak.png
+    addSprite sSophie ignore SSophie/ignore.png
+    addSprite sSophie overjoyed SSophie/overjoyed.png
+    addSprite sSophie plead SSophie/plead.png
+    addSprite sSophie plead_speak SSophie/plead_speak.png
+    addSprite sSophie sad SSophie/sad.png
+    addSprite sSophie sad_speak SSophie/sad_speak.png
+    addSprite sSophie scared SSophie/scared.png
+    addSprite sSophie scared_speak SSophie/scared_speak.png
+    sSophie setHorizontalFlip true
+    com sSophie
+create character mistra name=Mistrassimo image=Mistra/mistra.png width=50 height=50*1.4 x=30 y=30 aX=50 aY=50
+    addSprite mistra smile Mistra/smile.png
+    addSprite mistra smile_speak Mistra/smile_speak.png
+    addSprite mistra serious Mistra/serious.png
+    addSprite mistra serious_speak Misrta/serious_speak.png
+    com mistra
+
+create character sCharles name=Charles image=SCharles/charles_young.png width=45 height=45*1.4 x=-10 y=32 aX=50 aY=50
+    addSprite sCharles worried SCharles/worried.png
+    addSprite sCharles worried_speak SCharles/worried_speak.png
+    addSprite sCharles impatient SCharles/impatient.png
+    addSprite sCharles impatient_speak SCharles/impatient_speak.png
+    addSprite sCharles smile SCharles/smile.png
+    addSprite sCharles smile_speak SCharles/smile_speak.png
+    addSprite sCharles focused SCharles/focused.png
+    addSprite sCharles focused_speak SCharles/focused_speak.png
+    addSprite sCharles explain SCharles/explain.png
+    addSprite sCharles stunned SCharles/stunned.png
+    addSprite sCharles stunned_speak SCharles/stunned_speak.png
+    addSprite sCharles apologetic SCharles/apologetic.png
+    addSprite sCharles apologetic_speak SCharles/apologetic_speak.png
+    addSprite sCharles curious SCharles/curious.png
+    addSprite sCharles curious_speak SCharles/curious_speak.png
+    addSprite sCharles thinking SCharles/thinking.png
+    addSprite sCharles thinking_speak SCharles/thinking_speak.png
+    addSprite sCharles sinister SCharles/sinister.png
+    addSprite sCharles sinister_speak SCharles/sinister_speak.png
+    addSprite sCharles surprised SCharles/surprised.png
+    addSprite sCharles surprised_speak SCharles/surprised_speak.png
+    addSprite sCharles angry SCharles/angry.png
+    addSprite sCharles angry_speak SCharles/angry_speak.png
+    addSprite sCharles upset SCharles/angry.png
+    addSprite sCharles berserk SCharles/berserk.png
+    addSprite sCharles berserk_speak SCharles/berserk_speak.png
+    sCharles setHorizontalFlip true
+    com sCharles
+
+create character slane name=Slane image=slane.png width=20 height=20*1.4 x=15 y=12 aX=50 aY=50
+    com slane
+
+create character wizard name=Wizard image=Wizard/serious.png width=60 height=60*1.4 x=10 y=15 aX=0 aY=100
+    addSprite wizard agitated Wizard/agitated.png
+    addSprite wizard agitated_speak Wizard/agitated_speak.png
+    addSprite wizard serious Wizard/serious.png
+    addSprite wizard serious_speak Wizard/serious_speak.png
+    addSprite wizard awkward Wizard/awkward.png
+    addSprite wizard awkward_speak Wizard/awkward_speak.png
+    addSprite wizard smile Wizard/smile.png
+    addSprite wizard smile_speak Wizard/smile_speak.png
+    addSprite wizard surprised Wizard/surprised.png
+    addSprite wizard surprised_speak Wizard/surprised_speak.png
+    com wizard
+
+create character deadsophie name=deadSophie image=Sophie/dead.png w=61.2 h=61.2*1.4 x=5 y=56 aX=50 aY=50
+    com deadsophie
+
+create character saveJuneCG name=saveJuneCG image=cg_savejune.jpg width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com saveJuneCG
+
+create character sophieStabbedCG name=sophieStabbedCG image=cg_sophiestabbed.jpg width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com sophieStabbedCG
+
+create character deadBodyCG name=deadBodyCG image=cg_deadbody.jpg width=100 height=56.25 x=0 y=0 aX=50 aY=50
+    com deadBodyCG
+
+//Murder Scene (King is special in that his default face is smile, not smile_speak)
+create character king name=King image=v_boriolsis/king/smile.png width=68 height=68*1.4 x=35.9 y=15.7 aX=50 aY=50
+    king setFontSize 1.5vw
+    com king
+create character queen name=Queen image=v_boriolsis/queen/smile.png width=68 height=68*1.4 x=25.9 y=20.5 aX=50 aY=50
+    queen setFontSize 1.5vw
+    com queen
+
+////////////////////////////////////////
+//        BORIOLSIS CHARACTERS        //
+///////////////////////////////////////
+create character patrick name=Patrick image=v_malidret/patrick/pain.png width=60 height=60*1.4 x=15 y=28 aX=0 aY=100
+    com patrick
+
+create character minion3 name=Minion image=v_boriolsis/ruskoff/arrogant.png width=68 height=68*1.4 x=-6 y=12 aX=0 aY=100
+    com minion3
+
+
+/////////////////////////////////////////
+//              STAGES               ///
+/////////////////////////////////////////
+macro addBG bgg nawa
+    bgg addBackground name=nawa path=bgg/nawa.jpg
+
+create stage brostika image=brostika_outside.jpg
+    brostika addBackground name=intro       path=kroigren.jpg
+    brostika addBackground name=alley       path=alley.png
+    brostika addBackground name=police      path=police.png
+    brostika addBackground name=winery      path=winery.png
+    comBG brostika
+
+create stage boriolsis image=boriolsis/town.jpg
+    addBG boriolsis house
+    addBG boriolsis forest
+    addBG boriolsis lab
+    addBG boriolsis room
+    addBG boriolsis valley
+    addBG boriolsis garden
+    addBG boriolsis balcony
+    comBG boriolsis
+create stage erithven image=erithven.jpg
+    erithven addBackground name=outsidehouse path=outsidehouse.png
+    erithven addBackground name=house        path=sick_boy_s_room.png
+    erithven addBackground name=pharma       path=pharma.png
+    erithven addBackground name=cliff        path=cliff.png
+    erithven addBackground name=finalcliff   path=finalcliff.png
+    erithven addBackground name=farcliff     path=farcliff.png
+    comBG erithven
+
+create stage malidret image=malidret.png
+    comBG malidret

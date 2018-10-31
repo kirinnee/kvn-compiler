@@ -1,0 +1,604 @@
+declare sophie,halley,charles,comet,yusie as character
+declare erithven as stage
+
+scene erithvenPharma erithven_pharma
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter halley
+    erithven bringCharacter comet
+    erithven bringCharacter yusie
+    halley,yusie setTextColor white
+    comet setTextColor white
+    sophie setTextColor white
+    charles setTextColor white
+    erithven display backgroundAlpha=0 t=0
+        erithven changeBackground background=pharma o=1 t=1000
+            sophie,yusie preMove x=-50
+            charles preMove x=-70
+            halley appear t=1000
+            comet appear t=1000
+            sophie appear
+            charles appear
+frame 1
+    sophie,charles appear
+        sophie,charles move t=850
+            comet changeSprite speak
+            comet preSpeak
+                comet speak text=Hello how can I help you?
+                    comet changeSprite default
+frame 2
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie speak text=Good Morning!
+            sophie wait t=300
+                sophie cont text=Can we purchase Rigorta and Meisumptum?
+                    sophie wait t=200
+                        sophie speak text=We're here to get the ingredients for a Brostikan sage to concoct an elixir for a sick boy down the road
+                            sophie changeSprite smile
+frame 3
+    comet changeSprite speak
+    comet preSpeak
+        comet speak text=Give me a moment to check!
+            comet wait t=200
+                comet flipHorizontally t=150
+                comet move x=2 t=200
+                    comet changeSprite smile_speak
+                    comet speak text=Halley, can you go to the back and check on our existing stock?
+                        comet changeSprite default
+frame 4
+    halley changeSprite frustrated_speak
+    halley preSpeak
+        halley speak text=Alright,alright...
+            halley changeSprite frustrated
+            comet move x=-2 t=200
+            comet flipHorizontally t=150
+frame 5
+    halley endSpeak
+        halley disappear t=1000
+            sophie,charles bringAboveOverlay
+                erithven changeOverlay yanse=black opacity=0.55 t=0
+                    sophie changeSprite curious_speak
+                    sophie preSpeak
+                        sophie changeItalic
+                        sophie setFontSize 1.2vw
+                        sophie speak Pss...
+                            sophie wait 600
+                                sophie cont Pss...
+frame 6
+    charles flipHorizontally 200
+    charles move x=10 t=200
+        charles changeSprite mildtakenaback_speak
+        charles preSpeak
+            charles changeItalic
+            charles setFontSize 1.2vw
+            charles speak Huh?
+                charles changeSprite curious
+frame 7
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie speak Charles,
+            sophie wait 300
+                sophie cont how do people usually bargain?
+frame 8
+    sophie changeSprite curious_speak
+    sophie speak I've heard that people usually bargain when they go shopping for things
+        sophie wait 300
+            sophie speak So I was wondering if I should keep my disguise up by bargaining
+frame 9
+    sophie speak What is a good price for these ingredients?
+        sophie changeSprite curious
+frame 10
+    charles changeSprite thinking_speak
+    charles preSpeak
+        charles speak text=...... t=1000 s=false
+            charles changeSprite awkward
+            charles wait 300
+                charles speak Normally, people don't bargain at the pharmacy...
+frame 11
+    charles changeSprite serious_speak
+    charles speak And you should really stop worrying about your disguise
+        charles wait 300
+            charles speak No one will guess that you're the Princess
+                charles changeSprite serious
+frame 6
+    halley appear t=1000
+    erithven changeOverlay yanse=black opacity=0 t=0
+    charles endSpeak
+    charles changeSprite default
+    sophie changeSprite smile
+    sophie,charles setFontSize 1.7vw
+    sophie,charles setNormalText
+    charles bringBelowOverlay
+    charles move x=-10 t=200
+    charles flipHorizontally t=200
+        halley changeSprite poorservice_speak
+        halley preSpeak
+            halley speak text=I'm sorry.
+                halley wait t=200
+                    halley cont text= But we're currently short of these two ingredients.
+                    comet changeSprite awkward
+                    sophie changeSprite sad
+                    charles changeSprite thinking
+frame 6
+    halley speak text=Our suppliers just informed us that it might take months before the new batch arrives
+        halley changeSprite frustrated
+frame 7
+    comet changeSprite awkward_speak
+    comet preSpeak
+        comet speak text=We're really sorry for inconveniencing you!
+            comet wait t=200
+                comet cont text=You must understand that both Rigortas and Meisumptums are really rare herbs
+                    comet changeSprite awkward
+frame 7
+    charles changeSprite thinking_speak
+    charles preSpeak
+        charles speak text=Indeed... t=800 s=false
+            charles wait t=200
+                charles contSpeak text=They are part of the Quinnsetas family after all
+                    charles changeSprite explain
+                    comet changeSprite surprised
+                    halley changeSprite impressed
+frame 8
+    charles speak The rarity of these herbs is due to their tendency to thrive in the most trecherous of locations
+        charles changeSprite default
+frame 8
+    comet changeSprite surprised_speak
+    comet preSpeak
+        comet speak text=Oh
+            comet wait t=200
+                comet cont text=, so you know about herbs?
+frame 9
+    sophie changeSprite smileexclaim_speak
+    sophie setFontSize 2vw
+    sophie changeBold true
+    sophie preSpeak
+        sophie speak text=Yesss!
+            sophie wait t=200
+                sophie cont text=He is really good with medicine and herbs!!
+                    sophie changeSprite smile
+frame 10
+    charles changeSprite serious_speak
+    comet changeSprite default
+    halley changeSprite default
+    sophie setNormalText
+    sophie setFontSize 1.7vw
+    charles preSpeak
+        charles speak text=It's really nothing much...
+            charles wait t=200
+                charles speak text=Read them from a book somewhere before
+                    charles changeSprite default
+frame 11
+    sophie changeSprite curious_speak
+    sophie preSpeak
+        sophie speak text=Actually
+            sophie wait t=200
+                sophie cont text=, is it possible for us to find these herbs out in the wild ourselves?
+frame 12
+    sophie changeSprite awkward_speak
+    sophie speak Well erm...erm
+        sophie wait 300
+            sophie cont I-I have plenty of experience p-picking herbs in the wild!
+                sophie changeSprite awkward
+frame 12
+    comet changeSprite speak
+    comet preSpeak
+        comet speak text=Yes! Of cour-
+            comet changeSprite surprised
+            halley changeSprite frustrated_speak
+            halley interupt
+                halley speak text=Duhh...!
+                    comet changeSprite angry
+                    halley wait t=300
+                        halley speak text=It's common sense that all herbs originate in the wild...
+                            halley changeSprite frustrated
+                            charles changeSprite upset
+frame 13
+    sophie bringAboveOverlay
+    charles bringAboveOverlay
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie speak text=Then can we help you to find the herbs?
+            sophie wait t=200
+                sophie cont text=We would love to hel-
+                    erithven changeOverlay yanse=black opacity=0.55 t=0
+                        sophie changeSprite surprised
+                        charles changeSprite upset_speak
+                        charles interupt
+                            charles changeItalic true
+                            charles setFontSize 1.2vw
+                            charles flipHorizontally t=200
+                            charles move x=10 t=200
+                                    charles changeSprite serious
+                                charles speak text=Sophie!
+frame 14
+    charles speak text=We cannot afford to help!
+        sophie changeSprite sad
+        charles wait t=300
+            charles cont text=To be honest, we can never be sure when the disease will break free from the Jakris's body
+frame 15
+    charles speak text=That's why we need to stop sticking our nose into everything and leave straight away
+        charles changeSprite upset
+frame 16
+    sophie changeItalic true
+    sophie setFontSize 1.2vw
+    sophie changeSprite sad_speak
+    sophie preSpeak
+            sophie speak text=B-But we promised to help!
+                charles changeSprite upset
+                sophie wait t=200
+                    sophie cont text=We can't just leave Jakris here alone!
+                        sophie changeSprite sad
+frame 17
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak text=We only promised to check on the ingredients at the pharmacy
+            charles wait t=200
+                charles speak text=We didn't promise anything about providing the cure or anything along that line
+frame 18
+    charles changeSprite serious_speak
+    charles speak text=Think about your parents and Novala.
+        charles wait t=200
+            charles cont text=There's no reason why we should take such risks when we've so much more at stake
+                charles changeSprite serious
+frame 19
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak text=B-But what about Erithven?!
+            sophie wait t=200
+                sophie cont text=The entire village is at stake!
+                    charles changeSprite upset
+frame 20
+    sophie changeSprite sad_speak
+    sophie speak text=If we don't help them, I'll definitely regret for the rest of my life!
+        sophie wait t=200
+            sophie speak text=How am I going to face the people of Novala in the future...
+                sophie changeSprite sad
+frame 21
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak text=Bu-
+            charles changeSprite mildtakenaback
+            sophie changeSprite sad_speak
+            sophie interupt
+                sophie speak text=Charles, please... t=800 s=false
+                    sophie changeSprite sad
+frame 22
+    charles changeSprite angry_speak
+    charles preSpeak
+        charles speak No!
+            sophie changeSprite scared
+            charles wait 300
+                charles cont I'm not going to allow you to participate in this
+                    charles wait 300
+                        charles speak And what was that lie about having experience picking herbs all about?
+                            charles changeSprite angry
+frame 23
+    sophie changeSprite relent_speak
+    sophie preSpeak
+        sophie speak text=...... t=1000 s=false
+            sophie wait 300
+                sophie speak Fine...
+                    sophie changeSprite relent
+                    sophie,charles setNormalText
+                    sophie,charles setFontSize 1.7vw
+frame 24
+    erithven changeOverlay yanse=black opacity=0 t=0
+    charles flipHorizontally t=200
+    charles move x=-10 t=200
+        charles changeSprite serious_speak
+        charles preSpeak
+            charles speak I'm sorry but I don't think we'll be needing your help to find the herbs anymore
+                halley changeSprite default
+                comet changeSprite default
+                charles wait 200
+                    charles speak We shall be taking our leave now
+                        charles changeSprite impatient
+frame 25
+    comet changeSprite speak
+    comet preSpeak
+        comet speak No worries!
+            comet wait 200
+                comet cont Don't hesitate to pop by our pharmacy if you need any medication!
+                    comet changeSprite default
+                    sophie changeSprite sad
+frame 26
+    sophie,charles flipHorizontally t=200
+        charles move x=-70 t=850
+        sophie move x=-5 t=1000 s=false
+            sophie wait 1000
+                sophie flipHorizontally t=200
+                    sophie wait 1000
+                        sophie flipHorizontally t=200
+                            sophie move x=-40 t=1000 s=false
+frame 27
+    comet,halley disappear t=1000
+        erithven closeTextBox
+        erithven changeBackground background=default t=1000 s=false
+            yusie changeSprite awkward
+            sophie changeSprite sad
+            charles changeSprite impatient
+            yusie appear
+                sophie,yusie,charles flipHorizontally
+                yusie,charles move t=1000
+                    sophie wait 500
+                        sophie move x=40 t=1200
+frame 28
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak So where's the way that leads to Boriolsis?
+            charles wait 300
+                charles speak We've been going around in circles...
+                    yusie changeSprite angry
+                    charles changeSprite impatient
+frame 29
+    yusie changeSprite angry_speak
+    yusie flipHorizontally t=200
+        yusie preSpeak
+            yusie speak Can you stop being so impatient?
+                yusie wait 200
+                    yusie changeSprite angry
+frame 30
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak Well, we've wasted enough time finding our way around Erithven.
+            yusie changeSprite awkward
+            charles wait 200
+                charles speak It's time we start heading in the right direction
+                    charles changeSprite impatient
+frame 31
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak Just give me a little more time...
+            yusie wait 700
+                yusie speak I'm sure it's just somewhere up ahead...
+                    yusie wait 200
+                        yusie endSpeak
+                        yusie changeSprite serious
+                        yusie flipHorizontally t=200
+                            yusie wait 400
+                                yusie flipHorizontally t=200
+                                charles bringBelowOverlay
+frame 32
+    erithven changeOverlay yanse=black opacity=0.55 t=0
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie changeItalic
+        sophie setFontSize 1.2vw
+        sophie speak Pss...
+            sophie wait 600
+                sophie cont Pss...
+frame 33
+    sophie speak #playName ...
+frame 34
+    sophie speak Let's sneak back to the pharmacy and find out where we can collect those herbs...
+        sophie wait 300
+            sophie speak We can't possibly leave Erithven in such a state!
+frame 35
+    sophie speak And I'm sure you too can't bear to see that family suffer when a cure is so readily available
+frame 36
+    sophie changeSprite serious_speak
+    sophie speak Quickk! Let's move noww!
+        sophie wait 300
+            sophie flipHorizontally
+                sophie move x=-40 t=800
+                    sophie changeSprite serious
+                    sophie setNormalText
+                    sophie setFontSize 1.7vw
+                    erithven changeOverlay yanse=black a=0 t=0
+frame 37
+    charles,yusie disappear 1000
+        erithven closeTextBox
+        erithven changeBackground opacity=1 background=pharma t=1000
+            sophie changeSprite worried
+            halley,comet appear 1000
+frame 38
+    sophie flipHorizontally
+    sophie move x=60 t=1000
+        comet changeSprite surprised_speak
+        halley changeSprite sneer
+        comet preSpeak
+            comet speak You're back?
+                comet wait 200
+                    comet cont Didn't your friend say that you weren't interested in finding the ingredients?
+                        comet changeSprite surprised
+frame 40
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie speak text=Errr... t=1000 s=false
+            sophie wait 200
+                sophie cont text=Well... t=1000 s=false
+                    sophie wait 300
+                        sophie cont I thought it wouldn't hurt to try looking for the herbs myself
+                            sophie changeSprite awkward
+frame 41
+    halley changeSprite sneer_speak
+    halley preSpeak
+        halley speak Well well well
+            halley wait 200
+                halley cont It seems like our beloved Princess Sophie is quite a rebellious kid, eh?
+                    halley changeSprite sneer
+                    comet changeSprite surprised
+                    sophie changeSprite surprised
+frame 42
+    sophie changeSprite relent_speak
+    sophie preSpeak
+        sophie speak text=...... t=1000 s=false
+            sophie wait 300
+                sophie changeSprite relent
+                sophie speak text=I knew you would find out eventually... t=1000 s=false
+                    halley changeSprite surprised
+                    sophie wait 300
+                        sophie speak text=I mean you were the Royal Ranger of Novala after all
+                            sophie changeSprite relent
+frame 43
+    halley changeSprite sneer_speak
+    halley preSpeak
+        halley speak It seems like the filthy royal blood does flow in you strongly, isn't it?
+            halley wait 400
+                sophie changeSprite angry
+                halley speak I was wondering who you resembled and only figured out after you left
+frame 44
+    halley speak Your bespectacled friend who was with you earlier must be your retainer, right?
+        halley changeSprite sneer
+frame 45
+    sophie changeSprite serious_speak
+    comet changeSprite scared
+    sophie preSpeak
+        sophie speak Yes
+            sophie wait 300
+                sophie speak But that's enough questions asked from you, where do I find the herbs?
+                    sophie changeSprite serious
+frame 46
+    halley changeSprite sneer_speak
+    halley preSpeak
+        halley speak Well you must have learnt from my carofle that after the way your parents have treated my life and the lives of my comrades, I would never help you in any way
+            halley wait 300
+                halley speak But there's always an exception, isn't it?
+                    halley changeSprite sneer
+frame 47
+    halley changeSprite explain
+    halley speak You can find the herbs at the Cliffs of Kusuri
+        halley wait 300
+            halley speak It's simply a short walk along the port and after a steep ascent, you should see the cliffs in no time!
+frame 48
+    halley speak Rigortas are white in color while the Meisumptums are red.
+        halley wait 300
+            halley changeSprite sneer_speak
+            halley cont They will be the only herbs of these two colors over there so don't worry about not being able to distinguish them
+                halley changeSprite sneer
+frame 49
+    comet changeSprite scared_speak
+    comet preSpeak
+        comet speak D-Do tread carefully over there!
+            comet wait 300
+                comet cont The terrain there is extremely treacherous!
+                    comet wait 300
+                        comet speak Many have fallen to their deaths over there!
+frame 50
+    comet speak text=A young lady like you really shouldn't be going there... t=1200 s=false
+        comet changeSprite scared
+frame 51
+    halley changeSprite frustrated_speak
+    halley preSpeak
+        halley speak text=Oh come on!
+            halley wait t=200
+                halley cont text=What's so hard about keeping balance on a cliff?
+                    halley changeSprite sneer
+frame 52
+    comet changeSprite angry_speak
+    comet preSpeak
+        comet speak Sorry, just ignore Halley-
+                    comet changeSprite surprised
+                    halley changeSprite sneer_speak
+                    halley interupt
+                        halley speak Wouldn't it be good if she just slips and falls to her death over there?
+                            sophie changeSprite angry
+                            comet changeSprite angry
+frame 53
+    halley speak She can then join her parents whom I'm betting should be dead by now
+        halley changeSprite sneer
+frame 54
+    comet changeSprite angry_speak
+    comet preSpeak
+        comet speak HALLE-
+            comet changeSprite angry
+            halley changeSprite angry_speak
+                halley interupt
+                halley speak Well I hate the Royal Family and I'm not shy about that
+frame 55
+    halley speak People like them go around putting on that facade and pretend to be all nice and good when deep inside them, they're nothing but heartless scumba-
+        halley changeSprite surprised
+        sophie interupt
+            sophie changeSprite angry_speak
+            sophie changeBold true
+            sophie setFontSize 2vw
+            sophie speak THAT'S NOT TRUEE!
+                sophie changeSprite angry
+                comet changeSprite awkward
+frame 54
+    halley changeSprite sneer_speak
+    halley preSpeak
+        halley speak Well, shout as much as you wish
+            halley wait 200
+                sophie setNormalText
+                sophie setFontSize 1.7vw
+                halley speak But nothing's going to change what I feel about fake people like you!
+                    halley changeSprite angry
+frame 55
+    sophie changeSprite angry_speak
+    sophie preSpeak
+        sophie speak I-I'm going to prove you wrongg!!
+            sophie wait 200
+                sophie speak I'm going to bring the herbs back and I'm going to save that child!
+                    sophie flipHorizontally
+                    sophie changeSprite angry
+                    halley changeSprite sneer_speak
+                    halley preSpeak
+                        halley speak Well let's see if the cliffs will deter you from that, tsk!
+                        sophie move x=-50 t=800
+                            halley changeSprite sneer
+                            halley,comet disappear 1000
+                                erithven closeTextBox
+                                erithven changeBackground opacity=1 background=default t=1000
+                                sophie flipHorizontally
+frame 56
+    sophie move x=65 t=1000
+        sophie changeSprite
+        sophie preSpeak tearangry_speak
+            sophie speak I'm so angry!
+                sophie wait 300
+                    sophie changeSprite sad
+                    sophie cont I mean how can he say that after all that my parents have done and sacrificed for Novala?
+frame 57
+    sophie speak I mean I do feel sorry for what has happened to him and his comrades...
+        sophie wait 300
+            sophie cont But how could he miss out on the bigger picture...?
+frame 58
+    sophie changeSprite angry_speak
+    sophie speak The worst part of it was how he questioned our intentions when we help others!
+        sophie wait 500
+            erithven displayText msg=...... color=white t=1000 name=none skip=false
+frame 59
+    sophie changeSprite sad_speak
+    sophie speak text=Sighh... t=1000 s=false
+        sophie wait 300
+            sophie cont But have I told you about this before?
+                sophie changeSprite sad
+frame 60
+    sophie changeSprite sad_speak
+    sophie speak Sometimes, I do ask myself why do we help others...
+        sophie wait 300
+            sophie speak I mean I do know that there are plenty of motivations and incentives -some even biological - underlying every assistance which we dispense
+frame 61
+    sophie speak But is there no way to achieve genuinity in helping others?
+frame 62
+    sophie speak Is there no value in helping others beyond those rewards?
+frame 63
+    sophie changeSprite gazeindistance_speak
+    sophie speak text=You know, s=false t=600
+        sophie wait 300
+            sophie cont when I fled away from the castle with my family and Charles, a part of me was a little happy about it
+frame 64
+    sophie speak I know it sounds very wrong but I was genuinely quite happy to be away from the political facade which everyone puts on in the castle
+        sophie wait 300
+            sophie speak A part of me knew that it was finally my chance to experience some authenticity in human interactions
+                sophie wait 300
+                    sophie cont and to most importantly, see for myself if altruism exists
+frame 65
+    sophie changeSprite sad_speak
+    sophie speak As of now, I can't conclude on anything for sure.
+        sophie wait 300
+            sophie cont But I'm determined to do my best to help as many people as possible
+frame 66
+    sophie speak Because that's the only way to bring myself closer to an answer
+frame 67
+    sophie changeSprite smile_speak
+    sophie speak You know what, I really need to thank you for believing in me
+        sophie wait 300
+            sophie speak It gives me confidence that I'm doing something right
+frame 68
+    sophie speak Alright!
+        sophie wait 200
+            sophie cont Shall we start heading to the Cliffs of Kusuri?

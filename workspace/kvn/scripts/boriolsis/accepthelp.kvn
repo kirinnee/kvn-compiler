@@ -1,0 +1,176 @@
+declare yusie,charles,sophie,chief,halley,june,deadBodyCG,deadsophie,slane as character
+declare boriolsis as stage
+
+scene boriolsis_accepthelp boriolsis_accepthelp
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter slane
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis bringCharacter deadBodyCG
+    boriolsis bringCharacter deadsophie
+    yusie,charles,sophie,chief,halley,june,slane setTextColor white
+    slane changeName ???
+    charles preMove x=-13
+    sophie preMove x=27
+    halley preMove x=-82
+    halley setHorizontalFlip true
+    june preMove x=-33
+    chief preMove x=-2
+    chief setHorizontalFlip true
+    boriolsis display t=500 bgO=0
+        boriolsis setAY 0
+        boriolsis setAX 0
+        boriolsis scale x=2 y=1 t=0
+                boriolsis changeBackground bg=forest a=1 t=500 s=false
+frame
+    june changeSprite serious_speak
+    chief,halley,sophie,charles changeSprite serious
+    sophie,charles,chief,june,halley appear 1000
+        june preSpeak
+            june say Alright
+                june wait 300
+                    june say Princess Sophie, I will need one strand of your hair
+                        june changeSprite serious
+frame
+    sophie changeSprite hesitate_speak
+    sophie preSpeak
+        sophie say msg=Err... t=800 s=false
+            sophie wait 300
+                sophie changeSprite serious_speak
+                sophie cont Okay!
+                    sophie wait 300
+                        sophie say No worries!
+                            halley changeSprite impressed
+frame
+    sophie changeSprite scared
+    sophie rotateClockwise angle=10 t=100
+        sophie rotateAntiClockwise angle=20 t=200
+            sophie rotateClockwise angle=10 t=100
+                sophie move x=30 t=300
+                    sophie changeSprite serious_speak
+                    sophie say Here you go!
+                        sophie wait 500
+                            sophie move x=-30 t=300
+                                sophie changeSprite serious
+frame
+    boriolsis changeOverlay yanse=black a=1 t=1000
+    boriolsis displayText color=white fontSize=1.4vw center=false msg=June quickly got to work and applied several biochemicals onto the dead body as she let the hair drop within the plume of smoke that was forming
+    deadBodyCG bringAboveOverlay
+        deadBodyCG appear 1000
+//add sizzling sound and smoke sprite
+frame
+    boriolsis displayText msg=The chemicals reacted vigorously with the body and the air surrounding you started to become very smoky.
+frame
+    boriolsis displayText msg=Very soon, the silhouette of the dead body started to morph before the smoke dispersed, revealing a dead body that resembled Princess Sophie.
+    deadsophie preMove x=20
+    deadsophie setHorizontalFlip true
+frame
+    deadBodyCG disappear 1000
+    deadsophie appear
+    sophie,charles changeSprite curious
+    halley changeSprite curious
+    chief changeSprite proud
+    june changeSprite tiredsmile_speak
+    boriolsis changeOverlay yanse=black a=0 t=1000
+        june preSpeak
+            june say It's done
+frame
+    june changeSprite worried_speak
+    june say I'l now make my way back to Boriolsis with this corpse
+        sophie,halley,charles,chief changeSprite serious
+frame
+    june say Take care of yourselves...
+        june changeSprite serious
+frame
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie say Wait, how are you going to bring my corpse back...?
+frame
+    sophie changeSprite shy_speak
+    sophie say Err...
+        sophie wait 500
+            sophie say I may actually weigh heavier than what you expect
+                sophie changeSprite shy
+frame
+    june changeSprite smile_speak
+    june preSpeak
+        june say Who said that I would be carrying it back myself?
+frame
+    june say Ruskoff's men are pretty strong, aren't they?
+        june changeSprite smile
+        charles changeSprite smile
+        halley changeSprite smile
+frame
+    june,deadsophie disappear 1000
+        sophie changeSprite confused_speak
+        sophie preSpeak
+            sophie say Huh...?
+                sophie wait 300
+                    sophie cont What was she trying to say?
+                        sophie endSpeak
+                        sophie changeSprite confused
+frame
+    chief changeSprite smile
+    boriolsis displayText msg=Other than the sound of the crickets, it was completely silent as everyone chose to walk and enjoy the momentary serenity.
+        boriolsis scaleBackground y=1.4 x=1.4 t=8000 s=false
+            sophie changeBold true
+            sophie setFontSize 2vw
+            sophie trigger t=200 shake=0.5
+                sophie changeSprite smileexclaim_speak
+                charles,chief,halley changeSprite surprised
+                sophie preSpeak
+                    sophie say Got it!
+frame
+    sophie changeSprite smile_speak
+    sophie say I finally got what June meant when she said that she could bring the minion back by herself!
+        sophie setNormalText
+        sophie setFontSize 1.7vw
+        sophie changeSprite smile
+frame
+    halley changeSprite smile
+    chief changeSprite smile
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles say So how do you think she did it?
+            charles changeSprite smile
+frame
+    sophie flipHorizontally 200
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie say She probably told the first minion whom she saw to help her carry it
+frame
+    sophie say That way, the minion will tell the rest of them to stop chasing after us
+frame
+    sophie changeSprite proud_speak
+    sophie say Isn't that very smart of me?
+        sophie changeSprite proud
+//LATEST NEWS: The dead body of Princess Sophie has been delivered by the local authorities in Boriolsis to King Mistrassimo.King Mistrassimo denounces the actions of the abductors and has ordered his men to hasten their search
+//for the King and the Queen.He wishes
+//for the people to demonstrate solidarity and pray
+//for the well - being of the King and the Queen.
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles say That's great!
+        sophie changeSprite overjoyed
+frame
+    charles say It seems like June has managed to cheat Ruskoff and his minions
+        charles wait 300
+            charles say This will definitely save us a lot of trouble in the future
+                charles changeSprite smile
+frame
+    slane preSpeak
+        slane say Oh is it?
+            boriolsis setAX 20
+            boriolsis setAY 30
+            slane wait 50
+                boriolsis scaleBackground x=1.8 y=1.8 t=1000 s=false
+                slane appear 1000
+                halley,sophie,charles,chief move x=0 y=80 t=800 s=false
+frame
+    slane say I've been waiting for you, Princess Sophie

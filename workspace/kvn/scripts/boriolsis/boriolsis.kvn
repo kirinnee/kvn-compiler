@@ -1,0 +1,419 @@
+declare yusie,charles,sophie,chief,halley as character
+declare boriolsis as stage
+
+let reply be I knew it! as string
+let exp be overjoyed as string
+
+
+
+create option youRight msg=Of course! I will never hurt you!
+create option maybeRight msg=Yeah, probably.
+    mod reply = 'Why are you so uncertain...'
+    mod exp = 'sad'
+
+scene boriolsisWelcome boriolsis_welcome
+
+frame
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter halley
+
+    yusie,charles,sophie,chief,halley setTextColor white
+
+    boriolsis display t=0 bgO=0
+        yusie setXOffSet 8
+        sophie setXOffSet -7
+        halley setXOffSet -24
+        charles setXOffSet -41
+        charles,yusie,halley,sophie animate
+        yusie,halley flipHorizontally
+        boriolsis setAY 0
+        boriolsis setAX 0
+        charles/halley/sophie/yusie bringToFront
+        boriolsis scale x=2 y=1 t=0
+            boriolsis changeBackground bg=forest a=1 t=1000 s=false
+                yusie changeSprite awkward_speak
+                charles changeSprite impatient
+                sophie changeSprite worried
+                halley changeSprite frustrated
+                yusie,sophie,charles,halley appear t=500 s=false
+
+frame
+    yusie setDefSkip false
+    yusie move left=25 t=800
+        yusie flipHorizontally t=200
+            yusie wait 500
+                yusie flipHorizontally t=200
+                    yusie wait 1000
+                        yusie flipHorizontally t=200
+                            yusie wait 500
+                                yusie preSpeak
+                                    yusie speak Hmm...
+                                        yusie wait 500
+                                            yusie cont I'm pretty sure it's' here...
+                                                yusie wait 500
+                                                    yusie changeSprite awkward
+
+frame
+    yusie setDefSkip
+    halley changeSprite frustrated_speak
+    halley preSpeak
+        halley speak Again?
+            halley wait 500
+                halley cont You are lost again?!
+                    halley wait 500
+                        halley cont How many times does this make it, Miss I-am-good-with-directions?
+                            halley changeSprite frustrated
+frame
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak Hey!
+          yusie wait 500
+            yusie cont What do you mean again?
+                yusie wait 500
+                    yusie cont This is pretty much the first time!
+                        yusie wait 500
+                            yusie speak And it's not my fault!
+                                yusie wait 500
+                                    yusie cont It says right here in the map that this is the place!
+                                        yusie changeSprite angry
+frame
+    halley changeSprite poorservice_speak
+    halley preSpeak
+        halley speak Yeah, yeah.
+            halley wait 500
+                halley cont This is like the fifth time you said "I'm pretty sure it was here..."!
+                    halley wait 500
+                        halley changeSprite angry_speak
+                        halley speak At this rate, we'll never reach Boriolsis!
+                            halley endSpeak
+                            halley changeSprite angry
+frame
+    yusie,halley changeSprite angry_speak
+    halley,yusie setDefSkip false
+    halley say Give me the map!
+        halley move x=45 t=500
+            halley wait 200
+                halley move x=-2 t=300 g=easeOut
+                    yusie wait 50
+                        yusie,halley move x=-5 t=150
+                            yusie say H-
+                                yusie wait 100
+                                    yusie cont Hey!
+                                        yusie wait 500
+                                            yusie,halley move x=5 t=150
+                                                yusie wait 500
+                                                    yusie,halley move x=-5 t=150
+                                                    halley say Give it to me!
+                                                        halley wait 500
+                                                            halley move x=-3 t=1000 g=easeIn
+                                                            yusie wait 50
+                                                                yusie move x=2 t=1000 g=easeIn
+                                                            halley say Let me do it instead, maybe we'll finally reach
+                                                                halley move x=-4 t=50 g=swing
+                                                                yusie move x=-8 t=150 g=stepped
+                                                                halley cont Boriolsis!
+                                                                    halley wait 800
+                                                                        halley changeSprite serious
+                                                                        halley speak msg=Hmm... s=false
+                                                                            halley wait 500
+                                                                                halley flipHorizontally 400
+                                                                                    halley wait 900
+                                                                                        halley flipHorizontally 400
+                                                                                            halley wait 900
+                                                                                                halley flipHorizontally 400
+                                                                                                    halley wait 900
+                                                                                                        halley flipHorizontally 400
+                                                                                                            halley wait 900
+                                                                                                                halley say It should be...
+                                                                                                                halley move x=15 t=800 g=swing
+                                                                                                                    halley wait 150
+                                                                                                                        halley move x=15 t=800 g=swing
+                                                                                                                            halley wait 150
+                                                                                                                                halley move x=15 t=800 g=swing
+                                                                                                                                    halley wait 150
+                                                                                                                                        halley move x=15 t=800 g=swing
+                                                                                                                                            halley wait 150
+                                                                                                                                        yusie flipHorizontally 200
+                                                                                                                                            yusie say Hey!
+                                                                                                                                                yusie wait 500
+                                                                                                                                                    yusie cont Get back here!!
+                                                                                                                                                        yusie move x=40 t=500
+                                                                                                                        yusie move x=25 t=600 g=swing
+                                                                                                                            yusie say Hey!!
+
+                                                                                    yusie speak Hey!
+                                                                                        yusie wait 800
+                                                                                            yusie setFontSize 1.8vw
+                                                                                            yusie cont Hey!
+                                                                                                yusie wait 1500
+                                                                                                    yusie setFontSize 1.9vw
+                                                                                                    yusie cont Hey!
+                                                                                                        yusie wait 1500
+                                                                                                            yusie setFontSize 2.0vw
+                                                                                                            yusie cont Hey!
+
+frame
+    halley,yusie changeSprite angry
+    yusie setFontSize 1.7vw
+    halley,yusie setDefSkip true
+    sophie,charles bringAboveOverlay
+    boriolsis changeOverlay yanse=black a=0.55 t=200
+        charles move x=20 t=300
+        sophie move x=30 t=500
+            charles changeSprite speechless
+            charles preSpeak
+                charles speak There they go again...
+                    charles wait 500
+                        charles say I'm sure we would have reached Boriolsis if they don't argue every other minute.
+                            charles wait 500
+                                charles changeSprite impatient_speak
+                                charles say Frankly speaking, I wish they weren't coming with us.
+                                    charles wait 500
+                                        charles cont They've been more unhelpful than helpful
+                                            charles changeSprite impatient
+            sophie flipHorizontally 100
+frame
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie say But isn't it more lively this way~?
+frame
+    sophie changeSprite smile_speak
+    sophie say I might actually die of boredom if it's always this quiet...
+        sophie changeSprite smile
+        charles changeSprite speechless
+frame
+    chief setXOffSet -60
+    chief flipHorizontally
+    chief appear
+    charles preSpeak
+        charles say Well, if you say so...
+frame
+    charles endSpeak
+    boriolsis changeOverlay 0
+    charles,sophie bringBelowOverlay
+    chief changeSprite angry_speak
+    chief changeName ???
+    chief say Hey!
+        charles wait 500
+            charles flipHorizontally 200
+            sophie changeSprite scared
+            charles changeSprite serious
+            charles move x=10 t=200 g=swing
+            sophie move x=5 t=200 g=swing
+            chief wait 200
+                chief say Stop right there!
+                    chief changeSprite angry
+frame
+    chief move x=25 t=500
+    charles move x=10 t=300 g=swing
+    sophie wait 400
+        sophie move x=-20 t=500
+frame
+    chief changeSprite uncertain_speak
+    chief preSpeak
+        chief say Hmm...
+            chief wait 400
+                chief say Aren't you Princess Sophie?!
+                    sophie wait 500
+                        sophie changeSprite scared_speak
+                        sophie preSpeak
+                            sophie setTextSize 1.4vw
+                            sophie speak text=Errr... t=1000 s=false
+                                sophie cont N
+                                    sophie wait 200
+                                        sophie cont msg=-No... t=500 append=false
+                                            sophie changeSprite scared
+        yusie,halley setHorizontalFlip false
+        halley changeSprite default
+        yusie changeSprite serious
+        yusie,halley animate
+            yusie move x=-45 t=1500 g= swing
+            halley move x=-40 t=1500 g=swing
+frame
+    halley changeSprite frustrated_speak
+    halley preSpeak
+        sophie sendToBack
+        halley say Hey, hey,
+            halley wait 300
+                halley cont what's going on over here?
+                    halley changeSprite frustrated
+frame
+    chief changeSprite uncertain_speak
+    chief preSpeak
+        chief say You look exactly like her..
+            sophie wait 500
+                sophie move x=-1 t=500 g=easeOut
+            chief move x=4 t=1000 g=easeOut
+                chief changeSprite serious_speak
+                chief say You are Princess Sophie!
+                    chief wait 200
+                        chief changeSprite surprised_speak
+                        chief say Isn't that the royal pendant on your waist?!
+frame
+    chief changeSprite angry_speak
+    chief preSpeak
+        chief say Needless to say, you people are the ones who kidnapped her!!
+        chief move x=-10 t=1000
+            chief changeSprite angry
+frame
+    sophie changeSprite worried_speak
+    sophie move x=5
+        sophie preSpeak
+            sophie speak No!
+                sophie wait 200
+                    sophie say There're not!
+                        sophie changeSprite worried
+frame
+    chief changeSprite angry_speak
+    chief preSpeak
+        chief say It's alright princess!
+            chief wait 200
+                chief cont I don't know what they're threatening you with, but you can come over here!
+frame
+    chief say I swear on my life that I'll protect you from these thugs!
+        chief changeSprite angry
+        yusie,halley changeSprite angry
+frame
+    sophie changeSprite scared_speak
+    charles changeSprite curious
+    sophie preSpeak
+        sophie say No...
+            sophie wait 300
+                sophie cont Wait...
+                    sophie wait 200
+                        sophie cont It's a misunderstanding!
+                            sophie changeSprite scared
+frame
+    charles move x=-10 t=1000
+        charles changeSprite curious_speak
+        charles speak Hmm.... Hold on...
+frame
+    charles preSpeak
+        charles say Are you by any chance...
+            charles wait 300
+                charles cont Helmuth?
+                    charles changeSprite curious
+frame
+    chief changeName Helmuth
+    chief changeSprite surprised_speak
+    chief preSpeak
+        chief say Huh!
+            chief wait 200
+                chief changeSprite uncertain_speak
+                chief say msg=Wait a minute... t=1500 s=false
+                chief move x=5 t=1000
+frame
+    chief changeSprite surprised_speak
+    chief speak Charles...?!
+        chief wait 500
+            chief changeSprite curious_speak
+            chief cont Are you Charles?
+                chief wait 500
+                    chief cont Our village's child prodigy who made it to the Royal Academy?
+                        chief changeSprite curious
+frame
+    charles,yusie,halley,sophie changeSprite smile
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak Yes, I am Charles indeed.
+            chief changeSprite smile
+            charles wait 200
+                charles cont How many years has it been, Helmuth?
+                    charles changeSprite smile
+frame
+    chief changeSprite uncertain_speak
+    chief preSpeak
+        chief say What are you doing with the Princess?
+            chief wait 200
+                chief changeSprite angry_speak
+                chief cont Have you turned against the Royal Family?
+frame
+    sophie changeSprite helpless
+    halley changeSprite default
+    yusie changeSprite serious
+    charles changeSprite explain
+    charles preSpeak
+        charles say It's a long story.
+            charles wait 300
+                charles cont Mistrassimo staged a coup and sent the Royal Family on the run.
+frame
+    charles say In order to catch them while putting himself in a good light, Mistrasimmo sent out false news that the Royal family has been kidnapped.
+        charles changeSprite serious
+frame
+    chief changeSprite uncertain_speak
+    chief preSpeak
+        chief say Mistrassimmo?
+            chief wait 200
+                chief cont He did that?
+                    chief changeSprite uncertain
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say What Charles said is the truth!
+frame
+    sophie say Charles has been escorting us along with our new friends over here!
+frame
+    sophie changeSprite smile_speak
+    sophie say They've been really helpful,
+        sophie wait 200
+            sophie cont and they'll never harm me!
+                sophie wait 200
+                    sophie moveAnchorY 10
+                        sophie setXOffSet 0
+                        sophie preScale x=1.15 y=1.15
+                        sophie animate t=500
+                            sophie flipHorizontally 200
+                                sophie changeSprite smileexclaim_speak
+                                sophie cont Right, #playName ?
+                                    boriolsis displayOption [youRight,maybeRight]
+frame
+    sophie scale t=500
+        sophie changeSprite #exp
+            sophie say #reply
+frame
+    sophie flipHorizontally 200
+        sophie moveAnchorY
+            sophie move x=5 t=800
+                sophie changeSprite def
+                    sophie say Anyways,
+                        sophie wait 500
+                            sophie cont I assure you that they're my friends!
+                                sophie changeSprite smile
+frame
+    chief changeSprite thinking_speak
+    chief preSpeak
+        chief say Hmm...
+frame
+    chief changeSprite uncertain_speak
+    chief say It's hard to believe Mistrasimmo has turned against the family,
+        chief wait 200
+            chief cont but if both Charles and you are saying so, there isn't much reason to doubt it...
+frame
+    chief changeSprite scowl
+    chief say I always thought Mistrassimo was acting strange, but
+        chief wait 300
+            chief cont msg=staging a coup?
+                chief wait 300
+                    chief cont That's really unexpected...
+frame
+    chief changeSprite warning
+    chief say That aside,
+        chief wait 500
+            chief cont it's really dangerous in this forest right now.
+
+frame
+    yusie,halley,charles changeSprite surprised
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie say Dangerous?
+            sophie changeSprite surprised
+frame
+    chief changeSprite serious_speak
+    chief preSpeak
+        chief say Let's hurry to my house first.
+            chief wait 500
+                chief cont I will explain later.
+                    chief changeSprite serious

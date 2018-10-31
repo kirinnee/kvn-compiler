@@ -1,0 +1,337 @@
+declare sCharles,sSophie,mistra,sophieStabbedCG as character
+declare boriolsis as stage
+
+scene boriolsis_flashback2 boriolsis_flashback2
+
+frame
+    boriolsis bringCharacter sCharles
+    boriolsis bringCharacter sSophie
+    boriolsis bringCharacter mistra
+    boriolsis bringCharacter sophieStabbedCG
+    sCharles,sSophie,mistra setTextColor white
+
+    boriolsis display t=0 bgO=0
+        boriolsis changeBackground bg=garden a=1 t=1000 s=false
+frame
+    sCharles,sSophie changeSprite smile
+    sCharles,sSophie appear 1000
+        sCharles changeSprite smile_speak
+        sCharles preSpeak
+            sCharles speak Princess Sophie, can you meet me at the Sitting Room tomorrow?
+                sCharles changeSprite smile
+                sSophie changeSprite surprised
+frame
+    sSophie changeSprite surprised_speak
+    sSophie preSpeak
+        sSophie say Oh!
+            sSophie wait 300
+                sSophie changeSprite overjoyed
+                sSophie say Isn't it my birthday tomorrow?
+                    sSophie wait 200
+                        sSophie say You've got a birthday surprise for me?!
+                            sSophie changeSprite smile
+frame
+    sCharles changeSprite impatient_speak
+    sCharles preSpeak
+        sCharles say Well, you're not supposed to point it out like this
+            sCharles wait 300
+                sCharles changeSprite smile_speak
+                sCharles say But yes, it's something related to your birthday
+                    sCharles changeSprite smile
+frame
+    sSophie changeSprite overjoyed
+    sSophie preSpeak
+        sSophie say Yay!
+            sSophie wait 200
+                sSophie changeSprite smile_speak
+                sSophie cont What is the surprise about?
+                    sCharles changeSprite surprised
+frame
+    sSophie changeSprite plead_speak
+    sSophie say Can you please tell me?
+        sSophie changeSprite plead
+frame
+    sCharles bringAboveOverlay
+        boriolsis changeOverlay yanse=black a=0.55
+            sCharles changeSprite sinister_speak
+            boriolsis displayText center=false color=white fontSize=1.4vw msg=I planned to stab her with a knife on her birthday
+frame
+    boriolsis displayText msg=I figured that it would be symbolic to kill Princess Sophie on her birthday when she finally turns 9
+frame
+    boriolsis displayText msg=Her parents will finally understand the pain which the commoners face when they lost their loved ones during the Great War
+frame
+    boriolsis displayText msg=They'll finally understand the pain which I felt when I lost my parents because of their stupid instructions
+frame
+    boriolsis displayText msg=I will be the brave one from my generation to end the continuity in the Royal Family lineage and bring instability to their selfish regime built on fear and deception
+        sCharles changeSprite sinister
+frame
+    boriolsis changeOverlay yanse=black a=0
+        sCharles changeSprite upset_speak
+        sCharles preSpeak
+            sCharles say Well, it's a surprise
+                sCharles wait 300
+                    sCharles say Of course I can't let you know
+                        sCharles changeSprite impatient
+frame
+    sSophie changeSprite plead_speak
+    sSophie preSpeak
+        sSophie say Awww....
+            sSophie wait 200
+                sSophie say Pleaseee...
+                    sSophie changeSprite plead
+frame
+    sCharles changeSprite impatient_speak
+    sCharles preSpeak
+        sCharles say No way!
+            sCharles wait 300
+                sCharles say If there's nothing, I'll take my leave to prepare for your surprise!
+                    sCharles changeSprite impatient
+frame
+    sSophie changeSprite pain_speak
+    sSophie preSpeak
+        sSophie changeBold true
+        sSophie setFontSize 1.9vw
+        sSophie say Ahhh!!!
+            sCharles wait 500
+                sCharles changeSprite worried
+                sCharles move x=10 t=200
+            sSophie scale x=1/1.05 y=1/1.05 t=100
+            sSophie move x=0 y=5 t=100
+                sSophie wait 300
+                    sSophie scale x=1.05 y=1.05 t=100
+                    sSophie move x=0 y=-5 t=100
+                    sSophie changeSprite pain
+frame
+    sCharles changeSprite worried_speak
+    sCharles preSpeak
+        sCharles say What's wrong?
+            sCharles wait 300
+                sCharles say Are you okay, Princess Sophie?
+                    sCharles changeSprite worried
+frame
+    boriolsis changeOverlay yanse=black a=0.55
+        sCharles changeSprite sinister_speak
+        boriolsis displayText msg=I was immensely cruel
+frame
+    boriolsis displayText msg=I couldn't afford her to get injured before her big day tomorrow
+frame
+    boriolsis displayText msg=Nothing should happen to her before I stab her
+frame
+    boriolsis displayText msg=I'll be the one to create a power vacuum by eliminating the successor of the Royal Family, creating unrest and instability to the throne of the Royal Family
+        sCharles changeSprite sinister
+frame
+    boriolsis changeOverlay yanse=black a=0
+    sSophie setNormalText
+    sSophie setFontSize 1.7vw
+    sSophie changeSprite tearful_speak
+    sSophie preSpeak
+        sSophie say I'm o-okay...
+            sSophie wait 300
+                sSophie say I just got a splitting headache...
+                    sSophie changeSprite scared
+frame
+    sCharles changeSprite worried_speak
+    sCharles preSpeak
+        sCharles say Do you need me to help you back to your room?
+            sCharles changeSprite worried
+frame
+    sSophie changeSprite tearsmile_speak
+    sSophie preSpeak
+        sSophie say It's okay! I'll see you tomorrow!
+frame
+    sSophie say I just need Alice to bring me back to my room...
+frame
+    sSophie changeSprite pain_speak
+    sSophie flipHorizontally 200
+        sSophie say Aliceeee, can you help me back to my room?
+            sSophie changeSprite pain
+frame
+    sSophie disappear 1000
+frame
+    sCharles changeSprite sinister_speak
+    boriolsis changeOverlay yanse=black a=0.55
+        boriolsis displayText msg=And so I went on with my preparations
+            boriolsis changeOverlay yanse=black a=0
+                sCharles disappear 1000
+                    boriolsis changeBackground opacity=1 background=balcony t=1000
+frame
+    boriolsis changeOverlay yanse=black a=0.55
+        boriolsis displayText msg=I made sure that the Viewing Deck would be empty on that day as I prepared to give Princess Sophie a stab in the chest before dumping her down from the Deck
+frame
+    sCharles move x=-10
+    boriolsis displayText msg=Subsequently, after successfully absolving from all responsibility, I'll continue to propagate anti-establishment ideas to bring the Royal Family down from within the castle
+        sCharles appear 1000
+frame
+    sCharles changeSprite surprised_speak
+    boriolsis changeOverlay yanse=black a=0
+    sSophie flipHorizontally 200
+        sSophie appear 1000
+            sCharles preSpeak
+                sCharles say Princess Sophie, you're here!
+                    sCharles changeSprite surprised
+frame
+    sSophie changeSprite sad_speak
+    sSophie preSpeak
+        sSophie say Charles, d-do you have something to say to me?
+            sSophie changeSprite sad
+frame
+    boriolsis changeOverlay yanse=black a=0.55
+        sCharles changeSprite worried_speak
+        boriolsis displayText msg=At that point of time, I was a little caught off guard by her words but I continued with my plan
+frame
+    boriolsis changeOverlay yanse=black a=0
+        sCharles move x=5 t=600
+            sCharles changeSprite smile_speak
+            sCharles preSpeak
+                sCharles say Happy Birthday, Princess Sophie!
+                    sCharles wait 300
+                        sCharles say Guess what I've got for you!
+                            sCharles changeSprite smile
+frame
+    sSophie changeSprite scared_speak
+    sSophie preSpeak
+        sSophie say C-Charles, why don't you speak your mind now?
+            sSophie changeSprite sad
+frame
+    sCharles changeSprite stunned
+    sCharles preSpeak
+        sCharles say msg=...... t=1000 s=false
+frame
+    boriolsis changeOverlay yanse=black a=0.55
+        boriolsis displayText msg=At this point, it was clear that she was already suspecting something.
+frame
+    boriolsis displayText msg=But how?
+frame
+    boriolsis displayText msg=None of my actions or words should have given away my plans
+frame
+    boriolsis changeOverlay yanse=black a=0
+        sCharles changeSprite impatient_speak
+        sCharles say So you know about it already?
+            sCharles changeSprite impatient
+frame
+    sSophie move x=5 t=600
+        sSophie changeSprite scared_speak
+        sSophie preSpeak
+            sSophie say msg=...... t=1000 s=false
+                sSophie wait 300
+                    sSophie say Yes...
+                        sSophie changeSprite scared
+frame
+    sCharles changeSprite stunned_speak
+    sCharles preSpeak
+        sCharles say How?
+            sCharles wait 300
+                sCharles cont And why are you still here then?
+frame
+    sCharles changeSprite curious_speak
+    sCharles say Aren't you afraid?
+        sCharles wait 300
+            sCharles changeSprite angry_speak
+            sCharles cont Or you've gotten help?
+                sCharles changeSprite angry
+frame
+    sSophie changeSprite sad_speak
+    sSophie preSpeak
+        sSophie say I didn't tell you about this...
+            sSophie wait 300
+                sSophie say But not too long ago, I realized I have started to develop the ability to read carofles
+                    sSophie wait 300
+                        sSophie say But it would result in a serious headache because I haven't really gotten the hang of it
+frame
+    sSophie say I kept it from everyone including Alice because I didn't want it to affect our friendship
+        sSophie wait 300
+            sSophie changeSprite tearful_speak
+            sSophie say But I couldn't resist using it when you told me about the surprise...
+                sSophie changeSprite tearful
+frame
+    sCharles changeSprite angry_speak
+    sCharles preSpeak
+        sCharles say Then why are you still here alone?
+            sCharles changeSprite angry
+frame
+    sSophie changeSprite scared_speak
+    sSophie wait 500
+        sSophie say msg=Well...... t=1000 s=false
+            sSophie wait 300
+                sSophie say I came alone here because I wanted to help you
+frame
+    sSophie say There's no reason why you have to suffer all of these alone
+        sSophie wait 500
+            sSophie move x=-10 t=600
+                sSophie changeSprite sad_speak
+                sSophie say msg=Let me help you! t=1000 s=false
+                    sCharles changeSprite impatient
+frame
+    sSophie say I'm sure we can find a way to improve the way we govern Novala
+frame
+    sSophie say There's no need for us to solve things with hatred
+frame
+    sCharles changeSprite angry_speak
+    sCharles preSpeak
+        sCharles say IT'S TOO LATE!
+        sCharles move x=-5 t=100
+            sSophie changeSprite scared
+frame
+    sCharles say Your help is 8 years late!
+frame
+    sCharles say If your parents didn't withdraw the soldiers back then, my parents wouldn't have died
+        sCharles wait 300
+            sCharles say If your parents didn't care so much about their sovereign power, tons of the misfortune we have witnessed in Novala could have been avoided
+                sSophie changeSprite sad
+frame
+    sCharles changeSprite berserk_speak
+    sCharles say It's time that they feel the pain of losing a lost one
+        sCharles wait 300
+            sCharles say Time for them to step down!
+                sCharles changeSprite angry
+frame
+    sSophie changeSprite tearful_speak
+    sSophie preSpeak
+        sSophie say No Charles!
+            sSophie wait 300
+                sSophie say Liste-
+                    sCharles changeSprite angry_speak
+                    sSophie changeSprite tearful
+                    sCharles interupt
+                        sCharles say You know nothing about the pain myself and the rest of Novala have been suffering!
+                            sCharles changeSprite angry
+frame
+    sSophie changeSprite sad_speak
+    sSophie preSpeak
+        sSophie say Do you really hate me?
+            sSophie changeSprite sad
+frame
+    sCharles bringBelowOverlay
+    sCharles changeSprite berserk_speak
+    sCharles preSpeak
+        sCharles say YESS!!!
+            sCharles move x=25 t=200
+                sophieStabbedCG bringAboveOverlay
+                    sophieStabbedCG appear t=1000
+                    boriolsis changeOverlay yanse=black a=1 t=700
+frame
+    sSophie say Sorry...
+frame
+    sCharles say Why did you still come...
+frame
+    sSophie say Because...
+        sSophie wait 300
+            sSophie cont I...I
+                sSophie wait 300
+                    sSophie cont know that you've been through a lot
+frame
+    sSophie say B-But I...I
+        sSophie wait 300
+            sSophie cont still want to show you that the world is still...
+                sSophie wait 500
+                    sSophie cont beautiful...
+frame
+    sSophie say Sorryy......
+frame
+//CG with tears dripping overlay
+    sCharles say msg=...... t=1000 s=false
+        sCharles say I-I...I
+            sCharles wait 500
+                sCharles say W-What have I done?
+frame
+    sCharles say N-Noo......

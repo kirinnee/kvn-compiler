@@ -1,0 +1,160 @@
+declare sophie,yusie,charles as character
+declare erithven as stage
+
+scene erithvenWelcome erithven_welcome
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter yusie
+    sophie setTextColor white
+    charles setTextColor white
+    yusie setTextColor white
+    erithven display backgroundAlpha=1 t=1000
+frame 1
+    sophie preMove x=-50
+    charles preMove x=-50
+    yusie preMove x=-80
+    yusie changeSprite overjoyed
+    sophie changeSprite overjoyed
+    charles changeSprite speechless
+    yusie flipHorizontally
+
+    sophie appear
+    yusie appear
+    charles appear
+
+        sophie move t=850
+        charles move t= 650
+        yusie move x= 80 t= 750
+
+frame 2
+    yusie move x=20 t= 800
+        yusie flipHorizontally
+            yusie preSpeak
+                yusie speak text=Wow!
+                    yusie wait 200
+                        yusie contSpeak So this is Erithven!
+                        charles changeSprite speechless
+frame 3
+    yusie speak text= Look at the huge boats, the fluffy white clouds
+        yusie cont t=1000 text=and the BOOOOUNNNDDDLEESSSS OCEAN!
+frame 4
+    charles changeSprite disgusted_speak
+    charles preSpeak
+        charles setFontSize 1.2vw
+        charles speak text = Ughh somehow I have the feeling that she's just finding an excuse to visit Erith-
+            charles setFontSize 1.7vw
+            charles changeSprite disgusted
+frame 5
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak text= Hey! I'm on official duty right now!
+            yusie changeSprite awkward_speak
+            sophie changeSprite worried
+frame 6
+    yusie changeSprite awkward
+    yusie speak text = W-Who says I'm on a holiday!!
+
+frame 7
+    yusie speak text = I-I'm just admiring the secnery while at work!
+        yusie changeSprite awkward
+
+frame 8
+    charles changeSprite speechless
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie speak text = But oh myy, the this place is really beautif-
+frame 9
+    sophie changeSprite surprised
+    yusie changeSprite overjoyed
+    yusie preSpeak
+        yusie speak text = I KNOW, RIGHT?
+frame 10
+    sophie changeSprite smile
+    yusie speak text = At this rate, I think I am really going to fall in love with this place!
+        yusie changeSprite smile
+frame 11
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak It would be so great to stay here and experience the fishermen lifestyle
+frame 12
+    sophie changeSprite surprised_speak
+    sophie speak Huh?
+        sophie wait 300
+            sophie changeSprite curious_speak
+            charles changeSprite curious
+            yusie changeSprite surprised
+            sophie cont What are those glowing colored rings in the sea?
+frame 13
+    sophie changeSprite smileexclaim_speak
+    sophie speak They look really pretty!
+        yusie changeSprite curious
+        sophie changeSprite smile
+        charles wait 300
+            charles changeSprite explain
+            charles preSpeak
+                charles speak Those rings are called Septras.
+                    sophie changeSprite curious
+frame 14
+    charles changeSprite explain
+    charles speak Septras are rings which the fishermen build from manacytes to demarcate their fishing zone.
+        charles wait 300
+            charles speak These rings will not only help to prevent conflict of interest between fishermen but also facilitate the entire fishing process.
+frame 12
+    sophie changeSprite smileexclaim_speak
+    yusie changeSprite smile
+    sophie preSpeak
+        sophie speak These rings and the sea look really good together!
+            sophie wait 300
+                sophie speak text=Imagine waking up every morning to the sun rising up from the ocean... t=1200 s=false
+                    sophie wait 500
+                        sophie changeSprite smile
+                        sophie speak text=Ahhh~~~ t=1000 s=false
+frame 13
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak text = Alright, alrigh-
+            yusie changeSprite angry_speak
+            charles changeSprite mildtakenaback
+            yusie interupt
+                yusie speak Hey Charles!
+                    yusie wait 300
+                        yusie cont Stop delaying our movement!
+                            yusie changeSprite angry
+                            sophie changeSprite playful
+frame 14
+    charles changeSprite speechless
+    charles preSpeak
+        charles speak text =...... t=1000 s=false
+            charles endSpeak
+frame 15
+    erithven closeTextBox
+    sophie flipHorizontally
+    charles flipHorizontally
+    sophie move x=-50 t=850
+    charles move x=-80 t=650
+    yusie move x = -20 t=2000
+        yusie changeSprite overjoyed
+        yusie flipHorizontally
+        yusie move x = 10 t=1000
+        charles flipHorizontally
+frame 16
+    yusie setFontSize 1.2vw
+    yusie preSpeak
+        yusie speak text = But before that, just one more look at the vast ocea-
+        charles move x= 90 t=1500 g= swing
+            charles changeSprite angry_speak
+            charles preSpeak
+                charles speak text = Come on! Hurry!
+                    charles changeSprite angry
+                    yusie changeSprite surprised
+frame 17
+    yusie changeSprite crysmile_speak
+    yusie preSpeak
+        charles flipHorizontally
+        charles move x = -80 t=2000 g= linear
+        yusie move x= -90 t=2000 g= stepped
+        yusie setFontSize 2vw
+        yusie speak text = Noooooooooo~
+            yusie changeSprite crysmile

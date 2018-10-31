@@ -1,0 +1,445 @@
+declare sophie,halley,charles,comet,yusie,mother,sickchild,childGratitudeCG as character
+declare erithven as stage
+
+scene erithvenElixir erithven_elixir
+
+frame 0
+    erithven bringCharacter sophie
+    erithven bringCharacter charles
+    erithven bringCharacter halley
+    erithven bringCharacter comet
+    erithven bringCharacter yusie
+    erithven bringCharacter mother
+    erithven bringCharacter sickchild
+    erithven bringCharacter childGratitudeCG
+    halley,yusie setTextColor white
+    comet setTextColor white
+    sophie setTextColor white
+    charles setTextColor white
+    erithven display backgroundAlpha=0 t=0
+        erithven changeBackground background=pharma o=1 t=1000
+            sophie preMove x=-50
+            charles preMove x=-70
+            halley preMove x=-120
+            yusie preMove x=-120
+            yusie,halley flipHorizontally
+                comet appear t=1000
+                charles changeSprite upset
+                sophie changeSprite apologetic
+                halley changeSprite default
+                yusie changeSprite serious
+                charles,halley,yusie,sophie appear
+                sophie bringToFront
+frame 1
+    sophie move x=57 t=850
+    charles move x=75 t=850
+    yusie move x=48 t=850
+    halley move t=3000 g= swing
+        halley flipHorizontally 200
+            comet changeSprite speak
+            comet preSpeak
+                comet speak text=Welcome back!
+frame 2
+    comet changeSprite smile_speak
+    comet speak So were you all impressed by Halley's abilities?
+        comet wait 300
+            comet speak I mean after all, he used to be a ranger
+                yusie changeSprite angry
+frame 3
+    comet speak The cliffs shouldn't have been an issue for him
+        comet changeSprite smile
+frame 3
+    halley changeSprite explain
+    halley preSpeak
+        halley speak Well, I didn-
+            halley changeSprite surprised
+            yusie changeSprite angry_speak
+            sophie changeSprite surprised
+            charles changeSprite mildtakenaback
+            comet changeSprite surprised
+            yusie interupt
+                yusie speak Halley didn't do anything at all!
+                    halley changeSprite angry
+frame 4
+    yusie speak All he did was stand around and look at Princess Sophie while she collected all the herbs hersel-
+        sophie changeSprite awkward
+        charles changeSprite impatient
+        yusie changeSprite surprised
+        halley changeSprite angry_speak
+        halley interupt
+            halley speak I don't get what's wrong with you!
+frame 5
+    halley speak You just like to pick a fight, don't you?
+frame 6
+    halley speak You better keep your mouth shut, alright?
+        halley wait 300
+            halley speak If not I'm going to make sure I throw you down the cliff!
+                yusie changeSprite angryawkward
+                halley changeSprite angry
+frame 4
+    comet changeSprite awkward_speak
+    comet preSpeak
+        comet speak msg=...... t=1000 s=false
+            comet wait 300
+frame 5
+    comet changeSprite speak
+    comet speak Anyways,
+        comet wait 300
+            comet cont while all of you were gone, the sage had come by and dropped the incomplete elixir over here
+                sophie,yusie changeSprite overjoyed
+                charles changeSprite mildtakenaback
+                halley changeSprite smile
+frame 6
+    comet speak I have already been briefed by him on how to add the remaining ingredients to produce the elixir
+        comet changeSprite default
+        charles changeSprite smile
+        yusie changeSprite smile
+frame 7
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak That's great!
+            sophie wait 200
+                sophie cont Let me pass you the ingredients!
+                    sophie changeSprite smile
+                    sophie move x=50 t=850
+                        sophie wait 300
+                            sophie move x=-50 t=850
+frame 8
+    comet changeSprite speak
+    comet preSpeak
+        comet speak Alright!
+            comet wait 300
+                comet cont Give me a moment while I head to the back to prepare the elixir!
+                    comet disappear t=1000
+frame 9
+    comet changeSprite awkward_speak
+    comet setFontSize 1.4vw
+    comet speak Halley, can you come back here as well?
+        comet wait 300
+            comet speak I need your help
+                comet changeSprite awkward
+frame 10
+    halley changeSprite frustrated_speak
+    halley preSpeak
+        halley speak Alright...
+            halley changeSprite frustrated
+            halley disappear 1000
+frame 11
+    yusie,charles,sophie changeItalic true
+    yusie,charles,sophie setFontSize 1.2vw
+    yusie,charles,sophie bringAboveOverlay
+    erithven changeOverlay yanse=black a=0.55 t=0
+        sophie changeSprite apologetic_speak
+        sophie preSpeak
+            sophie speak text=Charles... t=1000 s=false
+                sophie wait 800
+                    sophie speak text=I'm sorry... t=1000 s=false
+                    charles changeSprite upset
+                    yusie changeSprite worried
+frame 12
+    sophie speak Can you forgive me...?
+        sophie wait 300
+            sophie speak I know what I did was wrong...
+                sophie changeSprite apologetic
+frame 13
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak text=...... t=1000 s=false
+            charles wait 300
+                charles speak Did you know how worried all of us were?
+frame 14
+    charles speak text=...... t=1000 s=false
+        charles wait 300
+            charles changeSprite serious_speak
+            charles speak Make sure you listen to what I say in the future
+                charles wait 400
+                    charles speak I really hope that you've learnt something
+                        charles changeSprite serious
+                        sophie changeSprite worried
+frame 15
+    yusie changeSprite explain
+    yusie preSpeak
+        yusie speak Well, it's not only your fault
+            yusie wait 300
+                yusie changeSprite angry_speak
+                yusie speak I mean after all, Halley kept egging you on and directed you to the cliffs anyways
+frame 16
+    yusie speak He's not really any much better in my opinion!
+        yusie changeSprite angry
+frame 17
+    charles changeSprite default
+    sophie changeSprite gazeindistance_speak
+    sophie preSpeak
+        sophie speak He's a...
+            sophie wait 300
+                sophie cont confusing character...
+                    sophie changeSprite gazeindistance
+frame 9
+    sophie endSpeak
+    comet wait 800
+        yusie,charles,sophie setNormalText
+        yusie,charles,sophie setFontSize 1.7vw
+        yusie,sophie,charles bringBelowOverlay
+        erithven changeOverlay yanse=black a=0 t=0
+            halley changeSprite frustrated
+            comet changeSprite default
+            halley,comet appear t=1000
+                comet changeSprite speak
+                comet preSpeak
+                    comet speak Alright!
+                        comet wait 200
+                            comet cont The elixir is ready for collection
+                                sophie changeSprite overjoyed
+                                yusie changeSprite smile
+frame 10
+    sophie preSpeak
+        sophie speak Thank you so much!
+            sophie wait 200
+                sophie move x=50 t=850
+                    sophie wait 300
+                        sophie move x=-50 t=850
+                            sophie changeSprite smile
+frame 11
+    yusie changeSprite overjoyed
+    yusie preSpeak
+        yusie speak Let's go!
+            yusie wait 300
+                yusie endSpeak
+                yusie changeSprite smile
+                yusie,sophie,charles flipHorizontally 200
+                    yusie,sophie,charles move x=-70 t=800
+                        halley,comet disappear 1000
+                            erithven closeTextBox
+                            erithven changeBackground bg=house o=0
+                                erithven setAX 0
+                                erithven scale x=1.5
+                                    erithven setOpacity 1
+                                    erithven animate t=1000
+frame 12
+    sophie,yusie,charles changeSprite smile
+    yusie,sophie,charles flipHorizontally
+    mother changeSprite default
+    mother appear 1000
+        yusie,sophie,charles move x=70 t=800
+            mother changeSprite surprised_speak
+            mother preSpeak
+                mother speak You're back?!
+                    mother wait 200
+                        mother cont How did it go?
+frame 13
+    mother changeSprite plead_speak
+    mother speak Did you all manage to get the elixir?
+frame 14
+    mother speak P-Please tell me that you did!
+        mother changeSprite plead
+frame 14
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak Yes! We did!
+frame 15
+    sophie speak We managed to get the elixir from the pharmacy!
+        sophie changeSprite smile
+frame 15
+    mother changeSprite crysmile_speak
+    mother preSpeak
+        mother speak Oh my!
+            mother wait 300
+                mother speak I can't thank all of you enough!
+frame 16
+    mother speak I mean this feels so surreal...
+frame 16
+    mother speak I must invite you to feed Jakris with the elixir
+        mother wait 300
+            mother speak He must know the people who helped save his life
+                mother changeSprite crysmile
+                sickchild changeSprite sleep
+                sickchild appear
+frame 17
+    erithven pan left=-50 t=1000 g=swing
+    sophie move x=-40 t=1000 g=swing
+    yusie move x=-80 t=1000 g=swing
+    charles move x=-80 t=1000 g=swing
+    mother move x=-40 t=1000 g=swing
+    sickchild move x=-40 t=1000 g=swing
+        sickchild changeSprite cough_speak
+        sickchild scale x=1.05 y=1.05 t=200 s=false
+            sickchild changeSprite cough
+            sickchild scale t=200 s=false
+                sickchild changeSprite cough_speak
+                sickchild scale x=1.05 y=1.05 t=200 s=false
+                    sickchild changeSprite sleep
+                    sickchild scale t=200 s=false
+frame 18
+    mother move x=10 t=800
+        mother changeSprite caring_speak
+        mother preSpeak
+            mother speak Jakris...
+                mother wait 300
+                    mother cont Wake up...
+                        mother changeSprite caring
+frame 19
+    sickchild changeSprite sleep
+    sickchild preSpeak
+        sickchild speak Hmm...
+            sickchild changeSprite struggle
+frame 20
+    mother changeSprite caring_speak
+    mother preSpeak
+        mother speak Our friend here is going to feed you some medicine
+            mother wait 300
+                mother speak Can you promise Mama that you'll finish all of it?
+frame 21
+    mother changeSprite smile_speak
+    mother speak I promise you that after you finish it, you'll no longer be sick!
+        mother changeSprite caring
+frame 22
+    sickchild changeSprite surprised_speak
+    sickchild preSpeak
+        sickchild speak Is it really true?
+            sickchild changeSprite surprised
+frame 23
+    mother changeSprite caring_speak
+    mother preSpeak
+        mother speak Of course, my baby...
+            mother changeSprite caring
+frame 24
+    erithven closeTextBox
+    mother move x=-80 t=1000
+    erithven setAX 50
+    erithven setAY 20
+    erithven scale x=1.5 y=1.5 t=1000
+    sickchild scale y=1.5 x=1.5 t=1000
+//option to feed elixir to sick child
+frame 25
+    sickchild speak text=Cough! t=200 s=false
+        sickchild changeSprite cough_speak
+        sophie changeSprite worried
+        sickchild scale x=1.05 y=1.05 t=200 s=false
+            sickchild changeSprite cough
+            sickchild scale x=1/1.05 y=1/1.05 t=200 s=false
+                mother changeSprite worried_speak
+                mother preSpeak
+                    mother speak Jakris!
+                        mother wait 300
+                            mother speak Are you okay?!
+                                sophie changeSprite scared
+                sickchild changeSprite cough_speak
+                sickchild scale x=1.05 y=1.05 t=200 s=false
+                    sickchild changeSprite struggle
+                    sickchild scale x=1/1.05 y=1/1.05 t=200 s=false
+        sickchild wait 200
+            sickchild cont text=Cough! t=200 s=false
+                sickchild wait 200
+                    sickchild cont text=Cough! t=200 s=false
+                        sickchild wait 400
+                            erithven setAX 0
+                            erithven setAY 20
+                            mother move x=80 t=1000
+                            sophie move x=40 t=1000
+                            erithven scale x=1/1.5 y=1/1.5 t=1000
+                            sickchild scale y=1/1.5 x=1/1.5 t=1000
+                                mother changeSprite cry_speak
+                                mother preSpeak
+                                    mother speak Jakris!
+                                        mother wait 300
+                                            mother speak Are you okay?!
+                                                mother changeSprite cry
+frame 26
+    sickchild wait 800
+    sickchild changeSprite surprised_speak
+    sickchild preSpeak
+        sickchild speak Hey!
+            sickchild wait 300
+                sickchild cont I don't feel any pain in my chest anymore!
+                    mother changeSprite surprised
+                    sophie changeSprite surprised
+frame 27
+    sickchild changeSprite overjoyed
+    sickchild speak Mama! Mama!
+        sickchild wait 300
+            sickchild speak I think I've recovered!
+            mother changeSprite crysmile
+            sophie changeSprite overjoyed
+frame 28
+    mother changeSprite crysmile_speak
+    mother preSpeak
+        mother speak Oh thank you!
+            mother wait 300
+                mother speak Thank you to all of you and the sage!
+frame 29
+    mother speak I'd never be able to express how indebted I'm to you
+frame 30
+    mother speak I can't believe that Jakris is finally cured of his disease!
+        mother changeSprite smile_speak
+        mother wait 300
+            mother speak I better tell my husband to bring these carved coconuts with him when he goes out to fish
+frame 31
+    mother changeSprite overjoyed
+    mother speak We have to thank the Gods above for their kindness
+        mother changeSprite smile
+frame 32
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie speak I'm so glad that the medicine is working!
+frame 33
+    sophie changeSprite smile_speak
+    sophie speak I was so worried for Jakris!
+        sophie wait 300
+            sophie speak Well, if there's nothing else, we should take our leave soon
+                sophie changeSprite smile
+frame 34
+    sickchild changeSprite smile_speak
+    sickchild preSpeak
+        sickchild speak Wait!
+            sophie changeSprite surprised
+            sickchild wait 300
+                sickchild speak I've got something for you!
+                    sickchild changeSprite smile
+frame 35
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie speak Oh!
+            sophie wait 300
+                sophie cont What is it?
+                    sophie changeSprite smile
+                    sophie move x=35 t=800
+                    mother move x=-35 t=800
+frame 36
+    erithven closeTextBox
+    childGratitudeCG bringAboveOverlay
+    childGratitudeCG appear t=1000
+    erithven changeOverlay yanse=black a=1 t=700
+frame 37
+    sickchild speak Thank you so much for helping me!
+        sickchild wait 300
+            sickchild speak I hope you will like this book!
+frame 38
+    sickchild speak It's my favourite book, you know?
+frame 39
+    sophie speak That's very sweet of you!
+        sophie wait 300
+            sophie speak I like it a lot!
+frame 40
+    sophie speak I'll definitely take good care of it!
+frame 41
+    childGratitudeCG disappear t=700
+    erithven changeOverlay yanse=black a=0 t=1000
+    mother changeSprite smile_speak
+    sophie changeSprite smile
+    mother preSpeak
+        mother speak This book is about the Gods which Erithven prays to
+        sophie flipHorizontally
+frame 42
+    mother speak Jakris reads this all the time
+        mother wait 300
+            mother speak He hopes that the Gods will be able to hear him and cure him of the illness.
+frame 43
+    mother speak I guess it did work but perhaps in a different way
+frame 44
+    mother speak I hope that it will bring you all luck and fortune for your journey ahead
+        mother changeSprite smile
+frame 45
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak Thank you so much for your well wishes!
+            sophie changeSprite smile

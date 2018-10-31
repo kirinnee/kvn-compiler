@@ -1,0 +1,442 @@
+declare yusie,charles,sophie,chief,halley,june as character
+declare boriolsis as stage
+
+scene boriolsis_postweapon boriolsis_postweapon
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis display backgroundAlpha=0 t=0
+        boriolsis changeBackground background=lab o=1 t=1000
+        halley preMove x=-78
+        sophie preMove x=12
+        halley flipHorizontally
+        chief preMove x=-18
+        charles preMove x=70
+        charles flipHorizontally
+        halley,sophie changeSprite smile
+        chief changeSprite smile
+            halley,chief,sophie appear 1000
+frame
+    chief changeSprite smile_speak
+    chief preSpeak
+        chief say Wow
+            chief wait 300
+                chief say So you were the Royal Ranger back then during the Great War?
+                    chief changeSprite smile
+frame
+    halley changeSprite impressed_speak
+    halley preSpeak
+        halley speak That's right
+            halley changeSprite impressed
+            charles,june changeSprite smile
+            charles,june appear
+                june move x=-28 t=1000
+                charles move x=-30 t=1000
+frame
+    june wait 500
+        june changeSprite overjoyed
+        june preSpeak
+            june speak Father, we've managed to uncover the identity of the monster
+                june changeSprite smile
+                chief flipHorizontally
+frame
+    sophie changeSprite surprised
+    chief changeSprite surprised_speak
+    chief preSpeak
+        chief speak That was really fast!
+            chief wait 300
+                chief say I mean I did expect both of you to wrap it up after now that Charles is back to help you
+frame
+    sophie changeSprite smile
+    chief say But to finish in the matter of a few hours,
+        chief wait 400
+            chief changeSprite smile_speak
+            chief cont that was really unexpected
+                chief changeSprite smile
+frame
+    sophie changeSprite smileexclaim_speak
+    halley changeSprite smile
+    sophie preSpeak
+        sophie speak I knew both of you could do it!
+            sophie wait 300
+                sophie changeSprite proud_speak
+                sophie speak Till now, I've never seen Charles stumped by anything!
+                    sophie changeSprite proud
+frame
+    june changeSprite shy_speak
+    june preSpeak
+        june speak It was really all thanks to Charles's brilliance
+            june wait 300
+                june say Compared to him, I'm really nothing...
+                    june changeSprite shy
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak Hey...
+            charles wait 200
+                charles say Don't say that
+frame
+    june changeSprite smile
+    charles changeSprite smile_speak
+    charles speak You did give many important input after all
+        charles wait 600
+            charles changeSprite serious_speak
+            charles say But anyways,
+                june changeSprite serious
+                charles wait 300
+                    charles cont the monster seems to be the one created by our parents more than fifteen years ago
+                    chief changeSprite serious
+frame
+    chief changeSprite angry
+    charles changeSprite worried_speak
+    june changeSprite worried
+    halley changeSprite serious
+    charles say It seems like the Chimera which had gone wrong has finally returned after your implementation of the new hunting weaponry
+        charles changeSprite worried
+frame
+    chief changeSprite angry_speak
+    sophie,halley changeSprite surprised
+    june changeSprite scared
+    chief preSpeak
+        chief speak Whatt?!
+            chief wait 300
+                chief say You're saying that it's the exact monster which killed my wife and your parents?!
+                    chief changeSprite angry
+                    sophie changeSprite scred
+frame
+    june changeSprite sad_speak
+    june preSpeak
+        june speak I'm afraid so...
+            june changeSprite sad
+frame
+    chief changeSprite thinking_speak
+    chief preSpeak
+        chief speak No wonder it's so strong...
+            chief wait 300
+                chief say I can still remember your mother sharing with me all sorts of attributes which she plan to give to the Chimeras
+                    chief changeSprite worried
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say This is bad...
+            sophie wait 200
+                sophie cont Do we then have a plan on how we can take it down?
+                    sophie changeSprite worried
+frame
+    charles changeSprite explain
+    june changeSprite serious
+    chief changeSprite serious
+    charles preSpeak
+        charles speak Don't worry!
+            charles wait 400
+                charles cont We've already devised five spears made from pressurized Sacremental extracts
+                    charles wait 300
+                        charles say After testing on the scales which you've collected a while back, we're quite confident of the lethality of these weapons
+                            charles changeSprite serious
+frame
+    june changeSprite serious_speak
+    june preSpeak
+        june speak It was fortunate that we managed to keep some of Mom's notes
+            june wait 300
+                june say If not, it would have taken us a long time to identify the right compound to utilize to slay the monster
+                sophie,chief,halley changeSprite smile
+frame
+    charles,june changeSprite smile
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie say That's great!
+            sophie wait 300
+                sophie speak Are we now going to head into the forest to find the monster?
+                    sophie changeSprite smile
+frame
+    chief changeSprite warning
+    chief preSpeak
+        chief speak I would suggest otherwise
+            chief wait 300
+                chief speak The sun will be setting soon and it would be unwise to battle a formidable foe in the dark
+                    june changeSprite worried
+frame
+    chief speak We shall head out into the woods the next week after I have rallied enough men from the village
+        chief wait 300
+            sophie,charles,halley changeSprite surprised
+            chief changeSprite serious_speak
+            chief say June, in the meantime, I will need you to craft a few more of your Sacremental spears
+frame
+    june changeSprite serious
+    chief say There shall be no room for failure and we must ensure that our force preparation is done sufficiently
+        chief changeSprite serious
+frame
+    charles changeSprite curious_speak
+    halley changeSprite curious
+    sophie changeSprite worried
+    charles preSpeak
+        charles say Next week...?
+            charles wait 400
+                charles say Is it not possible to hunt down the monster any sooner?
+                    charles wait 300
+frame
+    charles changeSprite explain
+    june changeSprite sad
+    charles say I think it would be best if we could reunite with the King and Queen as soon as possible
+        charles changeSprite curious
+frame
+    chief changeSprite serious_speak
+    chief preSpeak
+        chief say I'm afraid not...
+            chief wait 300
+                chief say The people living in Boriolsis generally lead a very slow-paced lifestyle due to their foraging and hunting habits
+                    chief changeSprite serious
+frame
+    halley changeSprite frustrated
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak But I'm sure they too can't wait to eradicate the monster once and for all,
+            charles wait 300
+                charles cont right?
+                    charles changeSprite upset
+frame
+    chief changeSprite warning
+    chief preSpeak
+        chief speak It doesn't work that way
+frame
+    chief say It usually takes quite a bit of time to rally them and get them ready for any organized activity or movement
+        chief wait 300
+            chief say As much as I hate to admit, this is also one of the reasons why Boriolsis has been unable to make any form of breakthrough in the growth of their economy
+                charles changeSprite thinking
+frame
+    chief changeSprite sad_speak
+    chief say I've tried so hard to implement many things to improve their lives
+        chief wait 300
+            chief say But they've generally been quite resistant or half-hearted in the execution of any of my plans
+                chief changeSprite sad
+frame
+    charles changeSprite speechless
+    charles preSpeak
+        charles say msg=...... t=1000 s=false
+            charles wait 300
+                charles changeSprite sad_speak
+                charles say It's quite regrettable then...
+                    charles changeSprite worried
+frame
+    chief changeSprite serious_speak
+    chief preSpeak
+        chief speak How about this?
+            chief wait 300
+                chief say I'll head off to the huts in the Northern area of Boriolsis to start recruiting some of our villagers tonight
+                    charles,sophie,june changeSprite worried
+frame
+    chief speak Hopefully, this will help us to speed things up a little
+        chief changeSprite worried
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say That would be most ideal
+            charles endSpeak
+            charles changeSprite worried
+frame
+    charles wait 800
+        halley,charles,chief,sophie disappear 1000
+            june move x=-30 t=500
+                june changeSprite sad_speak
+                june preSpeak
+                    june speak Charles seems to be quite upset about being stuck here for a week or possibly more...
+                        june changeSprite sad
+frame
+    june endSpeak
+    june disappear 1000
+        boriolsis closeTextBox
+        boriolsis changeBackground opacity=1 background=room t=2000
+            charles move
+            charles flipHorizontally
+                charles appear 1000
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak #playName , is it me or is the room actually very stuffy?
+//option
+
+frame
+    charles speak For some strange reason, I just find it really hard to sleep despite it being a really long day...
+frame
+    charles changeSprite sad_speak
+    charles speak msg=...... t=1000 s=false
+        charles wait 300
+            charles say Sighhh
+frame
+    charles say It feels so surreal that the monster, which I've been chasing in my head all this time, is finally going to be killed
+        charles wait 300
+            charles say I've never really thought that I would actually have the opportunity to avenge my parents
+frame
+    charles changeSprite gazeindistance_speak
+    charles say In fact, the existence of this monster really made my parents feel a lot more real than before, I guess
+        charles wait 300
+            charles say I probably hid all of my sorrows and all of my painful memories in Boriolsis when I left for the Royal Academy
+frame
+    charles changeSprite upset_speak
+    charles say That's why I must say that I was very reluctant to revisit all of these.
+        charles wait 300
+            charles say The reappearance of the monster is very symbolic in the sense that it truly embodied the flashback of all of the nasty things that happened here
+frame
+    charles say But I must admit that the true monster didn't run into the forest after killing my parents
+        charles wait 300
+            charles say It followed me all the way to the castle into the Royal Academy...
+frame
+    charles changeSprite sad_speak
+    charles say text=Sigh...... t=1000 s=false
+        charles wait 300
+            charles say It pains me to say this but I brought a lot of hatred and vengeful thoughts with me all the way from Boriolsis to the Castle
+frame
+    charles say Back then, I really thought I had left everything behind
+        charles wait 300
+            charles say But I became a vessel of hatred manipulated by others for their twisted causes in the castle
+frame
+    charles changeSprite serious_speak
+    charles say Now that I'm back here, I've truly returned to end everything once and for all
+        charles wait 300
+            charles say To finally slay this monster in my mind
+frame
+    charles say But of course,
+        charles wait 500
+            charles cont Helmuth is right that we have to be patient
+frame
+    charles say We can't afford to sustain any more casualties against the monster
+        charles wait 800
+            charles changeSprite surprised_speak
+            charles say msg=Wait a minute... t=1500 s=false
+frame
+    charles changeSprite thinking_speak
+    charles say Don't you find that June was acting a little strange just now?
+frame
+    charles say She looked as though she was about to disobey...
+        charles wait 300
+            charles changeSprite mildtakenaback_speak
+            charles say Actually now that I think about it, I'm starting to get a little worried for her
+frame
+    charles changeSprite serious_speak
+    charles say Shall we go and check on her together?
+        charles wait 300
+            charles say I don't think it's a really good idea for a guy to look for a female in the middle of the night alone
+frame
+    charles changeSprite worried_speak
+    charles say I really hope that she won't do anything foolish
+        charles changeSprite worried
+frame
+    charles disappear 1000
+        boriolsis closeTextBox
+        boriolsis changeBackground opacity=0 background=house t=0
+            boriolsis changeOverlay yanse=black a=0.7 t=1000
+            charles bringBelowOverlay
+                boriolsis changeBackground opacity=1 background=house t=1000
+                    charles move x=-50
+                        charles appear
+                            charles move t=500
+                                charles changeSprite surprised_speak
+                                charles say It seems like there's still some light coming out from the laboratory
+frame
+    charles say It's so late in the night already...
+        charles wait 300
+            charles changeSprite thinking_speak
+            charles say Unless June is still working on the Sacremental Spears?
+                charles changeSprite worried
+frame
+    charles move x=100 t=1000
+        boriolsis closeTextBox
+        boriolsis changeBackground opacity=0 background=house t=0
+            boriolsis changeOverlay yanse=black a=0 t=1000
+            charles bringBelowOverlay
+                boriolsis changeBackground opacity=1 background=lab t=1000
+                    charles disappear
+                        charles move
+                            charles move x=-50
+                                charles appear
+                                    charles move t=500
+                                        charles changeSprite surprised_speak
+                                        charles speak She's not here?
+frame
+    charles changeSprite thinking_speak
+    charles say Why did she leave the light on though?
+        charles wait 300
+            charles say Isn't Boriolsis already experiencing scarcity in manacytes?
+frame
+    charles changeSprite surprised_speak
+    charles say Huh?
+        charles wait 300
+            charles cont There's a letter on the table
+                charles changeSprite worried
+frame
+    charles move x=20 t=200
+        charles rotateClockwise angle=10 t=100
+        charles move y=15 t=100
+            charles wait 900
+                charles rotateClockwise t=100
+                charles move y=-15 t=100
+                charles changeSprite speechless
+                charles preSpeak
+                    charles changeBold true
+                    charles setFontSize 2vw
+                    charles changeSprite angry_speak
+                    charles speak WHAT?!
+frame
+    charles say Is she crazy?!
+        charles setNormalText
+        charles setFontSize 1.7vw
+        charles wait 300
+            charles changeSprite speechless
+            charles say June left the house to find the monster already!
+frame
+    charles changeSprite angry_speak
+    charles say What was she thinking?!
+        charles wait 300
+            charles flipHorizontally 200
+                charles wait 200
+                    charles flipHorizontally 200
+frame
+    charles changeSprite worried_speak
+    charles say It seems like she was sensible enough to arm herself by taking the Sacremental Spear along with her
+        charles wait 400
+            charles say But a spear's not going to keep her alive
+frame
+    charles changeSprite thinking_speak
+    charles say Should I wake Halley and the rest up to find June...?
+        charles wait 500
+            charles say If we go in as such a large party without any Sacremental Spears, we might become the victims instead of June...
+frame
+    charles changeSprite explain
+    charles say Besides, it would be hard to stop Princess Sophie from coming along once we wake the rest up
+        charles wait 400
+            charles say And none of them is familiar with the forests in Boriolsis anyways
+frame
+    charles changeSprite serious_speak
+    charles say I guess that leaves us with no choice but to make our way into the forests alone
+        charles changeSprite serious
+frame
+    charles flipHorizontally 200
+        charles move x=-70 t=700
+        boriolsis closeTextBox
+        boriolsis changeBackground opacity=0 background=lab t=0
+            boriolsis changeOverlay yanse=black a=0.7 t=1000
+            charles bringBelowOverlay
+                boriolsis changeBackground opacity=1 background=default t=1000
+                    charles disappear
+                        charles move
+                            charles move x=100
+                                charles appear
+                                    charles move x=-60 t=400
+                                        charles rotateAntiClockwise angle=10 t=100
+frame
+    charles changeSprite surprised_speak
+    charles speak Footsteps!
+        charles rotateClockwise a=10  t=100
+        charles wait 300
+            charles changeSprite serious_speak
+            charles speak That's excellent!
+frame
+    charles say I guess that's the good thing about not having proper cobbled paths or roads in Boriolsis
+        charles wait 300
+            charles say We better hurry up before the wind covers up June's tracks
+                charles changeSprite serious

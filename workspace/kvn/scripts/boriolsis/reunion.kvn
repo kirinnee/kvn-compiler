@@ -1,0 +1,499 @@
+declare yusie,charles,sophie,chief,halley,june,saveJuneCG as character
+declare boriolsis as stage
+
+scene boriolsis_reunion boriolsis_reunion
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis bringCharacter saveJuneCG
+    yusie,charles,sophie,chief,halley setTextColor white
+    charles setHorizontalFlip false
+    sophie preMove x=10
+    halley preMove x=-85
+    halley setHorizontalFlip true
+    charles preMove x=40
+    chief preMove x=-17
+    june preMove x=-28
+    boriolsis display t=0 bgO=0
+        boriolsis changeBackground bg=house a=1 t=1000 s=false
+            sophie changeSprite worried
+            chief changeSprite worried
+            halley changeSprite frustrated
+            sophie,chief,halley appear 1000
+frame
+    june changeSprite sad
+    charles changeSprite serious
+    june,charles appear 1000
+        chief flipHorizontally 200
+        sophie changeSprite surprised_speak
+        chief,halley changeSprite surprised
+        sophie preSpeak
+            sophie speak Where were all of you?
+                chief changeSprite scowl
+                halley changeSprite frustrated
+frame
+    sophie changeSprite worried_speak
+    sophie speak When we woke up and realized that all of you were gone, we were so worried!
+        sophie changeSprite worried
+frame
+    chief preSpeak
+        chief say I had just returned from the neighbouring housing clusters early this morning
+            chief wait 300
+                chief say And when I heard what Princess Sophie said, I suspected that the three of you must have went into the forest
+frame
+    chief changeSprite angry_speak
+    chief say Look at the mess all of you are in right now!
+        june changeSprite guilty
+        chief wait 300
+            chief say June, you should have known better than to bring them into the forest!
+                sophie changeSprite scared
+frame
+    chief say And Charles, I've already told you that we would get it settled in one week
+        chief wait 300
+            charles changeSprite mildtakenaback
+            chief say Why do you have to rush things and take such unnecessary risks?
+                charles changeSprite serious
+frame
+    chief say If the three of you had perished in the woods, who's going to make the Sacremental Spear to defend Boriolsis from the monster?
+        chief changeSprite angry
+frame
+    june changeSprite guilty_speak
+    june preSpeak
+        june say Father, it's my fault!
+frame
+    june say I was the one who sneak-
+        june changeSprite surprised
+        charles changeSprite serious_speak
+        charles interupt
+            charles say It's my fault
+                charles wait 300
+                    charles say I told her to bring us in without Princess Sophie so that we can get out of Boriolsis as soon as possible
+                        charles changeSprite serious
+                        june changeSprite shy
+frame
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie say Helmuth, at least they managed to kill the monster!
+            halley changeSprite impressed
+            sophie wait 300
+                sophie say We should be happy instead!
+                    sophie changeSprite awkward
+frame
+    chief changeSprite scowl
+    chief preSpeak
+        chief say Oh so you all managed to slay the monster?
+            chief wait 400
+                chief say Count yourselves lucky!
+                    chief changeSprite angry
+frame
+    june changeSprite guilty
+    charles changeSprite explain
+    charles preSpeak
+        charles say I realized that it was a very big gamble on our part
+            charles wait 300
+                charles cont and that we've to count ourselves lucky for coming out almost unscath-
+                    charles changeSprite mildtakenaback
+                    sophie changeSprite comforting_speak
+                    sophie interupt
+                        sophie,charles,june bringAboveOverlay
+                            boriolsis changeOverlay yanse=black a=0.55 t=0
+frame
+    sophie setFontSize 1.2vw
+    sophie changeItalic true
+    sophie say Let me handle this!
+        sophie changeSprite smileexclaim_speak
+        sophie wait 300
+            sophie say I probably understand him better than all of you~
+                charles changeSprite upset
+frame
+    sophie setNormalText
+    sophie setFontSize 1.7vw
+    boriolsis changeOverlay yanse=black a=0 t=0
+        sophie changeSprite comforting_speak
+        sophie say Helmuth, calm down...
+frame
+    halley changeSprite sneer
+    sophie say Don't be too upset that they didn't allow you to join in the hunt...
+        chief flipHorizontally
+        chief interupt
+            chief changeSprite awkward_speak
+            chief say W-Who said I was upset over that?
+frame
+    halley changeSprite impressed
+    june changeSprite smile
+    chief changeSprite scowl
+    chief say I-I'm just angry because I spent the whole night going door to door to get the residents to assist us in the hunt
+frame
+    sophie changeSprite awkward_speak
+    sophie say Oops...
+        sophie wait 300
+            sophie say I must have made a mistake then
+                sophie changeSprite awkward
+frame
+    chief changeSprite awkward_speak
+    chief say W-Well, I mean I do admit that I miss the sensation of adrenaline rushing through my veins
+        chief wait 300
+            chief say B-But I still know what should and should not be done
+                chief changeSprite scowl
+frame
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles say In that case, now that the monster has been slayed, we shall be taking our leave soon
+            chief changeSprite serious
+            charles changeSprite impatient
+frame
+    june changeSprite worried_speak
+    june move x=-5 t=500
+        june preSpeak
+            june say Charles, take care of yourself
+                sophie changeSprite smile
+                charles changeSprite smile
+                halley changeSprite default
+                june wait 400
+                    june changeSprite shy_speak
+                    june cont and Princess Sophie, of course!
+frame
+    june changeSprite smile_speak
+    june say Do come back here once in a while after you're done with your work
+        june wait 300
+            june say We'll be waiting for you!
+                june changeSprite smile
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie say Don't worry!
+            sophie wait 300
+                sophie say I'll send Charles back here myself after everything's over
+                    sophie changeSprite playful
+frame
+    charles changeSprite speechless
+    charles preSpeak
+        charles say msg=...... t=1000 s=false
+frame
+    chief changeSprite serious_speak
+    chief preSpeak
+        chief say Have a safe trip
+            sophie changeSprite smile
+            chief wait 200
+                chief say Make sure you don't let Mistrassimo get away after everything that he has done
+                    charles changeSprite serious
+                    chief changeSprite serious
+frame
+    sophie changeSprite serious_speak
+    sophie preSpeak
+        sophie say We won't!
+            sophie wait 300
+                sophie say Alright we'll be taking our leave now!
+                    sophie endSpeak
+                    sophie changeSprite serious
+frame
+    sophie flipHorizontally
+        charles move x=-70 t=700
+        sophie wait 500
+            sophie move x=-10 t=200
+                chief changeSprite awkward_speak
+                chief preSpeak
+                    chief say Wait!
+frame
+    sophie,charles,june,halley changeSprite surprised
+    sophie,charles flipHorizontally
+        chief say Actually, you're right...
+            chief wait 300
+                sophie,charles,halley changeSprite curious
+                chief say I'm sick of leading this rather sedentary life...
+frame
+    chief changeSprite thinking_speak
+    chief say Day in and day out, I'm just going into the woods, trying to rediscover the adrenaline from hunting
+        chief wait 300
+            chief say But it seems like I'm a born warrior
+frame
+    chief changeSprite sad_speak
+    chief say Despite trying so hard all these years to invigorate Boriolsis, the failures here just don't seem to help me find the same kind of satisfaction which I had back then during the war
+frame
+    chief changeSprite awkward_speak
+    chief say Will it be too much of me to ask if I can join you in the revolution against Mistrassimo, Princess Sophie?
+        chief wait 300
+            chief changeSprite serious_speak
+            chief say I'm eager to serve the King and Queen to restore the honor and glory of the Royal Family!
+frame
+    chief changeSprite smile_speak
+    chief say You all won't reject an old man like me, right?
+frame
+    sophie changeSprite smileexclaim_speak
+    june changeSprite smile
+    halley changeSprite hesitant
+    charles changeSprite thinking
+    sophie preSpeak
+        sophie speak That would be great, Helmuth!
+            sophie changeSprite smile
+frame
+    charles changeSprite curious_speak
+    charles preSpeak
+        charles say But who's going to manage Boriolsis while you're gone?
+            charles wait 300
+                charles say Like what you mentioned, this village is in dire need of leadership
+                    charles changeSprite curious
+                    halley changeSprite curious
+                    sophie changeSprite curious
+frame
+    june changeSprite comforting_speak
+    june preSpeak
+        june say Father, go ahead and join them!
+            june wait 300
+                june say It's your dream after all!
+frame
+    june say I'll stay behind to manage things
+        june changeSprite smile
+frame
+    chief changeSprite surprised_speak
+    chief flipHorizontally
+    chief preSpeak
+        chief say Are you sure you can handle all the administrative matters and socializing?
+frame
+    chief changeSprite worried_speak
+    chief say You can't spend all your time in the lab like you used to before, you know?
+        chief changeSprite worried
+frame
+    june changeSprite smile_speak
+    june preSpeak
+        june say Don't worry!
+            june wait 300
+                june say I've always wanted to develop some of these skills anyways
+frame
+    june say Besides, we've seen how much Charles have grown from an introverted boy to a responsible and promising young man
+        june wait 300
+            june say I'm sure I can do the same as well
+            sophie,charles,halley changeSprite smile
+frame
+    june changeSprite worried_speak
+    june say But do take good care of the rest and make sure they stay safe
+        june changeSprite comforting
+frame
+    chief changeSprite thinking_speak
+    chief preSpeak
+        chief say Hmm....
+            chief wait 400
+                chief say Alright
+                chief changeSprite smile
+frame
+    chief changeSprite smile_speak
+    chief preSpeak
+        chief say I'll lead them to Malidret then!
+            chief wait 300
+                chief say Take care, June!
+                    chief changeSprite smile
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie say Bye June!
+            sophie changeSprite smile
+frame
+    sophie,charles,chief,halley flipHorizontally 200
+        halley,sophie,charles,chief disappear 1000
+            june wait 500
+                june disappear 1000
+                    boriolsis closeTextBox
+                    boriolsis display t=500 bgO=0
+                        boriolsis setAY 0
+                        boriolsis setAX 0
+                        boriolsis scale x=2 y=1 t=0
+                            boriolsis changeBackground bg=forest a=1 t=500 s=false
+                                charles move x=17
+                                chief move x=15
+                                sophie move x=27
+                                sophie,charles,chief flipHorizontally
+frame
+    sophie changeSprite smile
+    chief changeSprite serious
+    charles changeSprite impatient_speak
+    sophie,charles,chief appear 1000
+        charles flipHorizontally 200
+        charles preSpeak
+            charles say Yusie and Halley!
+                charles wait 300
+                    charles say Can you all stop squabbling at the back?!
+frame
+    charles say We need to move faster
+        charles changeSprite impatient
+frame
+    sophie changeSprite comforting_speak
+    sophie preSpeak
+        sophie say Let them be!
+            charles flipHorizontally 200
+            sophie wait 300
+                sophie say It's good that they're further at the back
+frame
+    sophie changeSprite smile_speak
+    sophie say At least they won't disturb us while we admire the scenery over here
+        chief changeSprite smile
+frame
+    sophie say The woods in Boriolsis are really beautiful, isn't it?
+        sophie changeSprite smile
+frame
+    chief flipHorizontally 200
+    chief changeSprite proud_speak
+    chief preSpeak
+        chief say Indeed
+frame
+    chief changeSprite smile_speak
+    chief say Despite not having much natural resources, Boriolsis has an abundance of tall and strong oak trees
+        charles changeSprite smile
+        chief wait 300
+            chief say These oak trees complement the mountains and valleys within Boriolsis, building an impressive natural landscape
+frame
+    chief changeSprite warning
+    chief say In fact, we're walking on the ridgeline right now
+        chief wait 300
+            chief say A steep descent is what awaits us on either side of our path even though it might not appear so
+                chief,sophie,charles changeSprite serious
+//footstep sound and transit to clicker scene
+
+//Player enters battle
+
+//Player concludes battle
+
+//LATEST NEWS: Princess Sophie has been sighted in Boriolsis with her captors. She is known to be wearing commoner’s clothes. Once again, King Mistrassimo urges everyone in Novala to report Princess Sophie upon sight and to transport her to any of his men safely.
+
+frame
+    halley move x=3
+    halley flipHorizontally
+    halley changeSprite frustrated
+    halley appear
+    charles changeSprite worried
+    chief changeSprite serious
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say It seems like Ruskoff is catching up with us soon...
+            sophie changeSprite worried
+frame
+    chief changeSprite scowl
+    chief preSpeak
+        chief say Who is this Ruskoff that you're talking about?
+            chief changeSprite angry
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say He is one of the henchmen under Mistrassimo
+frame
+    charles say He has been tracking us down since we came from Erithven
+        charles wait 300
+            charles changeSprite impatient_speak
+            charles say It seems like we might need to move a little faster
+                charles changeSprite impatient
+                chief changeSprite worried
+frame
+    halley changeSprite frustrated_speak
+    halley preSpeak
+        halley say It's quite challenging to shake them off because of the terrain here
+frame
+    halley changeSprite explain
+    halley say Even if we try to walk by the side of this ridgeline, it's going to be near impossible to conceal the sound of all our footsteps
+        halley wait 300
+            halley say Not to mention how easy it is to spot the group of us especially with our lack of camouflage
+                halley changeSprite frustrated
+
+//footstep sound from back
+
+frame
+    june changeSprite tired_speak
+    sophie,charles,chief,halley changeSprite surprised
+    june appear 1000
+        chief flipHorizontally
+        june preSpeak
+            june say msg=Pant... t=1000 s=false
+                june wait 400
+                    june say msg=Pant... t=1000 s=false
+                        june wait 400
+                            june say msg=Pant... t=1000 s=false
+frame
+    june changeSprite tiredsmile_speak
+    june say Finally caught up with you all!
+        june changeSprite tiredsmile
+frame
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie say June?!
+            sophie wait 300
+                sophie cont What's wrong?
+                    charles,halley changeSprite curious
+                    chief changeSprite worried
+frame
+    sophie changeSprite curious_speak
+    sophie say Why did you come after us?
+        sophie changeSprite curious
+frame
+    june changeSprite worried_speak
+    june say There's a gang that came into our house looking for you right after you have left
+frame
+    charles,sophie changeSprite worried
+    halley changeSprite serious
+    june say I tried to send them in the wrong direction
+        june wait 300
+            june changeSprite scared_speak
+            june say But it seems like they've somehow managed to locate you down
+frame
+    june say They probably have more men than we can imagine
+        sophie changeSprite scared
+frame
+    june say It probably won't be long before the whole gang finds you all
+        june changeSprite scared
+frame
+    chief changeSprite scowl
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say It seems like they might really be closer than we think
+frame
+    charles say By now, Mistrassimo's many henchmen are probably lurking around the perimeters of Boriolsis to catch us
+        charles changeSprite worried
+frame
+    june changeSprite comforting_spek
+    june preSpeak
+        june say No worries!
+frame
+    june say I've an idea which might be useful in getting Princess Sophie safely to Malidret
+        june changeSprite smile
+    sophie,charles,halley,chief changeSprite surprised
+frame
+    june changeSprite shy_speak
+    june say You see...
+        june wait 300
+            june changeSprite serious_speak
+            june say I can make a dead body of Sophie from the assailant whom you’ve just killed
+frame
+    june say Following which, I will then pass the dead body to any of Ruskoff's minions to hand over to Ruskoff
+        june wait 300
+            june cont under the guise that the village has recovered Princess Sophie's dead body after she had been attacked by a group of bandits
+                june changeSprite serious
+frame
+    chief changeSprite thinking
+    halley changeSprite hesitant
+    sophie changeSprite curious
+    charles changeSprite thinking_speak
+    charles preSpeak
+        charles say Then Ruskoff would recall of his minions, allowing us to escape from Boriolsis without Ruskoff's interference
+frame
+    charles wait 400
+        charles changeSprite smile_speak
+        charles say It does sound viable
+            halley,chief,sophie,june changeSprite smile
+frame
+    charles changeSprite explain
+    charles say We should avoid contact with them as much as possible
+        charles wait 300
+            charles cont as it would only attract more of them to us
+                charles changeSprite serious
+frame
+    chief,halley,june changeSprite serious
+    sophie changeSprite serious_speak
+    sophie preSpeak
+        sophie say That's right!
+            sophie wait 300
+                sophie say It's really too risky for us to fight against them when they're much more prepared this time!
+                    sophie changeSprite serious
+//display option
+//if choose to accept help, go accepthelp.kvn

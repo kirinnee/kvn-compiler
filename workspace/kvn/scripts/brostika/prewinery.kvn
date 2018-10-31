@@ -1,0 +1,137 @@
+declare charles as character
+declare brostika as stage
+
+create option Qns msg=Actually, why can't Princess Sophie just reveal her identity? Wouldn't that solve the problem?
+
+scene prewinery prewinery
+
+frame 0
+    brostika bringCharacter charles
+    charles setTextColor white
+    charles preMove x=15
+    brostika display backgroundAlpha=0 t=0
+        brostika changeBackground opacity=1 background=alley t=1000
+frame 1
+    charles changeSprite sad_speak
+    charles appear 1000
+        charles preSpeak
+            charles say msg=Sighh... t=1000 s=false
+                charles wait 500
+                    charles say I can't believe our luck!
+frame 2
+    charles changeSprite disgusted_speak
+    charles scale y=1.1 x=1.1 t=200 s=false
+    charles say Who would have expected the Princess to be locked up?
+        charles wait 400
+            charles changeSprite impatient_speak
+            charles say And being accused of murder,
+                charles wait 100
+                    charles contSpeak of all things!
+frame 3
+    charles scale y=1/1.1 x=1/1.1 t=200 s=false
+    charles changeSprite gazeindistance_speak
+    charles say So much has happened in such a short time...
+frame
+    charles say First, Mistrassimo pulls his coup
+frame
+    charles say Then now, we are labeled as killers!
+        brostika displayOption [Qns]
+frame
+    charles changeSprite explain
+    charles say You see,
+        charles wait 400
+            charles cont it was not easy escaping from the castle.
+
+frame
+    charles flipHorizontally t=200
+    charles say En route to Kroigren, we had our fair share of betrayals, from persons we thought were trustworthy.
+
+frame
+    charles changeSprite serious_speak
+    charles say There were countless occasions when we were almost handed to Mistrassimo by local officials or the Guards...
+frame
+    charles move x=-15 t=1000 s=false
+    charles changeSprite worried_speak
+    charles say It appears that Mistrassimo's supporters have deeply infiltrated all levels of society.
+        charles wait 400
+            charles flipHorizontally t=200
+            charles say Many whom we believed we could trust have probably received bribes or threats from Mistrassimo.
+frame
+    charles changeSprite explain
+    charles say Even if Captain Yusie is not an enemy and is simply doing her job,
+        charles wait 400
+            charles cont we can never be sure about her involvement in the greater scheme of things.
+frame
+    charles move x=15 t=1000 s=false
+    charles say In fact, she might not even know if she was actually being manipulated via orders from her superior.
+frame
+    charles changeSprite serious_speak
+    charles say That's why both Princess Sophie and I have the understanding that there's a real and important need for us to lie low and avoid revealing our identity.
+frame
+    charles say Besides,
+        charles wait 150
+            charles contSpeak Sophie has never used her title or her position to impose her will or wishes on others.
+
+frame
+    charles changeSprite explain
+    charles say The princess hopes to respect the rules or the way things run as they are.
+frame
+    charles say She never wanted to be treated differently from others her age.
+frame
+    charles changeSprite gazeindistance_speak
+    charles move x=15 t=1000 s=false
+    charles say I remember hearing rumours about the princess when I first entered the castle.
+frame
+    charles say They spoke of an unreasonable child who would throw her title 'Princess' around.
+frame
+    charles changeSprite explain
+    charles say In truth, Sophie was no such girl.
+
+frame
+    charles flipHorizontally t=200 s=false
+    charles speak She was one of the most good natured kids I'd ever met.
+
+frame
+    charles speak It turns out all this stemmed from an incident where she used her title to threaten some playmates who took her toys.
+
+frame
+    charles move x=-15 t=1000 s=false
+    charles speak It was but a small issue but word spreads fast.
+        charles wait 400
+            charles say The princess soon realized many of her playmates started to distance themselves from her as though she was a monster.
+frame
+    charles say They were all scared of her,
+        charles wait 400
+            charles flipHorizontally t=200 s=false
+            charles say and stopped viewing her as a peer.
+frame
+    charles changeSprite sad_speak
+    charles say The loneliness stung,
+        charles wait 400
+            charles contSpeak and Sophie learnt the importance of not misusing one's authority.
+frame
+    charles changeSprite explain
+    charles scale x=1.1 y=1.1 t=200 s=false
+    charles say She recognized that being a Princess can be more of a curse at times,
+        charles wait 400
+            charles cont and that she would have to respect rules, systems and etiquette in order to get respect and goodwill in return.
+frame
+    charles changeSprite serious_speak
+    charles say I personally think she longs to be a normal person instead.
+        charles wait 400
+            charles say The pressure of being a royalty is not easy at all...
+frame
+    charles say That's why she would never reveal her identity to Captain Yusie or anyone else.
+frame
+    charles say She wants to be treated as normal and dignified person,
+        charles wait 400
+            charles say and avoid destroying protocol and legislation built because of her royalty status.
+frame
+    charles changeSprite sad_speak
+    charles say That's why I was quite apprehensive about leaving Princess Sophie in the bastille alone,
+        charles wait 500
+            charles say I was worried that she might continue to conceal her identity even when times have turned critical.
+frame
+    charles changeSprite serious_speak
+    charles move x=1/1.1 y=1/1.1 t=200 s=false
+    charles say I guess there's not much we can do except to hasten our footsteps and find Mr. Broski before any mishap can happen...

@@ -1,0 +1,740 @@
+declare brostika as stage
+declare charles,sophie as character
+
+create option joinTeam msg=Sure, why not?
+scene brostika_intro brostika_intro
+
+frame
+     brostika bringCharacter charles
+     brostika bringCharacter sophie
+     sophie,charles preMove x=-80
+     sophie,charles setTextColor white
+     sophie changeName ???
+     brostika display backgroundAlpha=0
+
+        brostika changeBackground opacity=1 background=intro t=1000
+       brostika displayText msg=--Village of Kroigren-- t=400 center=true size=2.5vw color=white s=false
+
+frame
+    sophie changeSprite scared_speak
+    sophie appear
+        sophie move x=80 t=1000
+            sophie say Hello...
+                sophie flipHorizontally 200
+                    sophie wait 800
+                        sophie cont Anyone around here...?
+                            sophie flipHorizontally 200
+                                sophie wait 400
+                                    sophie move x=30 t=500
+                                        sophie flipHorizontally 200
+                                            sophie wait 800
+                                                sophie flipHorizontally 200
+                                                    sophie move x=5 t=100
+                                                        sophie setFontSize 2vw
+                                                        sophie changeBold true
+                                                        sophie preSpeak
+                                                            sophie changeSprite surprised_speak
+                                                            sophie say Ahh...!
+                                                            //CAROFLE animation
+frame
+    sophie changeSprite shy_speak
+    sophie setNormalText
+    sophie setFontSize 1.7vw
+    sophie say msg=Erm... t=1000 s=false
+        sophie wait 400
+            sophie say Hi,
+                sophie wait 400
+                    sophie cont I'm Sophie!
+frame
+    sophie changeName Sophie
+    sophie say I just got separated from my retainer...
+frame
+    sophie changeSprite shy_speak
+    sophie say If it's not too much trouble,
+        sophie wait 400
+            sophie cont could you help me find him?
+                brostika displayOption [joinTeam]
+frame
+    sophie changeSprite overjoyed
+    sophie say Yay~!
+        sophie wait 400
+            sophie say I knew I could count on you!
+frame
+    sophie changeSprite awkward_speak
+    sophie say Oh!
+        sophie wait 400
+            sophie say I just realized I forgot to introduce myself!
+frame
+    sophie changeSprite shy_speak
+    sophie say I'm Sophie,
+        sophie wait 400
+            sophie cont the Princess of Novala!
+frame
+    sophie changeSprite smile_speak
+        sophie say But really,
+            sophie wait 400
+                sophie cont you can just call me Sophie!
+frame
+    sophie changeSprite curious_speak
+    sophie say msg=Hmm... t=1000 s=false
+        sophie wait 400
+            sophie say You don't look like you're from around here, do you?
+frame
+    sophie changeSprite smile_speak
+    sophie say Let me just give you a quick intro on Novala then!
+frame
+    sophie say You see,
+        sophie wait 400
+            sophie changeSprite smileexclaim_speak
+            sophie cont Novala is a kingdom with incredible diversity
+frame
+    sophie say Despite the diverse culture and economies within Novala,
+        sophie wait 400
+            sophie cont we're able to enjoy peace and prosperity under the governance of my parents
+frame
+    sophie changeSprite smile_speak
+    sophie say I'm sure you'll also love Novala after you've seen our majestic natural landscapes
+frame
+    sophie changeSprite gazeindistance_speak
+        sophie wait 1200 s=false
+            sophie say msg=But... t=1000 s=false
+                sophie wait 400
+                    sophie say I don't know how long more can I still call it home...
+frame
+    sophie say msg=How I wish t=1000 s=false
+        sophie wait 600
+            sophie cont msg=I didn't have to run away... t=1500 s=false
+frame
+    sophie say Not too long ago, Prime Minister Mistrassimo staged a coup
+frame
+    sophie changeSprite helpless_speak
+    sophie say His treachery was so...
+        sophie wait 400
+            sophie cont msg=unexpected... t=1000 s=false
+frame
+    sophie say My family and I fled away from the castle before his men could kill us
+frame
+    sophie changeSprite scared_speak
+    sophie say The past few weeks have been crazy...
+        sophie wait 600
+            sophie say All the vicious disguised minions
+                sophie wait 400
+                    sophie say And the fleeing
+frame
+    sophie say We tried so hard to shake off Mistrassimo's henchmen
+frame
+    sophie say It was such a mad rush
+        sophie wait 400
+            sophie say Charles, my guardian, and I were separated from my parents...
+frame
+    sophie changeSprite sad_speak
+    sophie say Just when I thought it couldn't get any worse,
+        sophie wait 400
+            sophie cont a pack of wild dogs separated Charles and me
+frame
+    sophie say They were so frightening
+        sophie wait 400
+            sophie say And I ran for my li-
+frame
+    sophie changeSprite pout_speak
+    sophie say Hey!
+        sophie wait 400
+            sophie cont I'm serious!
+frame
+    sophie say The dogs were really
+        sophie wait 300
+            sophie cont really fierce!
+frame
+    sophie changeSprite sad_speak
+    sophie say But yeah...
+        sophie wait 400
+            sophie say We'll need to find Charles first!
+frame
+    sophie changeSprite serious_speak
+    sophie say I know it won't be easy
+frame
+    sophie changeSprite smile_speak
+    sophie say But luckily for us,
+        sophie wait 400
+            sophie cont the Novalans are extremely helpful people!
+frame
+    sophie say You can always recruit them to help you!
+frame
+    sophie say Overlay and tutorial on recruit
+frame
+    sophie say Now that we have some friends to help us,
+        sophie wait 400
+            sophie cont let's go and find Charles!
+frame
+    sophie say Transit to clicker scene with charles and slimes on fighting stage Sophie: That’s Charles! Sophie: We’ve got to save him before it’s too late
+        sophie disappear 1000
+frame
+    charles move
+    sophie move
+        sophie move x=25
+        charles move x=30
+            charles changeSprite tiredpanting
+            sophie,charles appear 1000
+            sophie changeSprite smile_speak
+            sophie say Thank you for saving Charles!
+frame
+    sophie changeSprite amazed
+    sophie say And wow!
+        sophie wait 400
+            sophie say You sure learn fast!
+frame
+    sophie say Cue panting noise
+frame
+    sophie changeSprite smile
+    charles changeSprite tiredpanting_speak
+    charles preSpeak
+        charles say msg=T-Thank... t=1000 s=false
+            charles wait 600
+                charles cont youu...
+frame
+    charles say I-I was really that close to dying...
+frame
+    charles say Thanks for saving me
+frame
+    charles say Anyways,
+        charles wait 400
+            charles changeSprite smile_speak
+            charles cont I'm Charles
+frame
+    charles say The Royal Doctor of Novala
+        charles wait 400
+            charles changeSprite serious_speak
+            charles cont msg=And also the guardian of... t=1000 s=false
+                sophie move x=5 t=100
+                    sophie move x=-5 t=100
+                        sophie move x=5 t=100
+                            sophie move x=-5 t=100
+                                charles flipHorizontally 200
+frame
+    sophie changeSprite smileexclaim_speak
+    charles changeSprite upset
+    sophie say Don't worry!
+        sophie wait 400
+            sophie say #playName  can be trusted!
+frame
+    sophie say I've already told him about the coup!
+frame
+    sophie changeSprite awkward
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles say Didn't I tell you not to go around revealing your identity?
+frame
+    sophie changeSprite awkward_speak
+    charles changeSprite impatient
+    sophie preSpeak
+        sophie say Well, I needed help to find you
+frame
+    sophie changeSprite smile_speak
+    sophie say And yes!
+        sophie wait 400
+            sophie say #playName  has also agreed to help us find my parents!
+frame
+    charles changeSprite upset_speak
+    sophie changeSprite smile
+    charles preSpeak
+        charles say msg=...... t=1000 s=false
+            charles wait 400
+                charles say Okay...
+                    charles wait 400
+                        charles cont I guess we can do with the additional help
+                        sophie changeSprite overjoyed
+frame
+    charles changeSprite curious_speak
+    charles preSpeak
+        charles say #playName ,
+            charles wait 400
+                charles cont you're new to Novala,
+                    charles wait 400
+                        charles cont aren't you?
+                        sophie changeSprite smile
+frame
+    charles say I can tell it from your expression
+frame
+    charles changeSprite explain
+    charles say Let me see if what I can teach you
+frame
+    charles say I guess we can start with learning how to review our achievements
+frame
+    brostika changeOverlay yanse=black a=0.55 t=0
+    //chibiCharles appear 1000
+        //chibiCharles say Click this!
+frame
+    //chibiCharles say Mouse over this to check the time and date of the achievement
+frame
+    //chibiCharles say Excellent!
+        //chibiCharles disappear 1000
+            brostika changeOverlay yanse=black a=0
+frame
+    charles say Achievements are important records of your heroic acts.
+frame
+    charles say Now that we’re done with the achievements
+        charles wait 400
+            charles cont let’s run through an important rule that we should establish before we begin our journey.
+frame
+    sophie changeSprite serious
+    charles say During our journey,
+        charles wait 400
+            charles cont you must not be uncontactable
+frame
+    charles changeSprite thinking_speak
+    charles say msg=Hmm… t=1000 s=false
+        charles wait 400
+            charles changeSprite explain
+            charles say To put it simply,
+                charles wait 400
+                    charles cont don’t disconnect from the Internet
+frame
+    charles changeSprite serious_speak
+    charles say Being uncontactable will result in you losing your consciousness,
+        charles wait 400
+            charles cont rendering us vulnerable to all kinds of threat
+frame
+    sophie changeSprite smileexclaim_speak
+    charles changeSprite serious
+    sophie preSpeak
+        sophie say Yuuup!
+frame
+    sophie changeSprite smile
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles say How about you go and give it a try?
+frame
+    charles say Try becoming uncontactable and see what happens
+frame
+    charles say Don’t worry!
+        charles wait 400
+            charles cont We will stand guard over you
+                charles wait 400
+                    charles say But only just this time!
+                        charles changeSprite serious
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie say You can definitely trust us~!
+            sophie changeSprite smile
+frame
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles say And yes!
+            charles wait 400
+                charles say Do reconnect when you completely lose consciousness
+                charles changeSprite serious
+frame
+    brostika closeTextBox
+                //Player disconnects from the Internet
+frame
+    brostika changeOverlay yanse=black a=1 t=8000 g=swing s=false
+    charles changeSprite serious_speak
+    charles say So you can see how you're slowly losing your vision?
+        charles wait 400
+            charles say And how your senses gradually becoming muted?
+            //music decreases volume
+            sophie changeSprite smileexclaim_speak
+                sophie say Hellooo?
+                    sophie wait 400
+                        sophie cont Hello?
+                            sophie wait 400
+                                sophie say Can you heaaaar meeeee~?
+frame
+    charles say Princess Sophie, you've got to stop playing
+        charles wait 400
+            charles say We're dealing with a very serious issue here!
+frame
+    sophie say msg=Awwww... t=1500 s=false
+frame
+    charles say #playName ,
+        charles wait 400
+            charles cont before you become completely uncontactable,
+                charles wait 400
+                    charles say I need you to reconnect now
+                    //Player reconnects to the Internet
+frame
+    brostika changeOverlay yanse=black a=0 t=1000
+        brostika displayText msg=Quest Complete: Disconnect to the Internet
+            brostika displayText msg=Quest Complete: Reconnect to the Internet
+frame
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie say Welcome back~!
+frame
+    charles preSpeak
+        charles changeSprite serious_speak
+            charles say I hope you now understand the importance of keeping contact with us
+frame
+    sophie changeSprite smile
+    charles changeSprite explain
+    charles say Before we go on to the other fundamentals,
+        charles wait 400
+            charles cont there is something which I must emphasize
+frame
+    charles say In the world of Novala,
+        charles wait 400
+            charles cont we can't make changes to decisions which we've made in the past as we wish
+frame
+    sophie changeSprite serious
+    charles say We have to take full responsibility for our decisions as there’s no return once we’ve decided on a certain action
+frame
+    sophie changeSprite comforting_speak
+    sophie preSpeak
+        sophie say #playName , don't worry too much about it,
+            sophie wait 300
+                sophie cont okay?
+frame
+    sophie changeSprite smile_speak
+        sophie say We'll help you out!
+frame
+    charles preSpeak
+        charles say For now,
+            charles wait 400
+                charles cont just keep it at the back of your mind
+frame
+    charles say Now that we’re done with these,
+        charles wait 400
+            charles cont let’s start with learning how to manage the loot and resources we acquire after defeating our foes
+frame
+    charles say We'll need you to head into the forest around Kroigren and take down three mobs
+        charles wait 400
+            charles say Following which, we'll guide you on the allocation and optimization of the loot
+                //Tutorial
+                //overlay + chibicharles with textbox
+                //Chibi-charles: click this to increase //wtv it is
+
+                //clickkkkk
+                sophie,charles disappear 1000
+frame
+    brostika displayText msg=Quest Complete: Take down three enemies
+frame
+    brostika displayText msg=Upon the completion of the Quest, you navigated back to reunite with Charles and Sophie.
+        sophie changeSprite chewing
+        sophie,charles appear 1000
+frame
+    brostika displayText msg=Sophie was munching on something that looked rather peculiar as you returned.
+frame
+    charles changeSprite upset
+    sophie changeSprite chewing_speak
+    sophie preSpeak
+        sophie say Yeoue’re bhack!
+frame
+    sophie say Ahre yeou ohkhey-
+        charles changeSprite upset_speak
+        charles interupt
+            charles say Princess Sophie,
+                charles wait 400
+                    charles cont you shouldn’t talk when you’re chewing
+                        charles changeSprite upset
+frame
+    sophie changeSprite sad_speak
+    sophie preSpeak
+        sophie say Ohkhey…
+frame
+    //swallowing sound
+    sophie changeSprite swallow
+        sophie wait 800
+            sophie changeSprite smileexclaim_speak
+            sophie say #playName ,
+                sophie wait 400
+                    sophie cont do you want to try one of these prasines?
+frame
+    sophie changeSprite smile_speak
+    sophie say I’m telling you they’re really
+        sophie wait 400
+            sophie cont really
+                sophie wait 400
+                    sophie cont reallyyyyyy
+                        sophie wait 400
+                            sophie cont good!
+frame
+    sophie say It’s simply the best food in the entire of Novala!
+frame
+    //brostika changeBackground prasine background
+        brostika displayText msg=It had blackcurrants and a strange looking kind of berry all over its surface.
+frame
+    brostika displayText msg=Beneath the berry-coated surface, you could see a thin layer of crispy crust dotted by multi-grains.
+frame
+    brostika displayText msg=After taking a bite from the prasine, a smooth and sweet flavor wrapped itself around your tastebuds.
+frame
+    brostika displayText msg=You nodded your head as you finished the rest of the prasine.
+frame
+    //brostika changeBackground to default
+        sophie changeSprite overjoyed
+        sophie preSpeak
+            sophie say It's really great,
+                sophie wait 400
+                    sophie cont isn't it?
+frame
+    sophie changeSprite smile_speak
+    charles changeSprite impatient
+    sophie say I used to eat it at least once per day
+frame
+    sophie say If I don't get to eat prasines,
+        sophie wait 400
+            sophie cont I would feel super uncomfortable!
+frame
+    sophie changeSprite helpless_speak
+    sophie say That's why it was so tough when I was separated from Charles and my parents
+frame
+    sophie changeSprite sad_speak
+    sophie say No one would buy prasines for me to eat...
+frame
+    sophie changeSprite surprised_speak
+    sophie say Oh yes!
+        sophie wait 400
+            sophie say Charles,
+                sophie wait 400
+                    sophie changeSprite shy_speak
+                    sophie cont since #playName  seems to like prasines too,
+                        sophie wait 400
+                            sophie cont why don't we get some more?
+                            sophie changeSprite shy
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles say Alright
+            charles wait 400
+                charles say Enough of that
+                sophie changeSprite relent
+frame
+    charles say If you're going to continue eating like this,
+        charles wait 400
+            charles cont you're going to fall sick soon
+frame
+    charles changeSprite explain
+    charles say Let's carry on with our introduction
+frame
+    charles say Let’s see what you’ve got from those guys
+                //sophie changeSprite surprised_speak
+                //Sophie: Wow!
+
+                //Sophie: That’s a lot of good stuff!
+
+                //Charles: Let me show you how you can manage these loot.
+
+                //Tutorial
+
+                //Acutally is there loots?
+                //chibi-charles over text box over overlay
+                //Chibi-charles:
+
+                //First one is to go fight people collect loot
+                //Second one is management
+
+                //Ok i shallk do this on the last day itself
+frame
+    charles changeSprite smile_speak
+    sophie changeSprite smile
+    charles say Good job!
+        charles wait 400
+            charles say At this rate,
+                charles wait 400
+                    charles cont we should be done with the introduction in no time
+frame
+    charles changeSprite explain
+    charles say Lastly,
+        charles wait 400
+            charles cont there is a particular group of individuals which I need to talk about.
+frame
+    charles say They are called Heroes
+frame
+    charles say Heroes are important characters like myself who possess special abilities which can help assist Princess Sophie to find her parents
+frame
+    charles say Transit to clicker scene and chibi charles will share about heroes
+frame
+    charles say As we make our way to find her parents and eventually wrest back the throne,
+        charles wait 400
+            charles cont we might forge powerful partnership with allies which can assist us in our revolution
+frame
+    charles changeSprite serious_speak
+    charles say On that note,
+        charles wait 400
+            charles cont when there are outsiders around,
+                charles wait 400
+                    charles cont we should address her as Sophie without her Princess title
+frame
+    charles say After all,
+        charles wait 400
+            charles cont we'll never actually know who’s working for Mistrassimo
+frame
+    charles changeSprite explain
+    charles say That’s why Princess Sophie is dressed in this commoner outfit
+frame
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie say Charles,
+            sophie wait 400
+                sophie say Is that all for the introduction?
+                    sophie changeSprite smile
+frame
+    charles changeSprite explain
+    charles preSpeak
+        charles say I believe that's all for now
+            charles wait 600 s=false
+                charles preSpeak
+                    charles changeSprite surprised_speak
+                    charles say Oh before I forget,
+                        charles wait 400
+                            charles cont while I was separated away from Princess Sophie,
+                                charles wait 400
+                                    charles changeSprite explain
+                                    charles cont I managed to catch hold of some important news
+                                        sophie changeSprite surprised
+frame
+    charles say It appears that the King and Queen have been sighted at the Village of Malidret
+frame
+    sophie changeSprite curious_speak
+    sophie preSpeak
+        sophie changeSprite curious_speak
+        sophie say msg=Malidret...? t=1000 s=false
+            sophie changeSprite curious
+frame
+    charles preSpeak
+        charles say Yes, Malidret.
+frame
+    charles say If you were to open up your map,
+        charles wait 400
+            charles cont you would find our current position at a village called brostika
+frame
+    charles say Go on now and take a look at the map
+        charles wait 400
+            charles say It would be good to familiarize with it
+frame
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie say It seems like my parents aren't too far away
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say I'm afraid we won't be able to take the route you have in mind...
+frame
+    charles say Phinark is now swarming with Mistrassimo's men
+        charles wait 400
+            charles say And we can't take the risk to make our way back
+            sophie changeSprite sad
+frame
+    charles changeSprite explain
+    charles say The only way is to make one big round around Novala
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie say It's okay!
+frame
+    sophie say I am confident that we can pull it off!
+        sophie wait 400
+            sophie say Shall we make our move now?
+frame
+    sophie changeSprite awkward_speak
+    sophie say I meann,
+        sophie wait 400
+            sophie cont it's a good chance for me to check out these foreign places~~
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say You see,
+            charles wait 400
+                charles cont Princess Sophie,
+                    charles wait 400
+                        charles cont we’re actually facing a little problem
+                        sophie changeSprite curious
+
+frame
+    charles say There is a dark magical object in Kroigren which is filling the entire village with a vicious and negative aura.
+frame
+    charles say The negative aura is extremely infectious and has made many of the villagers very uncooperative at the very least.
+        sophie changeSprite scared
+frame
+    charles say The ones who are affected worse would attack anyone whom they saw on the streets.
+        charles changeSprite worried
+frame
+    sophie changeSprite scared_speak
+    sophie say That’s really…
+        sophie wait 400
+            sophie cont scary
+                sophie changeSprite scared
+frame
+    charles changeSprite worried_speak
+    charles preSpeak
+        charles say Indeed
+frame
+    charles say Without removing the dark magical object,
+        charles wait 400
+            charles cont leaving brostika might prove to be very difficult
+frame
+    charles changeSprite explain
+    charles say That’s why I recommend that we find the magical object first before moving onto the next village
+frame
+    charles say To move to any area outside of the main town,
+        charles wait 400
+            charles cont you will need to know how to Scout
+            //Scout Mechanism Tutorial
+frame
+    sophie,charles bringAboveOverlay
+        sophie,charles disappear 1000
+            brostika changeOverlay yanse=black a=1
+                sophie,charles appear 1000
+                    brostika displayText msg=Quest Completed: Locate the dark magical object
+frame
+    charles changeSprite worried
+    sophie preSpeak
+        sophie changeSprite scared_speak
+        sophie say Urgh…
+frame
+    sophie say I...
+        sophie wait 400
+            sophie cont I don’t like the look of this thing
+                sophie changeSprite scared
+frame
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles say Let me take a closer look at it
+frame
+    charles changeSprite thinking_speak
+    charles say msg=Hmm… t=1000 s=false
+        charles wait 400
+            charles cont I should be able to cast a seal on it
+frame
+    charles say CG for charles sealing dark orb?
+frame
+    sophie changeSprite amazed
+    charles changeSprite serious_speak
+    charles say This seal should be able to hold the aura in.
+        charles changeSprite serious
+frame
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie say Wow!
+            sophie wait 400
+                sophie cont Charles, you’re really incredible!
+                    sophie changeSprite smile
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles say It’s nothing much
+frame
+    charles changeSprite explain
+    charles say Anyways,
+        charles wait 400
+            charles cont his dark sphere is actually a Warp Gate
+frame
+    charles say Warp Gates are extremely useful equipment in combat when it comes to taking down many enemies at once
+frame
+    charles say #playName ,
+        charles wait 400
+            charles cont since you were the one who found it
+                charles wait 400
+                    charles cont I think it should belong to you.
+frame
+    charles say Let me show you how to use the Warp Gate
+frame
+    charles say Transit to Warp Gate Tutorial
+frame
+    charles say You must always remember to close the Warp Gate after using it
+frame
+    charles say If not,
+        charles wait 400
+            charles cont you will be consumed by the ominous aura within the sphere and never to regain control over your body again
+frame
+    play brostika_outside

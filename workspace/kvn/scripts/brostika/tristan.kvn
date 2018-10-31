@@ -1,0 +1,267 @@
+
+declare charles,sophie,tristan,tristanDeathCG as character
+declare brostika as stage
+
+scene tristanscene brostika_tristan
+frame //frame 0
+    brostika bringCharacter charles
+    brostika bringCharacter sophie
+    brostika bringCharacter tristan
+    brostika bringCharacter tristanDeathCG
+
+    brostika display bgA=0 bdA=1 t=0
+        brostika changeBackground bg=alley o=1 t=800
+frame
+    sophie,charles,tristan setTextColor white
+    tristan changeName  ???
+    tristan setFontSize  1.7vw
+    tristan changeBold
+    charles preMove 10
+    tristan preMove -20
+    charles,tristan animate
+    charles changeSprite curious
+    sophie changeSprite curious
+    tristan changeSprite struggle   //changes the sprite of sophie
+    sophie,charles,tristan appear 500
+
+frame
+        tristan changeSprite struggle_speak
+        tristan preSpeak
+            tristan speak  msg=T...thank you for your h- t=500
+                tristan wait 100
+                    tristan contSpeak msg=help! append=false
+                        tristan wait 500
+                            tristan changeSprite painexclaim_speak
+                            tristan speak Argghh!
+                                tristan move x=0 y=15 t=300
+                                tristan rotateAntiClockwise angle=10 t=300
+                                    sophie changeSprite surprised_speak
+                                    charles changeSprite mildtakenaback
+
+frame
+    tristan changeSprite struggle
+    sophie changeSprite worried_speak
+    charles changeSprite serious
+    sophie preSpeak
+        sophie speak Are you alright?
+            sophie changeSprite worried
+frame
+    tristan changeSprite struggle_speak
+    tristan preSpeak
+        tristan speak I-
+            tristan wait 300
+                tristan contSpeak I must find the constable...
+
+frame
+    charles changeSprite worried
+    tristan speak Don't have
+        tristan wait 400
+            tristan speak much time...
+                tristan changeSprite struggle
+frame
+      charles changeSprite worried_speak
+      charles preSpeak
+        charles speak What's going on?
+            charles wait 400
+                charles contSpeaking You're looking awfully pale.
+                    charles changeSprite worried
+frame
+    tristan changeSprite struggle_speak
+    tristan preSpeak
+        tristan speak Winery...
+            tristan wait 300
+                tristan contSpeak poisoned...
+                    sophie changeSprite surprised_speak
+                    charles changeSprite mildtakenaback
+                    tristan wait 600
+                        tristan contSpeak Must save the others and boss...
+                            tristan changeSprite struggle
+frame
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles speak Pull yourself together!
+            charles wait 400
+                charles contSpeak What in the world happened?
+
+macro cough character
+    character changeSprite painexclaim_speak
+    character scale x=1.02 y=1.02 skip=false t=80
+        character changeSprite struggle
+        character scale skip=false t=80
+            character wait 200
+frame
+    tristan changeSprite struggle_speak
+    tristan preSpeak
+        tristan speak Bandits,
+            tristan wait 300
+                tristan contSpeak with 'M' tattoos.
+                    sophie changeSprite scared
+                    charles changeSprite worried
+
+frame
+    tristan speak They've kidnapped Mr. Broski-
+    cough tristan
+        cough tristan
+            cough tristan
+frame
+    tristan changeSprite struggle_speak
+    tristan say They took over Brostikine winery and poisoned the wine!
+frame
+    tristan speak They want to kill the village!
+    cough tristan
+        cough tristan
+            cough tristan
+frame
+    sophie changeSprite scared_speak
+    sophie preSpeak
+        sophie speak That's terrible!
+            charles changeSprite thinking
+frame
+    sophie changeSprite worried_speak
+    sophie speak Where's the constable?
+        sophie wait 300
+            sophie contSpeak We'll bring you there,
+                sophie wait 400
+                    sophie contSpeak you're in no shape to walk alone.
+                        sophie changeSprite worried
+
+frame
+    tristan changeSprite struggle_speak
+    tristan preSpeak
+        tristan speak I-
+            tristan wait 400
+                tristan contSpeak I'm not...
+                    tristan wait 300
+                        tristan contSpeak sure.
+frame
+    tristan speak My head hurts...
+
+frame
+    tristanDeathCG bringAboveOverlay
+        tristanDeathCG bringToFront
+            tristanDeathCG appear t=500
+    tristan speak Ah!
+
+frame
+    tristan speak ...
+
+frame
+    tristan speak I-
+        tristan wait 400
+            tristan contSpeak I don't think I can make it...
+
+frame
+    tristan speak They fed me poison when they caught me escaping...
+
+frame
+    tristan speak ...and wanted to hunt me for sport...
+
+frame
+    tristan speak Too bad for them, I run fast...
+
+frame
+    tristan speak ...
+
+frame
+    tristan speak Ahh,
+        tristan wait 300
+            tristan contSpeak msg=it's gotten so dark... t=1200 skip=false
+
+frame
+    tristan speak Tell the constable for me,
+        tristan wait 600
+            tristan contSpeak msg=can't let those thugs have their way... t=600
+
+frame
+    //tristan looks at player
+    tristan speak (Looks at player) I spat out some of the poison into a vial...
+
+frame
+    tristan speak msg=Take it. t=400
+        tristan wait 400
+            tristan contSpeak msg=I hope it is useful... t=700
+                brostika displayText msg=You have received a vial of poison.
+frame
+    tristan speak (eyes closed)...
+
+frame
+    sophie preSpeak
+        sophie speak Tristan?
+            sophie wait 700
+                sophie speak Tristan!
+
+frame
+    charles preSpeak
+        charles speak He's
+            charles wait 300
+                charles contSpeak stopped breathing...
+
+frame
+    charles speak I'm sorry, I should have tried to do something for him.
+
+//frame
+//    charles speak He was a kind soul,
+//        charles wait 300
+//            charles contSpeak worrying about his fellow workers till the very end.
+
+frame
+    sophie preSpeak
+        sophie speak Poor Tristan,
+            sophie wait 300
+                sophie contSpeak His eyes,
+                    sophie wait 300
+                        sophie contSpeak they were so angry and scared.
+
+frame
+    sophie speak Those thugs must have really tortured him to make him hate them like that.
+
+frame
+    sophie speak I hope he is at peace now.
+
+frame
+    charles preSpeak
+        charles speak What are you doing, Sophie?
+
+frame
+    sophie preSpeak
+        sophie speak Brostikans believe that if you tie a thread to the pinky of someone who passes on,
+
+frame
+    sophie contSpeak their spirit will not disappate and they will be able to watch over their loved ones.
+
+frame
+    charles speak ...
+
+frame
+    charles preSpeak
+        charles speak You're as knowledgeable about local superstitions as always...
+
+frame
+    sophie preSpeak
+        sophie speak They're not superstitions, Charles!
+            sophie endSpeak
+
+frame
+    tristanDeathCG disappear t=500
+        sophie changeSprite hesitate_speak
+        charles changeSprite worried
+        sophie preSpeak
+            sophie speak Can you carry Tristan, Charles?
+
+frame
+    sophie changeSprite gazeindistance_speak
+    sophie speak We should hand his body to the constable so that he can be given a proper burial.
+
+frame
+    sophie speak Besides,
+        sophie wait 300
+            sophie contSpeak we can't possibly leave him with the corpses of his pursuers here.
+                sophie changeSprite sad
+frame
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles speak Yes, of course.
+
+frame
+    charles speak We'll make our way to Erithven after handing this issue over to the town guards.
+        charles changeSprite serious

@@ -1,0 +1,73 @@
+declare charles,sophie,tristan, as character
+declare brostika as stage
+
+scene alleyscene brostika_alley
+
+frame 0
+    brostika bringCharacter charles
+    brostika bringCharacter sophie
+    brostika bringCharacter tristan
+    brostika display bdO=1 t=0
+        brostika changeBackground bg=alley a=1 t=800
+            brostika displayText msg=--Village of Brostika-- t=400 fontSize=2.5vw color=white center=true
+
+
+frame 1
+    sophie,charles,tristan setTextColor white
+    tristan changeName ???
+    tristan setFontSize 2.0vw
+    tristan changeBold
+    charles,sophie preMove x=5
+    charles,sophie animate
+        sophie changeSprite default
+            sophie,charles appear 500
+            sophie changeSprite curious_speak
+            charles changeSprite serious
+            sophie preSpeak
+                sophie speak Turn left into the alley... and-
+frame 2
+//footsteps and panting
+    mod footsteps.play()
+    mod footsteps.rate(0.75);
+    mod footsteps.fadeIn(2000)
+    charles changeSprite mildtakenaback
+    sophie changeSprite surprised
+    charles wait t=1000
+        charles preSpeak
+            charles setTextSize 1.2vw
+            charles setItalic
+            charles changeSprite serious_speak
+            charles speak Someone's coming...
+                sophie changeSprite scared
+                charles changeSprite serious
+frame 3
+    tristan appear
+        brostika wait 425
+            charles setNormalText
+            charles setFontSize 1.7vw
+            charles changeSprite serious_speak
+            charles speak Careful!
+        tristan move x=-20 t=1000 g=easeOut skip=false
+            mod footsteps.stop()
+        charles bringToFront
+            sophie wait 675
+                sophie move x=-5 t=100
+            charles wait 550
+                charles move x=5 t=150
+                    charles changeSprite serious
+frame 4
+    tristan setTextSize 1.35vw
+    tristan changeSprite struggle_speak
+    tristan preSpeak
+        tristan speak H-
+            tristan wait t=400
+                tristan cont text=Help... append=false
+frame 5
+    tristan speak msg=Arachne...! t=1000
+        tristan changeSprite struggle
+
+
+frame
+    sophie,tristan,charles disappear 100
+    brostika unDisplay t=100
+        brostika closeTextBox

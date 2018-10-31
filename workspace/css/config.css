@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'qs';
+    src: url("quicksand.otf") format("opentype");
+}
+
+#maintext{
+    color:white;
+    font-family: 'qs', Verdana, sans-serif;
+    background-image: url('../clickerUI/darkchocolate.png');
+    background-size: 100% 100%;
+    /*border: solid 1px black;*/
+    /*border-radius: 1vw;*/
+    filter: hue-rotate(0deg) contrast(100%) brightness(200%) saturate(100%);
+
+}
+
+#nametext{
+    color:black;
+    font-family: 'qs', Verdana, sans-serif;
+    background-image: url('../clickerUI/obj_04.png');
+    background-size: 100% 100%;
+    /*border: solid 1px black;*/
+    border-radius: 3px;
+    filter: hue-rotate(0deg) contrast(160%) brightness(100%) saturate(100%);
+}
+
+.option{
+    color: black;
+    font-family: 'qs', Verdana, sans-serif;
+    background: rgba(255,255,255,0.5);
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+@media (hover:none), (hover:on-demand){
+    #maintext{
+        background: rgba(200,200,200,0.8);
+        border: solid 1px black;
+        border-radius: 1vw;
+    }
+
+    #nametext{
+        border: solid 1px black;
+        border-radius: 20px;
+    }
+}

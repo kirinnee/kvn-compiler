@@ -1,0 +1,553 @@
+declare yusie,charles,sophie,chief,halley,june as character
+declare boriolsis as stage
+
+scene chief_house_1 chief_house_1
+
+create option why msg=Why?
+    sophie changeSprite playful_speak
+        sophie speak Because~
+            sophie wait 500
+                sophie changeSprite overjoyed
+                    sophie say June has a crush on Charles~!
+
+create option dont msg=Don't mess with them...
+    sophie changeSprite pout_speak
+        sophie say Awww...
+            sophie cont
+                sophie cont You're no fun
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis display t=1000
+        chief changeSprite smile_speak
+        charles changeSprite smile
+        sophie changeSprite smile
+        sophie,charles,chief appear 500
+            chief preSpeak
+                chief say So this is the village of Boriolsis.
+frame
+    chief say And yes,
+        chief wait 300
+            chief cont I haven't properly introduced myself yet.
+frame
+    chief changeSprite serious_speak
+    chief say My name is Helmuth, and I am the chief of Boriolsis.
+frame
+    chief say Back then during the Great War, I served under the King and Queen as one of the Knights of Novala
+frame
+    chief changeSprite smile_speak
+    chief say Your friend, Charles, used to stay at my house when he was young before moving to the Royal Academy
+frame
+    chief changeSprite laugh
+    chief say I can still remember the old days when he messed up my house with all the funny experiments that he likes to do
+        sophie changeSprite laugh
+        charles changeSprite awkward
+frame
+    chief changeSprite serious_speak
+    chief say Anyways, Boriolsis is a poverty-stricken area because of our mountainous and heavily forested terrain
+        chief wait 300
+            charles,sophie changeSprite serious
+            chief say This makes it near impossible to trade with the other regions or perform any kind of agricultural activity
+frame
+    chief wait 500
+        chief changeSprite smile_speak
+        chief speak As the chief of our village,
+            chief wait 300
+                chief cont it's an honour to have you.
+                    sophie,charles changeSprite smile
+frame
+    chief changeSprite awkward_speak
+    chief say But I must apologize for requesting all of you to put up with the conditions of our village!
+        chief changeSprite awkward
+frame
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie speak It's no problem Helmuth!
+            sophie wait 500
+                chief changeSprite smile
+                sophie cont Really!
+                    sophie changeSprite smile
+frame
+    chief changeSprite smile_speak
+    chief preSpeak
+        chief say Alright then,
+            chief wait 500
+                chief cont my house is just up ahead.
+                    chief endSpeak
+                    chief changeSprite smile
+frame
+    boriolsis fadeOut 800
+    boriolsis closeTextBox
+    chief,sophie,charles disappear 800
+        boriolsis setAnchorX 0
+        boriolsis setAnchorY 0
+        boriolsis scale x=1.5
+            boriolsis changeBackground bg=house a=0
+                boriolsis fadeIn 800
+                    sophie changeSprite shy_speak
+                    sophie say Excuse us for intruding...
+                        chief move x=10
+                        sophie changeSprite smile
+                        chief,sophie,charles appear 800
+frame
+    chief changeSprite awkward_speak
+    chief preSpeak
+        chief say Well, my house is a little messy
+            chief wait 300
+                chief say I hope you don't mind.
+frame
+    chief changeSprite smile_speak
+    chief say And don't worry!
+        chief wait 300
+            chief cont Just make yourself comfortable!
+                chief changeSprite smile
+frame
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        sophie speak Wowww!
+            sophie wait 300
+                sophie cont Your house is so different from the ones which we normally see!
+frame
+    sophie speak And you've got so many interesting things in that glass cabinet over there!
+frame
+    chief changeSprite surprised_speak
+    chief preSpeak
+        chief speak Oh!
+            chief wait 200
+                chief changeSprite proud_speak
+                chief cont That's the cabinet that contains all of the items treasured by myself and my deceased wife
+frame
+    chief speak You see that glowing spear over there?
+        chief wait 300
+            chief speak That's the spear which I used to take down the great Kapitolian Knight, Arrastrus!
+frame
+    sophie changeSprite amazed
+    chief speak Even till today, I can still remember vividly how proud I was to be the first and the last to defeat the Great Arrastrus!
+        chief wait 300
+            chief speak It was a long time back even before you were born!
+frame
+    chief changeSprite sad_speak
+    chief speak The books in the cabinet were my wife's favourite.
+        charles changeSprite sad
+        chief wait 300
+            sophie changeSprite apologetic
+            charles changeSprite gazeindistance
+            chief cont She used to spend hours poring over these books as she looked to find inspiration and answer for her research work.
+                chief changeSprite sad
+frame
+    sophie changeSprite apologetic_speak
+    sophie preSpeak
+        sophie speak text=I'm so sorry... t=1000 s=false
+            sophie wait 500
+                sophie say I really shouldn't have talked about it...
+                    sophie changeSprite apologetic
+frame
+    chief changeSprite smile_speak
+    chief preSpeak
+        chief speak It's okay, Princess Sophie.
+            chief wait 300
+                chief cont It's been so long and well,
+                    chief wait 200
+                        chief cont we all have to move on and look ahead into the future, don't we?
+                            sophie changeSprite sad
+frame
+    chief wait 500
+        chief changeSprite sad_speak
+        chief speak Well, my wife used to lead Charles's parents in weapon research back then during the war.
+            chief wait 300
+                chief cont They were working on the development of a beast called the Chimera to assist them in the war
+frame
+    chief speak But then the research went wrong and my wife and Charles's parents got killed by the Chimera.
+        chief wait 300
+            chief speak After that fateful incident, Charles moved in to stay in my house
+frame
+    chief changeSprite laugh
+    chief speak It felt just like yesterday when Charles was still running around in my house and playing with my daughter.
+        chief wait 300
+            sophie changeSprite smile
+            chief speak Look how tall and handsome he is now!
+frame
+    chief changeSprite smile_speak
+    sophie changeSprite smile
+    chief speak I have always been hoping for him to come back to say hello or something
+        chief wait 300
+            chief cont but I do understand how fast-paced things are at the castle and how busy everyone can get
+                chief changeSprite smile
+frame
+    charles changeSprite awkward_speak
+    charles preSpeak
+        charles speak I'm really sorry for not returning to Boriolsis all these years
+frame
+    charles changeSprite sad_speak
+    charles speak I've always felt quite bad about it
+        charles wait 300
+            charles cont but like what you said, a lot of things have been happening in the castle and I just can't seem to find time for everything
+        charles wait 300
+            charles changeSprite surprised_speak
+            charles speak By the way, where's June?
+frame
+    sophie changeSprite curious
+    charles changeSprite curious_speak
+    charles speak Is she still staying with you in Boriolsis?
+        charles wait 300
+            charles speak Or did she follow her dream and begin work at Malidret as an alchemist?
+                charles changeSprite curious
+frame
+    chief changeSprite smile_speak
+    chief preSpeak
+        chief speak She's still with me in Boriolsis
+frame
+    chief changeSprite scowl
+    chief speak I don't know what's wrong with that brat, you know!
+        chief wait 300
+            chief speak She received so many job offers in Malidret from the top alchemy laboratories over there
+                chief wait 300
+                    chief speak Yet she insists to stay in Boriolsis to continue in her research in the local flora and fauna
+frame
+    chief say As her father, I admit I'm quite happy to see my daughter with me every day
+        chief wait 300
+            chief say But it's an entirely different matter to waste one's youth and talent on these relatively trivial matters.
+frame
+    chief changeSprite awkward_speak
+    chief speak Then again, I must say that she has been quite helpful recently
+        chief wait 400
+            chief changeSprite smile_speak
+            chief say She is helping me to research on the identity of a monster which has been lurking in the Boriolsis forests
+                chief changeSprite smile
+frame
+    charles changeSprite curious
+    sophie changeSprite curious_speak
+    sophie preSpeak
+        sophie say Huh?
+            sophie wait 200
+                sophie cont What is this monster that you're talking about?
+                    sophie changeSprite curious
+frame
+    chief changeSprite serious_speak
+    chief preSpeak
+        chief speak Remember how I told all of you to leave the forest quickly just now,
+            chief wait 300
+                chief cont it's because of the existence of a strange beast which has been lurking around the woods here
+                    chief wait 300
+                        chief changeSprite angry_speak
+                        charles changeSprite serious
+                        chief speak This strange beast started terrorizing our town recently and preyed on many of our local hunters who hunt in our forests for a living
+frame
+    sophie changeSprite scared
+    chief speak Because of this, many hunters dare not to enter the forest anymore.
+frame
+    chief speak This strange beast seems to frequent the path that leads to Malidret
+        chief wait 300
+            chief changeSprite worried_speak
+            chief speak Hence, I had no choice but to cordon off that area to protect all of my villagers as well as to ensure the safety of all travellers
+                charles changeSprite worried
+                chief changeSprite worried
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak Oh dear!
+            sophie wait 300
+                sophie cont We were planning to head to Malidret to find my parents!
+                    sophie changeSprite worried
+frame
+    charles changeSprite thinking
+    chief changeSprite worried_speak
+    chief preSpeak
+        chief speak Well, since the beast came to our attention, no one from Boriolsis has made it alive to Malidret and vice versa.
+            chief wait 300
+                chief speak Because of this, trade has gone down between Malidret and Boriolsis, reducing our trading volume to virtually zero
+frame
+    chief speak To understand how bad this is, you must know that Boriolsis sustains itself by either hunting or lumbering
+        chief wait 300
+            chief speak And without trading or selling the manashards, meat or fur looted from the animals in the forests, we cannot acquire any other materials or resources to sustain our living
+frame
+    chief changeSprite serious_speak
+    charles changeSprite serious
+    chief speak That's why there's this urgent need to kill the beast in the woods
+frame
+    chief speak Well, I've been leading expeditionary trips into the forest with a bunch of hunters
+        chief wait 300
+            chief speak We try to locate and collect items back for June to research on in hope of identifying this monster
+                chief wait 200
+            chief cont and also to devise a way to track it down before killing it
+frame
+    chief speak That was why we were roaming around in the forest before we bumped into you this morning
+frame
+    chief changeSprite scowl
+    chief speak As of now, we've only bumped into this strange beast once
+        chief wait 900
+            chief speak But I was the only one from the team to make it out of the woods alive
+frame
+    chief changeSprite serious_speak
+    sophie changeSprite scared
+    chief speak This monster's hides are so powerful and tough that neither physical or magical attacks can penetrate them .
+frame
+    chief say On top of that, it's also extremely agile
+        chief wait 300
+            chief say Many of my team members were paralyzed after getting a hit from its tail
+                chief changeSprite serious
+frame
+    sophie changeSprite scared_speak
+    sophie preSpeak
+        sophie setFontSize 1.4vw
+        sophie speak text=Ohh myyyy... t=1000 s=false
+            sophie wait 500
+                sophie speak T-That's really scary...
+                    sophie changeSprite scared
+frame
+    chief changeSprite worried_speak
+    chief preSpeak
+        chief speak Indeed...
+            chief wait 300
+                chief speak I can't describe the fear in my heart when I was running out of the woods and escaping from the beast back then
+                    charles changeSprite worried
+frame
+    chief changeSprite scared_speak
+    sophie setFontSize 1.7vw
+    chief speak I've never felt so humiliated in my life...
+        chief wait 300
+            chief speak Imagine a former Knight running for his life...
+frame
+    chief changeSprite worried_speak
+    charles,sophie changeSprite worried
+    chief say As you know, our village is scarce in resource.
+            chief wait 200
+                chief say We have neither the fertility to grow crops nor place to mine any useful minerals.
+frame
+    chief cont We are left to ration on whatever food we have kept.
+frame
+    june preMove x=10
+    chief changeSprite smile_speak
+    chief say However,
+        chief wait 500
+            chief cont I manage to find some of-
+                chief,sophie,charles changeSprite surprised
+                june interupt
+                    june speak Dad!
+                        june wait 500
+                            june changeSprite smile_speak
+                            june appear
+                            june cont I'm back!
+                                chief,sophie,charles changeSprite smile
+                                june wait 500
+                                    june setDefSkip false
+                                    june say msg=I heard you talking to somebody, do we have gues- t=1600
+                                    june move x=-45 t=1500 g=swing
+                                        june changeSprite surprised_speak
+                                        june move x=2.5 y=-2 t=80
+                                            june move x=2.5 y=2 t=80
+                                                june wait 300
+                                                    june say C-
+                                                        june wait 200
+                                                            june cont append=false msg=C-
+                                                                june wait 200
+                                                                    june cont append=false msg=Charles?
+                                                                        june wait 500
+                                                                            june cont I-Is that really you?
+                                                                                june changeSprite surprised
+                                                            june move x=3 t=200
+frame
+    sophie bringAboveOverlay
+        boriolsis changeOverlay yanse=black a=0.7
+            sophie changeSprite playful_speak
+            sophie preSpeak
+                sophie say Hehe~
+frame
+    sophie cont #playName ,
+        sophie wait 300
+            sophie cont this is going to be interesting!
+                sophie changeSprite playful
+//boriolsis displayOption [why,dont] and can hint player to look at June's carofle
+frame
+    boriolsis changeOverlay yanse=black a=0
+    june changeSprite shy
+    charles changeSprite smile_speak
+    chief,sophie changeSprite smile
+    charles preSpeak
+        june changeSprite overjoyed
+        charles speak Of course it's me
+            charles wait 300
+                charles speak It's really been a long time since we met, hasn't it?
+                    charles changeSprite smile
+frame
+    june changeSprite shy_speak
+    june preSpeak
+        june speak Y-Ya
+            june wait 300
+                june cont R-Really long
+frame
+    june changeSprite surprised_speak
+    june speak You've grown a lot taller, haven't you?
+        june changeSprite surprised
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak Of course!
+            charles wait 300
+                charles changeSprite thinking_speak
+                charles cont It's been what
+                    charles wait 200
+                        charles speak 15 years already?
+                            charles changeSprite smile
+frame
+    june changeSprite shy_speak
+    june preSpeak
+        june speak Hehe!
+            june wait 200
+                june cont You're right!
+frame
+    june changeSprite surprised_speak
+    june speak Who's that girl behind you?
+        june wait 300
+            june changeSprite worried_speak
+            june say text=Is she your sweetheart? t=2300 s=false
+                sophie changeSprite surprised_speak
+                june changeSprite worried
+                sophie interupt
+                    sophie setFontSize 2vw
+                    sophie speak No!
+                        sophie wait 200
+                            sophie changeSprite worried_speak
+                            sophie cont No!
+                                sophie wait 200
+                                    sophie cont No!
+                                        sophie wait 200
+                                            sophie changeSprite smileexclaim_speak
+                                            sophie speak I'm Princess Sophie and Charles is my retainer
+                                                sophie setFontSize 1.7vw
+                                                sophie changeSprite smile
+frame
+    june changeSprite smile
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak And we've got a few friends with us at the back as well
+            charles changeSprite smile
+frame
+    june changeSprite shy_speak
+    june preSpeak
+        june speak I see!
+            june wait 300
+                june cont I'm sorry Princess for mistaking you as Charles's sweetheart!!!
+                    june changeSprite shy
+frame
+    sophie changeSprite laugh
+    sophie preSpeak
+        sophie speak Don't worry about it!
+            june changeSprite smile
+            sophie wait 300
+                sophie changeItalic true
+                sophie setFontSize 1.3vw
+                boriolsis changeOverlay yanse=black a=0.55
+                    sophie changeSprite playful_speak
+                    sophie speak I'll never snatch him away from you...
+frame
+    sophie changeSprite smile
+    sophie setNormalText
+    sophie setFontSize 1.7vw
+    boriolsis changeOverlay yanse=black a=0
+        charles changeSprite smile_speak
+        charles preSpeak
+            charles speak So Miss Genius Alchemist, what have you been working on all these while?
+                charles wait 300
+                    charles speak I heard you turned down numerous offers from Malidret to stay in Boriolsis
+                        charles changeSprite smile
+frame
+    june changeSprite shy_speak
+    june preSpeak
+        june speak Can you not say such things?
+            june wait 300
+                june cont How can I be considered a genius compared to you?
+frame
+    june changeSprite smile_speak
+    june speak Well, I have been trying to devise a way to increase the purity of nutritional minerals within the fruits which can be found in Boriolsis
+        june wait 300
+            june cont until my father told me to help him out with the investigation
+                june changeSprite smile
+frame
+    charles changeSprite surprised_speak
+    charles preSpeak
+        charles speak Wow! That sounds pretty impressive!
+            charles wait 300
+                charles changeSprite smile_speak
+                charles speak I can still remember those days when we ran about in your house trying to experiment and replicate the chemical excretions made by the Slimes using plant extracts
+                    chief changeSprite scowl
+frame
+    charles speak And now you're already miles ahead in the research of plants and chemica-
+        charles changeSprite mildtakenaback
+        chief interupt
+            chief say Alright! The both of you can catch up later!
+                charles,sophie,june changeSprite serious
+frame
+    chief changeSprite serious_speak
+    chief say June, here's a tuft of long fur from the beast which I manage to find this morning
+        chief wait 300
+            chief say The fur was caught onto an overhanging branch ten meters above the ground
+frame
+    chief say Hopefully, it will give us more clues about the beast
+            chief changeSprite serious
+            chief flipHorizontally 200
+                chief wait 500
+                    chief flipHorizontally 200
+frame
+    june changeSprite serious_speak
+    june preSpeak
+        june speak Okay Dad!
+            june wait 300
+                june speak You can catch up with Charles and Princess Sophie!
+                    june wait 300
+                        june say I'll get to work right away!
+                            june changeSprite serious
+frame
+    june flipHorizontally 200
+        charles changeSprite awkward_speak
+        charles preSpeak
+            charles speak June, is it okay if I join you?
+                june flipHorizontally 200
+                june changeSprite surprised
+                charles changeSprite serious_speak
+                charles wait 300
+                    charles cont I'm not really a conversationalist and would prefer to help out with the research
+                        charles changeSprite serious
+frame
+    june changeSprite surprised_speak
+    june preSpeak
+        june speak text=... t=500 s=false
+            june wait 200
+                june speak O-Of course!
+                    june wait 700
+                        june changeSprite overjoyed
+                        june cont It will just be like old time again, won't it?
+frame
+    june changeSprite smile_speak
+    june speak Both of us playing around in the laboratory
+        june changeSprite smile
+        sophie changeSprite playful
+frame
+    charles changeSprite smile_speak
+    charles preSpeak
+        charles speak I guess so...?
+            charles changeSprite smile
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak I think I will just stay here and talk to Helmuth
+            sophie wait 300
+                sophie speak There're so much things about the past which I want to ask him!
+                    sophie changeSprite smile
+frame
+    chief changeSprite smile_speak
+    chief preSpeak
+        chief speak No problem, Princess Sophie!
+            chief wait 300
+                chief changeSprite serious_speak
+                chief speak Then I guess Charles and June,
+                    chief wait 300
+                        chief cont both of you can run along and start on the research
+frame
+    chief speak We need to figure out a way to stop the monster soon
+        chief changeSprite serious

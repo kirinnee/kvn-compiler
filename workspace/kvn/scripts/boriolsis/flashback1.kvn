@@ -1,0 +1,361 @@
+declare sCharles,sSophie,mistra as character
+declare boriolsis as stage
+
+scene boriolsis_flashback1 boriolsis_flashback1
+
+frame
+    boriolsis bringCharacter sCharles
+    boriolsis bringCharacter sSophie
+    boriolsis bringCharacter mistra
+    sCharles,sSophie,mistra setTextColor white
+    boriolsis display t=0 bgO=0
+        boriolsis changeBackground bg=garden a=1 t=1000 s=false
+frame
+    sSophie changeSprite pain_speak
+    sSophie,sCharles appear 1000
+        sSophie preSpeak
+            sSophie speak Ouch!!!
+                sCharles changeSprite worried
+                sSophie changeSprite tearful
+                sCharles wait 600
+                    sCharles move x=20 t=200
+frame
+    sCharles changeSprite worried_speak
+    sCharles preSpeak
+        sCharles say Are you okay, Princess Sophie?
+            sCharles wait 300
+                sCharles say What happened?
+                    sCharles changeSprite worried
+frame
+    sSophie changeSprite tearangry_speak
+    sSophie preSpeak
+        sSophie speak Why are there so many thorns on this flower?
+            sSophie wait 300
+                sSophie say They're so prickly and sharp!
+frame
+    sSophie wait 400
+        sSophie changeSprite surprised_speak
+        sSophie say Oh dear!
+            sSophie wait 300
+                sSophie changeSprite tearful_speak
+                sSophie say Now my fingers are bleeding!
+                    sSophie changeSprite tearful
+frame
+    sCharles changeSprite impatient
+    sCharles bringAboveOverlay
+    boriolsis changeOverlay yanse=black a=0.55
+        boriolsis displayText size=1.4vw center=false color=white msg=At this very moment, I really didn't feel like helping her. But it would look very strange for me to leave her alone.
+frame
+    boriolsis changeOverlay yanse=black a=0
+        sCharles changeSprite smile_speak
+        sCharles preSpeak
+            sCharles say Let me help you with this
+                sCharles changeSprite smile
+                sSophie changeSprite scared
+frame
+    sCharles changeSprite focused
+    sCharles rotateClockwise angle=10 t=100
+        sCharles move x=0 y=10 t=400
+            sCharles move x=0 y=-10 t=400
+                sCharles move x=0 y=10 t=400
+                    sCharles move x=0 y=-10 t=400
+                        sCharles rotateClockwise angle=null t=100
+                        sCharles changeSprite smile_speak
+                        sCharles say Now is it better?
+                            sCharles changeSprite smile
+frame
+    sSophie changeSprite tearsmile_speak
+    sSophie preSpeak
+        sSophie say Yes!
+frame
+    sSophie say Thank you so much!
+        sSophie changeSprite tearsmile
+frame
+    sCharles changeSprite explain
+    sCharles say Next time, just don't go running around touching any flower that you see
+        sCharles wait 300
+            sCharles say You'd never know which ones would be poisonous or thorny
+frame
+    sCharles say At the end of the day, they're all just flowers
+        sSophie changeSprite upset
+        sCharles wait 300
+            sCharles say They attract you via with their colors and shapes in hope that you'd assist them in their reproductive processes
+frame
+    sSophie changeSprite upset_speak
+    sSophie preSpeak
+        sSophie say How can you say that?
+frame
+    sSophie say Flowers are one of the greatest things in our world!
+        sSophie wait 300
+            sSophie changeSprite smile_speak
+            sSophie say They're so pretty and nice!
+                sSophie changeSprite smile
+frame
+    sCharles changeSprite smile_speak
+    sCharles preSpeak
+        sCharles say I won't argue against that
+            sCharles wait 300
+                sCharles changeSprite explain
+                sCharles say But that's all there is to it
+frame
+    sCharles say There's no need for us to get overly excited or involved in it
+        sCharles changeSprite focused
+frame
+    sSophie changeSprite ignore
+    sSophie preSpeak
+        sSophie say I don't get what's wrong with you scholars in the Academy
+frame
+    sSophie changeSprite upset_speak
+    sSophie say Must there be a reason or purpose for my flowers to exist?
+        sSophie wait 300
+            sSophie changeSprite smile_speak
+            sSophie say I like them just as they are
+            sCharles changeSprite surprised
+frame
+    sSophie say Beautiful and nice-smelling
+frame
+    sCharles changeSprite stunned
+    sSophie changeSprite upset_speak
+    sSophie say You all need to learn how to appreciate these physical things rather than always looking at the other things that may or may not matter
+frame
+    sSophie changeSprite smile_speak
+    sSophie say If not, wouldn't you be missing out on the world that we live in?
+        sSophie endSpeak
+        sSophie changeSprite smile
+frame
+    boriolsis changeOverlay yanse=black a=0.55
+        boriolsis displayText msg=Her words struck me deeply as I realized that this little girl has a knack of making sense out of the mundane things in our lives
+frame
+    boriolsis displayText msg=And because of this, I find myself increasingly intrigued by Princess Sophie as I spent more time with her learning to look at things from her unconventional pair of eyes
+frame
+    boriolsis displayText In fact, she was taking away the hatred and vengeful thoughts in my head bit by bit
+        sCharles wait 500
+            boriolsis displayText Until certain ideas were forced into my head
+                boriolsis changeOverlay yanse=black a=0
+                    sSophie,sCharles disappear 1000
+frame
+    sCharles move x=-20
+    mistra appear 1000
+        boriolsis displayText Mistrassimo was my mentor during the Academy
+frame
+    boriolsis displayText Back then, every scholar at the Academy will be attached to one of the Ministers
+frame
+    boriolsis displayText And because I was the top scholar of the cohort, I was attached to Prime Minister Mistrassimo
+frame
+    boriolsis displayText It was him who reinvigorated the disappearing vengeful thoughts in my head...
+frame
+    sCharles changeName default
+    sCharles changeSprite apologetic
+    sCharles appear 1000
+        mistra changeSprite smile_speak
+        mistra preSpeak
+            mistra speak Charles, you're...
+                mistra wait 300
+                    mistra cont quite early today
+                        mistra changeSprite smile
+frame
+    sCharles changeSprite apologetic_speak
+    sCharles preSpeak
+        sCharles say I'm sorry for bothering you so early today
+            sCharles wait 300
+                sCharles say I've got a few questions for you, Minister Mistrassimo
+                    sCharles changeSprite apologetic
+frame
+    mistra changeSprite smile_speak
+    mistra preSpeak
+        mistra say So what do you have for me?
+            mistra changeSprite smile
+frame
+    sCharles changeSprite explain
+    sCharles preSpeak
+        sCharles speak I was reading about some readings on Governance which you passed me last week
+frame
+    sCharles changeSprite worried_speak
+    sCharles say There was this text about legitimacy of political authority
+        sCharles wait 300
+            sCharles say I was a little confused between the terms sovereignty by acquisition and sovereignty by institution
+frame
+    sCharles say Even though the text tries to draw a distinction between these two terms, I can't help but feel that they're fundamentally the same
+        sCharles changeSprite worried
+frame
+    mistra changeSprite serious_speak
+    mistra preSpeak
+        mistra speak Let me try to illustrate the differences using an example
+frame
+    mistra say Why do you think the King and Queen have the authority to rule over Novala?
+        mistra changeSprite serious
+frame
+    sCharles changeSprite thinking_speak
+    sCharles preSpeak
+        sCharles say Well, they have inherited the right from their predecessors
+frame
+    sCharles say Also, they have been treated Novalans with respect and taken utmost care of them
+        sCharles wait 300
+            sCharles changeSprite explain
+            sCharles say I guess this gives them some sort of legitimacy to rule over Novala
+frame
+    mistra changeSprite smile_speak
+    mistra preSpeak
+        mistra speak Your statements are correct but not fundamentally accurate
+            sCharles changeSprite curious
+frame
+    mistra changeSprite serious_speak
+    mistra say Yes they have been given certain powers by the Great Leviathan to exercise control over Novala with their eyes
+        mistra wait 300
+            mistra say And yes they have been doing a decent job
+                mistra wait 200
+                    mistra cont at least from the perspectives of certain individuals
+frame
+    mistra say But did the Novalans willingly concede their rights to the King and Queen?
+        mistra wait 300
+            mistra say Was it out of a conscious agreement to consign their freedom to the Royal Family?
+                sCharles changeSprite thinking
+frame
+    mistra changeSprite smile_speak
+    mistra say Or was it one out of fear of the Sovereign and the powerful?
+frame
+    mistra say People sometimes mistake fear for respect and hatred for gratitude
+        mistra wait 300
+            mistra say And it's not hard to imagine why
+                sCharles changeSprite worried
+frame
+    mistra changeSprite serious_speak
+    mistra say When we lack institutions and alternatives, we tend to confuse the wrong as the one and absolute truth
+        mistra changeSprite serious
+frame
+    sCharles changeSprite thinking_speak
+    sCharles preSpeak
+        sCharles say msg=...... t=1000 s=false
+            sCharles wait 200
+                sCharles changeSprite curious_speak
+                sCharles say But why should we be afraid even if we lack institutions?
+frame
+    sCharles changeSprite upset_speak
+    sCharles say Ultimately, the Sovereign still has to derive its power from the people
+frame
+    sCharles say If things really go out of hand, isn't there already an inherent mechanism to offset any imbalances?
+        sCharles changeSprite curious
+frame
+    mistra changeSprite smile_speak
+    mistra preSpeak
+        mistra say The mechanism does exist
+            mistra wait 400
+                mistra say But it only functions when it's triggered
+frame
+    mistra changeSprite serious_speak
+    mistra say And the Sovereign is well aware of that as well
+        mistra wait 300
+            mistra say Thus, when a Sovereign is not empowered by any form of institution, and when it's power is conferred by parties beyond its people,
+                mistra wait 100
+                    mistra cont they worry about their legitimacy and tries to cover up whatever wrong they've done
+frame
+    mistra changeSprite smile_speak
+    mistra say When their power has to come from acquisition or fear, the power can be easily lost to the majority or the peole like what you have mentioned
+        mistra wait 400
+            mistra say So the most common way for regimes to maintain control over large populaces and to overcome a lack of legitimacy is to spread fear
+                sCharles changeSprite thinking
+frame
+    mistra changeSprite serious_speak
+    mistra say But what we're seeing now in Novala is one of the highest level of control and governance
+frame
+    mistra say By allowing little private conflicts to form between social groups and hierarchies, people will sink too deeply into these problems
+        mistra wait 400
+            mistra say They will become too entangled with their immediate fears and concerns to trouble the Sovereign or to even reevaluate some of the actions performed by the Sovereign
+frame
+    sCharles changeSprite curious
+    mistra say We see Kapitolian fishermen fighting with our fishermen in Erithven for fishing strips
+frame
+    mistra say We see class battles and broken dreams in Malidret as well as people competing with one another on the ladder of meritocracy
+frame
+    mistra say These seemingly minor conflicts distract people from questioning the legitimacy of the Sovereign and judging the performance of the Sovereign
+frame
+    mistra changeSprite smile_speak
+    mistra say One might argue that these occurences are minor in the bigger scheme of things
+        mistra wait 300
+            mistra changeSprite serious_speak
+            mistra say But the biggest lesson learnt from history is that prevention is better than cure
+                sCharles changeSprite worried
+frame
+    mistra say Do we wait for a big problem before we conclude that a mechanism is failing?
+        mistra changeSprite serious
+frame
+    sCharles changeSprite worried_speak
+    sCharles preSpeak
+        sCharles say That's quite frightening indeed...
+frame
+    sCharles changeSprite curious_speak
+    sCharles say But isn't it very risky to upset any kingdom which has been relatively successful with their current system?
+            sCharles wait 300
+                sCharles say I mean, since the war, Novala has been enjoying peace and prosperity...
+                    sCharles changeSprite worried
+frame
+    mistra changeSprite smile_speak
+    mistra preSpeak
+        mistra say There is no doubt that you're right about the prosperity which we have enjoyed
+            mistra wait 300
+                mistra changeSprite serious_speak
+                mistra say But peace?
+frame
+    mistra changeSprite smile_speak
+    mistra say Using Novala as an example to further my exposition
+frame
+    mistra changeSprite serious_speak
+    mistra say If Novala were to take a firmer stance against the Kapitolian fishermen, would our Erithven fishermen be suffering right now?
+        mistra wait 300
+            mistra say If the King and Queen were to be truly interested in the welfare of its people instead of holding onto their power, they would have looked into the manashard exploitation in Boriolsis instead of letting it damage the lives of all Boriolsis citizens
+                mistra wait 300
+                    mistra say Our current King and Queen made many mistakes during the war, surrendering important rights to Kapitolis and causing the death of many of our fellow Novalans
+                        sCharles changeSprite surprised
+                        sCharles wait 400
+                            sCharles changeSprite angry
+frame
+    mistra changeSprite smile_speak
+    mistra say But of course, at the end of the day, there are many ideologies on how a ruler should govern
+        mistra wait 200
+            mistra say We have witnessed so many different personalities on the throne and there is no clear right or wrong
+                sCharles changeSprite impatient
+frame
+    mistra changeSprite serious_speak
+    mistra say But we must always look out for the trajectory of the fate of a kingdom
+        mistra wait 300
+            mistra say In those days before the Great Leviathan intervened, chaos and misfortune always follow weakness and selfishness within a Kingdom
+                sCharles changeSprite worried
+frame
+    mistra say And these weakness and selfishness must exist both within the rulers
+        mistra wait 400
+            mistra cont msg=and the people t=1200 s=false
+                mistra changeSprite serious
+frame
+    sCharles changeSprite worried_speak
+    sCharles preSpeak
+        sCharles say Wait so how are we going to prevent this?
+            sCharles changeSprite worried
+frame
+    mistra changeSprite smile_speak
+    mistra preSpeak
+        mistra say Well, to be honest, I can't see the future at all...
+frame
+    mistra say I'm but a man concerned with the theory of Governance
+frame
+    mistra changeSprite serious_speak
+    mistra say But a word of advice would be to be brave
+        mistra wait 300
+            mistra say After all, your generation will have to depend on one of you to break the continuity in the chain of weakness
+                sCharles changeSprite thinking
+frame
+    mistra say And to establish a new pillar of institution to rediscover the peace and liberty which belongs to the people
+        mistra wait 300
+            mistra say For change to happen, someone has to stem the intergenerational flow of authority and inspire changes to the system
+frame
+    mistra changeSprite smile_speak
+    mistra say Alright, if there's nothing else, I'll need to rush to meet the other ministers
+        mistra wait 300
+            mistra say If there's anything that I should add, I would say that
+                mistra wait 300
+                    mistra cont you shouldn't be too naive
+                        mistra changeSprite smile
+frame
+    sCharles changeSprite impatient
+    mistra wait 300
+        mistra disappear 1000
+//transit back to search

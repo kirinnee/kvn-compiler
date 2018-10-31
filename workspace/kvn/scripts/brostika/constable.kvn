@@ -1,0 +1,481 @@
+declare charles,sophie,yusie as character
+declare brostika as stage
+
+scene brostikaConstable brostika_constable
+frame 1
+    brostika bringCharacter sophie
+    brostika bringCharacter charles
+    brostika bringCharacter yusie
+    sophie setTextColor white
+    charles setTextColor white
+    yusie setTextColor white
+    charles,sophie preMove x=-50
+    brostika display backgroundAlpha=0 t=0
+        brostika changeBackground opacity=1 background=police t=800
+frame 2
+    yusie changeName Guard
+    yusie setFontSize 1.7vw
+    yusie changeSprite serious
+    yusie appear t=500
+        charles,sophie changeSprite worried
+        charles,sophie appear
+            sophie,charles move t=1000 g=easeOut
+frame 3
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak Hello, is this the station of the town guards?
+            sophie changeSprite worried
+frame 4
+    yusie changeSprite serious_speak
+    charles changeSprite serious
+    yusie preSpeak
+        yusie speak Yes it is,
+            yusie wait t=200
+                yusie cont how may I help you?
+                    yusie changeSprite serious
+frame 5
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles speak We'd like to speak to the one in charge.
+            charles changeSprite serious
+            yusie changeSprite angry
+frame 5
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak Captain Yusie. That's me.
+frame 7
+    yusie changeSprite serious_speak
+    yusie speak Now,
+        yusie wait t=200
+            yusie cont I don't recall seeing you two around before.
+                yusie changeSprite serious
+                sophie changeSprite awkward
+                charles changeSprite mildtakenaback
+frame
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie speak We're,
+            sophie wait 300
+                sophie contSpeak umm...
+                    sophie changeSprite awkward
+                    charles changeSprite serious_speak
+                    charles interrupt
+                        charles speak Travellers.
+                            charles wait 200
+                                charles contSpeak We're travellers.
+                                    charles changeSprite serious
+                                    sophie changeSprite worried
+frame
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak Ok...
+            yusie wait 400
+                yusie contSpeak Care to explain the guy slumped over your shoulder?
+                    yusie changeSprite serious
+
+frame
+    charles changeSprite explain
+    charles speak Brostikine winery has been taken over by a group of unsavoury individuals.
+
+frame
+    charles speak Tristan here managed to escape, but was pursued and poisoned by his captors.
+        sophie changeSprite scared
+frame 9
+    charles speak We found him in an alley and defeated his pursuers, but he didn't make it.
+        sophie changeSprite worried
+frame 10
+    yusie changeSprite snigger_speak
+    yusie preSpeak
+        yusie speak Your story sounds awfully unbelievable.
+            sophie changeSprite surprised
+            charles changeSprite mildtakenaback
+frame 11
+    sophie changeSprite worried
+    yusie changeSprite serious_speak
+    yusie speak Why would bandits want to take over Brostikine Winery?
+        yusie wait 300
+            yusie contSpeak I can't see what they would stand to gain.
+                yusie changeSprite serious
+frame 11
+    charles changeSprite mildtakenaback_speak
+    charles preSpeak
+        charles speak Yes,
+            charles wait 200
+                charles contSpeak I was about to explain that.
+                    charles changeSprite explain
+                    charles wait 300
+                        charles contSpeak They wanted to poison the wine, to kill the village!
+                            charles changeSprite serious
+frame 12
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak And how did you find that out?
+            yusie wait 400
+                yusie contSpeak Who would corroborate your claim?
+                    yusie changeSprite serious
+                    charles changeSprite mildtakenaback
+frame
+    charles changeSprite mildtakenaback_speak
+    charles preSpeak
+        charles speak We heard it from Tristan...
+
+frame
+    charles changeSprite impatient_speak
+    charles speak Look, we just came here to bring the issue to your attention.
+        charles wait 300
+            charles contSpeak There's no reason to doubt-
+                yusie changeSprite snigger_speak
+                charles changeSprite impatient
+                yusie interrupt
+                    yusie speak Heard it from the dead person,
+                        yusie wait 300
+                            yusie contSpeak how convenient!
+                                yusie changeSprite snigger
+frame
+    sophie changeSprite surprised_speak
+    sophie preSpeak
+        sophie say Oh yes!
+            sophie wait 300
+                sophie say There was something about a Mr. Broski kidnapped at the winery!
+                    sophie changeSprite worried
+frame
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie say You do know that dropping the owner's name won't make you more credible, don't you?
+            yusie changeSprite serious
+            sophie changeSprite worried
+frame
+    charles changeSprite upset
+    charles preSpeak
+        charles speak ...
+frame
+    charles changeSprite upset_speak
+    charles flipHorizontally
+        charles speak Sophie,
+            charles wait 200
+                charles contSpeak we're leaving.
+                    charles wait 400
+                        charles contSpeak Staying here is a waste of time anyway
+                            charles changeSprite impatient
+                            yusie changeSprite angry
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie speak But Charles! We-
+            sophie wait 300
+                sophie changeSprite worried
+                yusie changeSprite angry_speak
+                yusie interrupt
+                    yusie speak HOLD IT!
+                    charles flipHorizontally
+                    charles changeSprite mildtakenaback
+                    sophie changeSprite scared
+frame
+    charles changeSprite serious
+    yusie speak You're not going anywhere.
+
+frame
+    yusie speak You can't just waltz in here with a dead body and walk out as if nothing happened.
+
+frame
+    yusie speak As far as I'm concerned,
+        yusie wait 300
+            yusie contSpeak what you said was but a fanciful story to cover up the murder of this kid.
+
+frame
+    yusie speak I will have to hold you in custody until an investigation is completed.
+        charles changeSprite mildtakenaback
+        yusie changeSprite angry
+frame
+    charles changeSprite mildtakenaback_speak
+    charles preSpeak
+        charles speak What?
+            charles wait 400
+                charles contSpeak No!
+
+frame
+    charles changeSprite impatient_speak
+    charles speak We can't afford to dawdle here!
+        charles changeSprite impatient
+        sophie changeSprite worried
+frame
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie say If you haven't realized yet,
+            yusie wait 400
+                yusie cont you don't really have the final say here.
+frame
+    yusie say I've seen too many of your kind...
+        charles changeSprite angry
+frame
+    yusie say The thief cries thief-
+        sophie interupt
+            sophie say No! You're mistak-
+                yusie interupt
+                    yusie say Alright!
+                        yusie changeSprite angry_speak
+frame
+    yusie say I've enough of your nonsense!
+frame
+    yusie say I'm putting all three of you in the bastille.
+        yusie wait 400
+            yusie say None of you are going anywhere until the investigation is completed!
+                yusie changeSprite angry
+frame
+    charles changeSprite angry_speak
+    charles preSpeak
+        charles say What?!
+frame
+    charles say That's not fair!
+        charles wait 400
+            charles say Is that even standard protocol?!
+frame
+    charles say Do all Brostikan guards go around putting people in the bastille based on mere conjecture?
+        sophie changeSprite scared
+        charles changeSprite angry
+        yusie changeSprite awkward
+frame
+    yusie changeSprite awkward_speak
+    yusie preSpeak
+        yusie say W-Well...
+            yusie wait 600
+                yusie say It's not exactly a situation with clear protocols...
+                    yusie changeSprite awkward
+frame
+    charles changeSprite angry_speak
+    charles preSpeak
+        charles say Then, we're not staying here any longer!
+            yusie changeSprite angry
+frame
+    charles changeSprite impatient_speak
+    charles flipHorizontally
+        charles wait 300
+            charles say Sophie, let's leave!
+frame
+    charles say There's no use in wasting our time talking to unreasonable peop-
+        charles changeSprite mildtakenaback
+        yusie changeSprite angry_speak
+        yusie interupt
+            yusie say Hold it there!
+                yusie move x=-70 t=600
+                    yusie flipHorizontally
+                        charles flipHorizontally 200
+                        sophie wait 100
+                            sophie move x=15 t=400
+                            charles move x=20 t=400
+                                sophie,charles flipHorizontally 200
+                                    charles changeSprite impatient
+                                    sophie changeSprite worried
+frame
+    yusie say You're not going anywhere!
+frame
+    yusie say Based on protocol,
+        yusie wait 400
+            yusie cont whenever a syndicate is suspected of an organized crime,
+                yusie wait 400
+                    yusie cont all members of the syndicate will be put behind bars until conclusive evidence proving their innocence is submitted
+                        yusie changeSprite serious
+frame
+    sophie changeSprite worried_speak
+    sophie preSpeak
+        sophie say Captain Yusie,
+            sophie wait 400
+                sophie cont can you give us a chance to prove our innocence?
+frame
+    sophie say We're really not the villains here.
+
+frame
+    sophie say Every moment we spend here doubting each other is another opportunity for the thugs to distribute the poisoned wine!
+        sophie changeSprite worried
+frame
+    yusie changeSprite serious
+    yusie preSpeak
+        yusie speak msg=... t=1000 s=false
+
+frame
+    yusie changeSprite serious_speak
+    yusie speak Alright,
+        yusie wait 200
+            yusie contSpeak under these unusual circumstances,
+                yusie wait 200
+                    yusie contSpeak I'll make an exception.
+                    charles changeSprite mildtakenaback
+                    sophie changeSprite relieved
+frame
+    yusie changeSprite explain
+    charles changeSprite serious
+    yusie say At most two of you can be released to collect the necessary conclusive evidence.
+        yusie wait 400
+            yusie say However,
+                yusie wait 100
+                    yusie contSpeak they must return within 48 hours with or without the evidence.
+frame
+    sophie changeSprite serious
+    yusie say Otherwise,
+        yusie wait 100
+            yusie contSpeak the remaining members of the syndicate in the bastille shall be executed!
+                yusie changeSprite serious
+frame
+    charles changeSprite explain
+    charles preSpeak
+        charles say So regardless,
+            charles wait 100
+                charles contSpeak we have to conclusively prove our innocence before all of us are free to go?
+                    charles changeSprite serious
+frame
+    yusie changeSprite explain
+    yusie preSpeak
+        yusie say You got that right.
+            yusie changeSprite serious
+frame
+    charles changeSprite thinking_speak
+    charles preSpeak
+        charles say I see...
+            charles wait 400
+                charles changeSprite explain
+                charles say Can you give us a moment to discuss who we would choose to stay in the bastille?
+                    charles changeSprite serious
+frame
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie say Do it quickly.
+            charles changeSprite impatient
+            yusie wait 400
+                yusie say I don't have the entire day to wait for your decision!
+                    yusie changeSprite serious
+frame
+    charles preSpeak
+        charles say msg=...... t=1000 s=false
+            charles bringAboveOverlay
+            sophie bringAboveOverlay
+            brostika changeOverlay color=black a=0.55
+frame
+    charles changeSprite explain
+    sophie changeSprite worried
+    charles say Sophie, I think it would be best for me to stay in the bastille while you go and search for Mr. Broski with #playName
+    sophie flipHorizontally 200
+    charles move x=5 t=200
+frame
+    charles say #playName  will be able to provide you with the necessary security in the event that you bump into any of the bandits
+frame
+    charles changeSprite gazeindistance
+    charles say msg=...... t=1000 s=false
+        charles wait 500
+            charles changeSprite gazeindistance_speak
+            charles say I hate to say this,
+                charles wait 400
+                    charles cont but in the event that you cannot find Mr. Broski or any evidence,
+                        charles wait 400
+                            charles cont just ignore me and run away
+                                sophie changeSprite surprised
+frame
+    sophie changeSprite serious
+    charles changeSprite serious_speak
+    charles say Always remember that our utmost priority lies in reuniting with our
+        charles wait 600
+            charles cont allies in Malidret
+                sophie changeSprite serious
+frame
+    sophie changeSprite serious_speak
+    sophie preSpeak
+        sophie say No...
+            sophie wait 500
+                sophie say I should be the one stayin-
+                    sophie changeSprite surprised
+                    charles changeSprite impatient_speak
+                    charles interupt
+                        charles say No!
+                            sophie changeSprite serious
+frame
+    charles say How can someone of your status stay in the bastille?
+        charles wait 400
+            charles speak I will stay behind! Let's tell Captain Yusie about thi-
+                sophie changeSprite angry_speak
+                charles changeSprite mildtakenaback
+                sophie interupt
+                    sophie say Charles,
+                        sophie wait 400
+                            sophie cont listen to me
+                                charles changeSprite serious
+frame
+    sophie changeSprite serious_speak
+    sophie say If we've only got one shot at this,
+        sophie wait 400
+            sophie say we should send our best team to collect the evidence
+                charles changeSprite sad
+frame
+    sophie say And that would be you and #playName
+frame
+    sophie changeSprite smile_speak
+    sophie say Besides,
+        sophie wait 400
+            sophie cont wouldn't the bastille be a lot safer than anywhere near the Brostikine Winery?
+frame
+    sophie say As long as both of you return in 48 hours, they won't kill me.
+        sophie wait 400
+            sophie say They would still have to look for evidence to corroborate their claim that we're guilty, right?
+frame
+    sophie changeSprite serious_speak
+    sophie say So go on with #playName
+        sophie wait 400
+            sophie cont while I enjoy my short stay in the bastille
+frame
+    sophie changeSprite smile_speak
+    sophie say I've always wanted to see how a bastille looks like!
+        sophie wait 400
+            sophie say Wouldn't this be a great chance to check it out firsthand?
+                sophie changeSprite smile
+frame
+    charles preSpeak
+        charles say msg=...... t=1000 s=false
+            charles wait 500
+                charles changeSprite sad_speak
+                charles say You're not wrong...
+frame
+    charles changeSprite serious_speak
+    sophie changeSprite serious
+    charles say Fine,
+        charles wait 400
+            charles cont you'll stay here then.
+frame
+    charles changeSprite impatient_speak
+    charles say We'll be back for you as quickly as possible!
+frame
+    charles say In the meantime,
+        charles wait 400
+            charles cont do take care of yourself.
+frame
+    charles changeSprite angry_speak
+    charles say If that Yusie girl tries to threaten your life,
+        charles wait 400
+            charles cont or for some reason we're unable to return in 48 hours,
+                charles wait 400
+                    charles cont just flash your pendant and reveal your identity.
+                        charles changeSprite serious
+frame
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie say Don't worry!
+            sophie wait 400
+                sophie say I'll be fine!
+                    sophie changeSprite smile
+frame
+    charles bringBelowOverlay
+    sophie bringBelowOverlay
+    brostika changeOverlay color=black a=0
+        charles changeSprite explain
+        charles preSpeak
+            charles speak Alright,
+                charles wait 150
+                    charles contSpeak Sophie will remain here while #playName  and I will go collect the proof you require.
+                        charles changeSprite serious
+frame
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak Fine.
+            yusie wait 150
+                yusie contSpeak You have 48 hours.
+
+frame
+    yusie speak Don't try anything funny.
+        yusie changeSprite serious

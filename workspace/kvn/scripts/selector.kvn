@@ -1,0 +1,91 @@
+declare erithven as stage
+create option elixir msg=Elixir
+    play erithven_elixir
+create option pre_op msg=Intro
+    play brostika_intro
+
+create option start_op msg=Brostika Start
+    play brostika_outside
+
+create option alley_op msg=Brostika Alley
+    play brostika_alley
+create option tristan_op msg=Brostika Tristan
+    play brostika_tristan
+
+create option constable_op msg=Brostika Constable
+    play brostika_constable
+
+create option prewinery2_op msg=Brostika Prewinery
+    play prewinery
+
+create option winery_op msg=Brostika Winery
+    play brostika_winery
+create option constable2_op msg=Brostika Constable 2
+    play brostika_constable2
+
+create option end_op msg=Brostika End
+    play brostika_end
+create option start msg=Meet Chief
+    play boriolsis_welcome
+create option house msg=Visit Chief House
+    play chief_house_1
+create option lab msg=Visit Lab
+    play boriolsis_lab
+create option postweapon msg= After Weapon Built
+    play boriolsis_postweapon
+create option search msg= Search for June
+    play boriolsis_search
+create option flashback1 msg=Flashback 1
+    play boriolsis_flashback1
+create option flashback2 msg=Flashback 2
+    play boriolsis_flashback2
+create option reunion msg=Reunion
+    play boriolsis_reunion
+create option accepthelp msg=Accept June Help
+    play boriolsis_accepthelp
+create option rejecthelp1 msg=Reject June Help & Wizard Intro
+    play boriolsis_rejecthelp_1
+create option rejecthelp2 msg=Collect Herbs for Wizard
+    play boriolsis_rejecthelp_2
+create option rejecthelp3 msg=Learn Ritual
+    play boriolsis_rejecthelp_3
+create option rejecthelp4 msg=Understand Ritual
+    play boriolsis_rejecthelp_4
+scene selector selector
+
+frame
+    erithven display
+        erithven displayOptionPrecise fontSize=2.5 width=20 col=4 option=[elixir]
+
+//declare boriolsis as stage
+//create option pre_op msg=Intro
+//    play brostika_intro
+//create option start_op msg=Brostika Start
+//    play brostika_outside
+
+//create option alley_op msg=Brostika Alley
+//    play brostika_alley
+//create option tristan_op msg=Brostika Tristan
+//    play brostika_tristan
+
+//create option constable_op msg=Brostika Constable
+//    play brostika_constable
+
+//create option prewinery2_op msg=Brostika Prewinery
+//    play prewinery
+
+//create option winery_op msg=Brostika Winery
+//    play brostika_winery
+//create option constable2_op msg=Brostika Constable 2
+//    play brostika_constable2
+
+//create option end_op msg=Brostika End
+//    play brostika_end
+
+
+
+//scene selector selector
+
+//frame
+    //boriolsis display
+        //boriolsis displayOptionPrecise fontSize=2.5 width=20 col=4 option=[start,house,lab,postweapon,search,flashback1,flashback2,reunion,accepthelp,rejecthelp1,rejecthelp2,rejecthelp3,rejecthelp4]

@@ -1,0 +1,99 @@
+declare yusie,charles,sophie,chief,halley,june,deadBodyCG,deadsophie,slane,wizard as character
+declare boriolsis as stage
+
+scene boriolsis_rejecthelp_4 boriolsis_rejecthelp_4
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter slane
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis bringCharacter deadBodyCG
+    boriolsis bringCharacter deadsophie
+    boriolsis bringCharacter wizard
+    yusie,charles,sophie,chief,halley,june,slane setTextColor white
+    slane changeName ???
+    yusie preMove x=-70
+    yusie setHorizontalFlip true
+    charles preMove x=-13
+    sophie preMove x=27
+    june preMove x=-63
+    wizard preMove x=10
+    june setHorizontalFlip true
+    boriolsis display t=500 bgO=0
+        boriolsis setAY 0
+        boriolsis setAX 0
+        boriolsis scale x=2 y=1 t=0
+                boriolsis changeBackground bg=forest a=1 t=500 s=false
+frame
+    charles,sophie,yusie changeSprite curious
+    june changeSprite serious
+    wizard changeSprite serious_speak
+    sophie,wizard,charles,june,yusie appear 1000
+            wizard preSpeak
+                wizard say It’s a ritual that summons an immemorial legendary creature which resides in the divine realm
+frame
+    wizard changeSprite smile_speak
+    wizard say But don't worry!
+        wizard wait 400
+            wizard say The summoning of the creature will not harm anyone
+frame
+        sophie changeSprite amazed
+        charles changeSprite mildtakenaback
+        june changeSprite surprised
+        yusie changeSprite surprised
+    wizard say  Because the creature lives in the divine realm, it has abilities that exceed our imaginative capacity
+frame
+    wizard changeSprite serious_speak
+    charles,sophie,yusie changeSprite curious
+    wizard say Once summoned, you can strike a deal with the creature to ask it for a favor
+frame
+    wizard say It was rumored that it had great powers that ranges from purging immense amounts of poison to scrying the future
+frame
+    wizard say However, I’m not sure if there will be any undesirable consequences that come along with the deal
+        wizard wait 400
+            wizard say More often than not, there's always an undesired byproduct
+frame
+    wizard changeSprite smile_speak
+    wizard say I’ve never actually seen this legendary creature or heard of anyone summoning it before in this century
+frame
+    wizard say But from the text which my ancestors had handed down to me, it’s supposed to be a large flying whale
+frame
+    wizard say I'm not sure if it's the same God that the Brostikans and Boriolsisians are praying
+        wizard wait 400
+            wizard say But apparently, it's supposed to be something like the Leviathan
+frame
+    wizard changeSprite serious_speak
+    wizard say I really want to summon this legendary creature
+        wizard wait 400
+            wizard cont so that I can pry into the future as a form of scrying
+                wizard changeSprite serious
+frame
+    june,yusie changeSprite surprised
+    sophie changeSprite amazed
+    charles changeSprite surprised_speak
+    charles preSpeak
+        charles say Scrying the future?
+            charles wait 400
+                charles say Is there really such a thing?
+                    charles changeSprite curious
+frame
+    wizard changeSprite awkward_speak
+    wizard preSpeak
+        wizard say I know it’s unbelievable that the future is already predetermined
+            wizard wait 400
+                wizard changeSprite serious_speak
+                wizard say But trust me when my family has been practising this ritual for centuries
+                    wizard changeSprite serious
+frame
+    charles changeSprite upset
+    june changeSprite serious
+    yusie,sophie changeSprite curious
+    wizard changeSprite serious_speak
+    wizard say Alright!
+        wizard wait 400
+            wizard say Any other questions?
+                wizard changeSprite serious

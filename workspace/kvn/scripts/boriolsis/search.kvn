@@ -1,0 +1,447 @@
+declare yusie,charles,sophie,chief,halley,june,saveJuneCG as character
+declare boriolsis as stage
+
+scene boriolsis_search boriolsis_search
+
+frame
+    boriolsis bringCharacter yusie
+    boriolsis bringCharacter charles
+    boriolsis bringCharacter chief
+    boriolsis bringCharacter halley
+    boriolsis bringCharacter sophie
+    boriolsis bringCharacter june
+    boriolsis bringCharacter saveJuneCG
+    yusie,charles,sophie,chief,halley setTextColor white
+    boriolsis display t=0 bgO=0
+        boriolsis setAY 0
+        boriolsis setAX 0
+        boriolsis scale x=2 y=1 t=0
+            boriolsis pan x=-100
+                boriolsis changeBackground opacity=0 background=forest t=0
+                    boriolsis changeOverlay yanse=black a=0.3 t=1000
+                    charles bringBelowOverlay
+                        boriolsis changeBackground opacity=1 background=forest t=1000
+frame
+    charles setFontSize 1.2vw
+    charles changeItalic true
+    charles changeSprite worried_speak
+    charles appear 1000
+        charles say With visibility at this level, we're really disadvantaged when coming up against the monster
+//foot stepping on dry leaves sound
+frame
+    charles wait 1000
+        charles changeSprite explain
+        charles say #playName , land your feet on the outside ball of your feet
+            charles wait 300
+                charles say Let's try to keep the sound of our footsteps minimal and stay alert
+                    charles changeSprite serious
+//scuffling sound
+frame
+    charles wait 1500
+        charles changeSprite surprised_speak
+        charles move x=-5 t=100
+        charles say Did you hear that?
+frame
+    charles changeSprite serious_speak
+    charles say There seems to be some scuffle going on up ahead
+        charles wait 300
+            charles say We should be close
+frame
+    charles say Let's hurry!
+        charles wait 300
+            charles say But don't make too much noise
+                charles changeSprite serious
+                charles move x=100 t=1000 g=easeOut
+frame
+    june changeName ???
+    june setFontSize 2vw
+    june changeBold true
+    june say AHHHHH!!!
+        june wait 500
+            charles setNormalText
+            charles setFontSize 1.7vw
+            saveJuneCG appear t=1000
+frame
+    june changeName June
+    june speak C-Charles, is that you?
+        june wait 300
+            june say D-Don't come over here!
+frame
+    june say T-The monster is too strongg!
+frame
+    charles say Hang onn!
+        charles wait 300
+            charles say We'll save you!!!
+//Item obtained: Sacremental Spear  (CG should include the spear lying on the ground)
+//transit to clicker scene
+//post fight
+frame
+    charles changeSprite angry
+    june changeSprite guilty
+    boriolsis closeTextBox
+    boriolsis changeOverlay yanse=black a=1
+        saveJuneCG disappear
+        charles move x=-100
+        june appear
+            june move x=-40
+                boriolsis changeOverlay yanse=black a=0.3 t=1000
+frame
+//charles help june up
+    charles changeSprite angry_speak
+    charles preSpeak
+        charles speak What were you thinking?!
+            charles wait 300
+                charles say Are you mad?!
+                    charles changeSprite angry
+frame
+    june setFontSize 1.7vw
+    june setNormalText
+    june speak msg=...... t=1000 s=false
+frame
+    charles changeSprite impatient_speak
+    charles say How could you risk your life like this?
+frame
+    charles say What is Helmuth going to do if you were to have died in the hands of the monster?
+        charles wait 300
+            charles say He has already lost your mother to the monster...
+                charles changeSprite upset
+frame
+    june changeSprite sad_speak
+    june preSpeak
+        june say msg=...... t=1000 s=false
+            june wait 800
+                june say I...I...
+frame
+    june changeSprite guilty_speak
+    june say I-I don't know......
+        june wait 600
+            june say I-I just can't bear to see you so...
+                june wait 500
+                    june cont msg=u-upset... t=1500 s=false
+                    june changeSprite sad
+frame
+    charles changeSprite mildtakenaback
+    charles preSpeak
+        charles say text=...... t=500 s=false
+            june changeSprite sad_speak
+            june preSpeak
+                june speak When I saw the disappointed look on your face after my father said that you'd to stay a week
+                    june wait 300
+                        june say I-I felt really helpless
+frame
+    june changeSprite cry_speak
+    june speak I-I...
+        june wait 300
+            june cont msg=really want you to be h-happy... t=1500 s=false
+frame
+    june wait 1000
+        june say msg=I can still remember the day when we both lost our parents t=3500 s=false
+            june wait 300
+                june say The look on your face
+frame
+    june changeSprite sad_speak
+    june say The light in your eyes was gone
+        june wait 300
+            june say I always felt very bad because I still had my father whereas you were left with no one else
+            charles changeSprite sad
+frame
+    june changeSprite guilty_speak
+    june say In a way, my mother, who led your parents in the project, was responsible for your parents' death
+        june wait 300
+            june changeSprite serious_speak
+            june say And I, as her daughter, must inherit the guilt and responsibility to make up for her mistakes
+frame
+    charles changeSprite sad_speak
+    charles preSpeak
+        charles speak No...
+            charles wait 300
+                charles speak That's not how you should thi-
+                    charles changeSprite mildtakenaback
+                    june changeSprite serious_speak
+                    june interupt
+                        june speak But I willingly do so
+frame
+    charles changeSprite worried
+    june changeSprite sad_speak
+    june speak Ever since I saw how your days and nights in Boriosis had been bleached of color after your parents were killed,
+        june wait 300
+            june cont I was determined to make it a personal goal to make you happy
+frame
+    june changeSprite crysmile_speak
+    june speak I wanted to see you smile every day
+        june wait 300
+            june cont msg=and to be truly happy... t=1500 s=false
+frame
+    june say I can still remember the first time you smiled after that incident
+        june wait 300
+            june say It was when you finally cracked a puzzle that had been boggling you for weeks
+frame
+    june say I can't describe how happy I felt that day
+frame
+    june changeSprite sad_speak
+    june say As much as I really want you to stay in Boriolsis with me,
+        june wait 300
+            june cont I knew that you would have to leave eventually to achieve greater things
+                june wait 300
+                    june cont and to save Novala...
+frame
+    june changeSprite serious_speak
+    june say That's why I must do this
+frame
+    june wait 500
+        june say I had to end your nightmare by killing the monster
+            june wait 300
+                june say I had to help you find the King and the Queen
+                    june wait 300
+                        june changeSprite crysmile_speak
+                        june say msg=I had to make you happy again... t=1500 s=false
+frame
+    june wait 800
+        june changeSprite cry_speak
+        june say text=Because I
+            june wait 500
+                june cont msg=l-love you... t=1500 s=false
+                    charles changeSprite surprised
+frame
+    june say I was so conflicted...
+        june wait 400
+            june say Killing the monster would only hasten your departure
+frame
+    june say But living it alive would torment you as well
+        charles changeSprite sad
+        june wait 400
+frame
+    june say I didn't want to monster to delay the search for the King and the Queen
+        june wait 300
+            june say And most importantly, I want you to stay because of me and not because of the monster
+                june changeSprite cry
+frame
+    charles changeSprite awkward_speak
+    charles preSpeak
+        charles speak I...I
+            charles changeSprite sad
+            june changeSprite sad_speak
+            june interupt
+                june speak It's okay...
+frame
+    june say I-I know I can't really ask you to reciprocate in any way
+        june wait 300
+            june changeSprite worried_speak
+            june say msg=But c-can I ask you to just stay in Boriolsis with me? t=1800 s=false
+frame
+    june say I know you really want to leave Boriolsis as soon as possible to find the King and the Queen
+        june wait 300
+            june say Now that the monster is dead, is it really not possible for you to stay at Boriolsis and let the rest assist Princess Sophie instead?
+frame
+    june changeSprite scared_speak
+    june say I really just want to relive those happier days with you...
+        june wait 300
+            june say Even if it's just a little while...
+                june changeSprite sad
+frame
+    charles changeSprite sad_speak
+    charles preSpeak
+        charles say I-I-
+            charles wait 500
+                charles cont I'm really sorry...
+frame
+    charles say Like what've you said,
+        charles wait 300
+            charles cont there's no chance that I would want to stay in Boriolsis when there are more important things to resolve out there
+frame
+    charles changeSprite explain
+    charles say I have to help Princess Sophie to find her parents
+        charles changeSprite sad
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june speak B-But does she really need so many people to help her?
+            june changeSprite worried
+frame
+    charles changeSprite gazeindistance_speak
+    charles preSpeak
+        charles speak Sighh...
+            charles wait 300
+                charles cont It's no longer an issue of whether I'm capable enough to help her or not
+frame
+    charles changeSprite explain
+    charles speak Princess Sophie is no longer just a member of the Royal Family whom I follow around
+        charles wait 300
+            charles changeSprite serious_speak
+            charles speak But she has become someone whom I really look up to
+                june changeSprite sad
+frame
+    charles say Supporting her and finding the King and Queen have become an inspired goal rather than any mundane duty or any romantic pursuit
+frame
+    charles say That's why I hope that you can give me your best wishes and support my decision to follow Princess Sophie
+        charles changeSprite serious
+frame
+    june changeSprite sad_speak
+    june preSpeak
+        june speak msg=...... t=1000 s=false
+            june wait 400
+                june setFontSize 1.4vw
+                june changeSprite worried_speak
+                june say W-Why are you so inspired by her?
+                    june wait 300
+                        june say I-Is she really that different from the average spoilt princess?
+                            june changeSprite worried
+frame
+    charles changeSprite thinking_speak
+    charles preSpeak
+        charles speak She's really quite...
+            charles wait 500
+                charles cont text=different append=false
+frame
+    charles changeSprite explain
+    charles speak I remember back when I left Boriolsis for the Royal Academy,
+        charles wait 400
+            charles changeSprite sad_speak
+            charles say I brought all the loneliness, sadness,
+                charles wait 500
+                    charles changeSprite disgusted_speak
+                    charles cont msg=and hatred to the Castle t=1500 s=false
+frame
+    charles say A lot of hatred for the Royal Family
+frame
+    charles changeSprite upset_speak
+    charles say Even though I knew it was pretty stupid, I attributed the misfortune which hit our parents to the Royal Family's decision to remove the guards from the research facility
+        charles wait 300
+            charles say I stubbornly refuse to admit that it was our parents' decision to carry on with the research without the necessary safety measures
+frame
+    charles changeSprite sad_speak
+    charles say This vicious hatred was a threat to everyone in the castle, including myself
+        charles wait 300
+            charles changeSprite explain
+            charles say But Princess Sophie's actions and words transformed the hatred into hope
+frame
+    charles say When I first met Princess Sophie, I met her in the Royal Gardens as part of a session involving the top scholars in the Academy and the Princess
+        charles wait 300
+            charles say The session was supposed to build strong and positive relationships between future ministers and the future ruler
+// transit to flashback1
+frame
+    charles changeSprite sad_speak
+    charles say In the end, I was really the naive one
+frame
+    charles wait 300
+        charles say I couldn't tell that he was trying to manipulate me into fulfilling his agenda of overthrowing the King and the Queen
+frame
+    charles changeSprite angry_speak
+    june changeSprite worried
+    charles say But looking back, it was quite clear that he wanted me to revolt against the King and the Queen
+        charles wait 300
+            charles say He played me as one of his pawns
+frame
+    charles say He was actually instigating me to kill Princess Sophie
+        charles wait 300
+            charles cont to supposedly end the Royal Bloodline of weakness
+frame
+    charles changeSprite disgusted_speak
+    charles say I can't believe I almost played into his hands to upset the new-found political equlibrium which Novala had achieved
+frame
+    charles changeSprite sad_speak
+    charles say After the short session with him, I mulled over his words day and night and soon found myself consumed with contempt and hatred against the Royal Family
+frame
+    charles changeSprite upset_speak
+    june changeSprite sad
+    charles say I became increasingly disgusted with the Royal Family's methods to hold onto their authority
+        charles wait 400
+            charles say And I thought that I was starting to see through some of their deceptive behavior
+frame
+    charles say It fed on the reserves of vengeful emotions which I had against the Royal Family because of my parents' death
+        charles wait 500
+            charles changeSprite sad_speak
+            june changeSprite scared
+            charles say And soon I found myself plotting a murder on Princess Sophie
+frame
+    charles changeSprite explain
+    charles say You might find it strange as to how did I become so persuaded by Mistrassimo
+        charles wait 300
+            charles say But he was very convincing when it came to the theoretical discussion about the semantics behind sovereign power
+frame
+    june changeSprite worried_speak
+    charles say He managed to invoke anxiety for the fate of Novala as well as hatred for how selfish the Royal Family supposedly was in a very intellectual fashion
+        charles wait 300
+            charles say This helped him to maintain his credibility and definitely stop me from questioning his motives even after my plans were foiled
+frame
+    charles say He kept himself clean from suspicion but was very focused when it came to directing the formation of ideas and thoughts within my head
+frame
+    charles say And thus, I proceeded to build closer bonds with Princess Sophie as I plotted her murder
+frame
+    charles changeSprite sad_speak
+    charles say Very soon,
+        charles wait 400
+            charles changeSprite gazeindistance_speak
+            charles cont I gained her trust and was close to achieving what I had planned for her
+//flashback2.kvn
+frame
+    charles say Her words clawed at my heart deeply and that was when I felt that perhaps there's still some beauty in our world
+        charles wait 300
+            charles say Perhaps there's still hope
+frame
+    charles changeSprite upset_speak
+    june changeSprite sad
+    charles say An eye for an eye won't change outcomes
+        charles wait 300
+            charles say Neither will revolution borne from violent hatred
+frame
+    charles changeSprite serious_speak
+    charles say Immediately, I did my best to save her and got the medical staff within the castle to attempt to resuscitate her
+frame
+    charles say She did manage to survive in the end and I was forgiven for everything that I've done
+frame
+    charles changeSprite upset_speak
+    june changeSprite worried
+    charles say The King and Queen were furious but she fought for me to keep me alive
+        charles wait 300
+            charles say She claimed that she saw hope in me
+frame
+    charles say The King refused to believe because he didn't pick that up from my carofle
+        charles wait 300
+            charles say But Princess Sophie insisted that she believed in me
+frame
+    june changeSprite sad
+    charles changeSprite gazeindistance_speak
+    charles say Till now, I still don't know what the truth is
+        charles wait 300
+            charles say But one thing I'm sure is that Princess Sophie has inspired me to view the world with less hatred and more optimism
+frame
+    charles changeSprite serious_speak
+    charles say That's why I will always follow behind her and work on building a beautiful world with peaceful means
+        charles changeSprite serious
+frame
+    june changeSprite worried_speak
+    june preSpeak
+        june say Then what happened to Mistrassimo?
+            june wait 300
+                june say How did he managed to get away with this?
+                    june changeSprite worried
+frame
+    charles changeSprite disgusted_speak
+    charles preSpeak
+        charles say Back then, it appeared to me and the rest of the Royal Family that the entire murder plan was developed by me
+frame
+    charles changeSprite sad_speak
+    charles say I was convinced that I was the one who had twisted Mistrassimo's words in my head
+        charles wait 300
+            charles say Hence, he was able to avoid any form of investigation
+frame
+    charles say I was truly naive like what he said
+        charles changeSprite sad
+frame
+    june changeSprite sad_speak
+    june preSpeak
+        june speak msg=...... t=1000 s=false
+            june wait 300
+                june say S-So there's no chance that you would stay behind?
+                    june changeSprite sad
+frame
+    charles changeSprite serious_speak
+    charles preSpeak
+        charles say None at all
+frame
+    charles wait 500
+        charles say Let's head back to your house now
+            charles wait 300
+                charles say The sun will be up soon
+                    charles changeSprite serious

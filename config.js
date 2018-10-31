@@ -3,11 +3,11 @@
  * Please refer any questions, bugs and copyright issue to https://bigbulb.studio or email me at kirinnee97@gmail.com
  */
 module.exports ={
-	seperate:false,
+	seperate:true,
 	initFile: "init.js",
 	configFile: "config.js",
-	name: "Tristan Death",
-	fileName: "brostika",
+	name: "Princess Saviour",
+	fileName: "game",
 	patch:true,
 	patchDir: "patch/",
 	//if you are going want to use reposnsive images, enable image compression too

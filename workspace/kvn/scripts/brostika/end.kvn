@@ -1,0 +1,494 @@
+declare sophie,yusie,charles,broski,yusieHelpedCG as character
+declare brostika as stage
+
+scene brostikaEnd brostika_end
+
+frame
+    brostika bringCharacter sophie
+    brostika bringCharacter charles
+    brostika bringCharacter yusie
+    brostika bringCharacter broski
+    sophie,charles,yusie,broski setTextColor white
+    brostika display backgroundAlpha=0 t=100
+            brostika changeBackground background=winery t=2 o=1
+                yusie preMove x=6 y=20
+                yusie preRotate degree=-10
+                yusie appear
+                sophie appear
+                charles appear
+                charles changeSprite serious
+                sophie changeSprite relieved
+                yusie changeSprite angry
+frame
+    yusie move x=-3 y=2 t=300
+        yusie wait 100
+            yusie rotateClockwise t=200
+            yusie move x=-3 y=-22 t=400 g=swing
+frame
+    yusie changeSprite angryawkward_speak
+    yusie preSpeak
+        yusie speak We could have taken them even without your help...
+            charles changeSprite impatient
+            yusie wait 400
+                yusie contSpeak but,
+                yusie changeSprite pout_speak
+                    yusie wait 300
+                        yusie contSpeak thanks...
+
+frame
+    yusie speak Why didn't you all say you could fight earlier?
+        yusie changeSprite pout
+
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak Well,
+            charles wait 300
+                charles contSpeak if you decided to actually listen instead of rushing off...
+                    sophie changeSprite worried
+                    charles changeSprite impatient
+                    yusie changeSprite angryawkward
+frame
+    yusie changeSprite angryawkward_speak
+    yusie preSpeak
+        yusie speak Hey!
+            yusie wait 500
+                yusie contSpeak My weapon was just dull from a lack of use recently!
+                    charles changeSprite disgusted
+frame
+    yusie speak I could have taken them no problem otherwise!
+        yusie changeSprite angry
+
+frame
+    charles changeSprite disgusted_speak
+    charles preSpeak
+        charles speak It's a shame your weapon's not as sharp as your tongue, or-
+            sophie changeSprite scared
+            yusie wait 150
+                charles changeSprite mildtakenaback
+                yusie changeSprite angry_speak
+                yusie interupt
+                    yusie speak Excuse me?!
+
+frame
+    yusie speak I-
+        yusie wait 400
+            charles changeSprite speechless
+            yusie contSpeak Did you just-
+                yusie wait 500
+                    yusie speak Ugh,
+                        yusie wait 400
+                            yusie contSpeak we should go back.
+                                yusie changeSprite angry
+                                sophie changeSprite relieved
+
+frame
+    yusie changeSprite serious_speak
+    yusie speak I'll need you all to make a statement.
+        yusie changeSprite serious
+
+frame
+    brostika changeOverlay o=0.55
+        charles bringAboveOverlay
+        charles changeSprite worried_speak
+        charles preSpeak
+            charles setItalic
+            charles setFontSize 1.2vw
+            charles speak msg=I hope Mr Broski isn't still there...
+                sophie changeSprite worried
+                charles changeSprite worried
+frame
+    brostika setOpacity 0
+    brostika changeOverlay o=0
+    charles bringBelowOverlay
+        yusie bringToFront
+            brostika closeTextBox
+            brostika animate t=500
+            sophie disappear t=500
+            charles disappear t=500
+            yusie disappear t=500
+                yusie move x=-25
+                charles,yusie,sophie move x=-70
+                yusie flipHorizontally t=0
+                brostika changeBackground opacity=1 background=police t=500
+                    brostika wait t=500
+                    sophie changeSprite default
+                    charles changeSprite serious
+                    yusie changeSprite serious
+                    broski changeSprite smile_speak
+                        sophie,charles,yusie appear
+                        broski move x=10
+                        broski flipHorizontally
+                        broski appear t=500
+                        broski preSpeak
+                            broski speak msg=...and you must know that we age our wines in the very best oak barrels, s=false
+                                sophie move x=70 t=1200 g=swing s=false
+                                charles wait 50
+                                    charles move x=70 t=1200 g=swing s=false
+                                yusie wait 100
+                                    yusie move x=70 t=1200 g=swing s=false
+                                broski wait 300
+                                    broski speak msg=carefully crafted in Malidret and imported- s=false
+                                        brostika wait 300
+                                            brostika displayText msg=Sir, Captain Yusie has returned! color=white center=false name=Town Guard t=400 s=false
+                                                charles setNormalText
+                                                charles setFontSize 1.7vw
+                                                broski wait 400
+                                                    broski flipHorizontally s=false
+                                                        broski wait 700
+                                                            broski changeSprite smileexclaim_speak
+                                                            broski speak text=Ah! s=false
+                                                                sophie changeSprite scared
+                                                                charles changeSprite speechless
+
+frame
+    broski changeSprite smile_speak
+    broski speak text=You've returned, my friends!
+        broski wait t=400
+            broski contSpeak text =Thank you for recovering my beloved winery!
+frame
+    broski speak text=It’s such a shame that I’ve lost Tristan because of this incident!
+            broski wait t=400
+                broski contSpeak text=Such a capable lad...
+                    broski wait 700
+                        broski contSpeak text=He will be sorely missed. t=500
+
+frame
+    broski speak BUT!
+
+frame
+    broski speak text=It’s okay!
+        broski wait 600
+            broski contSpeak As long as I’m still around,
+                broski wait 400
+                    broski contSpeak Brostikine will continue to produce the best-
+                        broski changeSprite mildtakenaback
+                        sophie changeSprite awkward_speak
+                        sophie interupt
+                            sophie speak text=Erm it's okay, Mr Broski!
+                                sophie wait t=200
+                                    sophie contSpeak text=I think we all understand how you feel...
+                                        sophie changeSprite awkward
+frame
+    charles changeSprite awkward_speak
+    charles preSpeak
+        charles speak text=That's right.
+            charles wait t=200
+                charles contSpeak text=It's getting a little late.
+                    charles changeSprite awkward
+frame
+    yusie changeSprite serious_speak
+    yusie preSpeak
+        yusie speak Y-
+            yusie wait 300
+                yusie contSpeak yes,
+                    yusie wait 200
+                        yusie contSpeak as much as I love your stories,
+                            yusie wait 300
+                                yusie contSpeak I still have to take a statement from these folks.
+
+frame
+    yusie speak So, if you could excuse us,
+        yusie move x=20 t=500
+        broski wait 100
+            broski move x=20 t=500
+                yusie contSpeak Mr Broski...
+                    yusie move x=20 t=500
+                        sophie changeSprite playful
+                        charles changeSprite speechless
+                        broski wait 100
+                            broski move x=20 t=500
+                                broski changeSprite smileexclaim_speak
+                                broski speak Alright, goodbye!
+                                    broski wait 300
+                                        broski contSpeak Hope to see you fine folks again soon!
+frame
+    yusie changeSprite awkward_speak
+    yusie speak Phew,
+        yusie flipHorizontally
+        yusie wait 300
+            yusie move x=-20 t=500 s=false
+                sophie changeSprite laugh
+                yusie contSpeak text=I thought he'd never leave. s=false
+                    yusie changeSprite serious
+
+frame
+    yusie changeSprite curious_speak
+    yusie speak So,
+        yusie wait 300
+            yusie contSpeak why were you in Brostika to begin with?
+                yusie changeSprite curious
+                sophie changeSprite smile
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak I don't see why we have to reveal any more-
+            charles changeSprite mildtakenaback
+            yusie changeSprite angry
+            sophie changeSprite serious_speak
+            sophie wait 300
+                sophie interupt
+                    sophie speak Come on, Charles, we can trust Yusie.
+                        charles changeSprite speechless
+frame
+    sophie changeSprite smile_speak
+    sophie speak We were just passing through here to Erithven!
+        sophie changeSprite smile
+frame
+    brostika displayText msg= Achievement Unlocked: XXX
+frame
+    yusie changeSprite surprised_speak
+    yusie preSpeak
+        yusie speak text=Oh
+            yusie wait t=300
+                yusie contSpeak text=, you're heading to Erithven?
+                    yusie changeSprite surprised
+frame
+    sophie changeSprite smile_speak
+    sophie preSpeak
+        sophie speak text=Yes,
+            sophie wait t=200
+                sophie contSpeak text=we'll be making our way through Erithven before heading to Boriolsis.
+                    sophie changeSprite smile
+                    charles changeSprite serious
+frame
+    yusie changeSprite overjoyed
+    yusie preSpeak
+        yusie speak text=Excellent,
+            yusie wait 200
+                yusie contSpeak in that case, could you do me a favour and deliver something?
+frame
+    yusie speak text=I need to deliver some medication to a family in Erithven.
+        yusie changeSprite smile
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak text=Wow,
+            charles wait t=400
+                charles contSpeak text=I didn't expect the town guards to be THAT shorthanded.
+                    sophie changeSprite worried
+                    yusie changeSprite angry
+                    charles changeSprite impatient
+frame
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak text=I'll have you know our staffing is perfectly sufficient!
+            yusie changeSprite angry
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak Why not do it yourself?
+frame
+    charles speak text=Who made this medicine anyway?
+        charles wait t=300
+            charles contSpeak text=And who is it for?
+                charles wait t=700
+                    charles speak text=We're not running a courier service.
+                        charles changeSprite impatient
+frame
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak text=Why do you even ask so many questions?
+            yusie wait 300
+                yusie contSpeak Do you still doubt me?
+                yusie changeSprite angry
+frame
+    sophie changeSprite awkward_speak
+    sophie preSpeak
+        sophie speak text=Err Yusie...
+            sophie wait t=400
+                sophie contSpeak text=I'm sure Charles is not questioning you...
+                    sophie wait t=200
+                        sophie contSpeak text=He just likes to understand what's going on...
+                            sophie changeSprite awkward
+frame
+    yusie changeSprite angry_speak
+    yusie preSpeak
+        yusie speak text=Hmphh!
+            yusie wait t=400
+                yusie speak It seems to me that you folks don't even have the confidence to do a simple delivery,
+                    yusie wait 400
+                        yusie contSpeak or will you prove me wrong?
+                        yusie changeSprite proud
+                        sophie changeSprite worried
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles flipHorizontally
+        charles speak text=Sophie, since Yusie seems unwilling to divulge any of this information with us,
+            charles wait t=200
+                charles contSpeak text=I suppose we should make our way-
+                    charles changeSprite impatient
+                    yusie setFontSize 2vw
+                    yusie changeBold true
+                    yusie changeSprite angry_speak
+                    yusie preSpeak
+                        yusie speak text=HEYYY!
+                            yusie setFontSize 1.7vw
+                            yusie setNormalText
+                            charles flipHorizontally
+                            yusie wait t=400
+                                yusie contSpeak text=Hold up a little, alright?
+                                    yusie changeSprite serious
+frame
+    yusie changeSprite serious_speak
+    yusie speak I didn't think you all would really walk out...
+        charles,sophie changeSprite curious
+
+frame
+    yusie changeSprite explain
+    yusie speak text=The medicine was made by Brostika's sage.
+
+frame
+    yusie contSpeak text=A kid in Erithven recently developed an extremely rare and deadly illness...
+
+frame
+    yusie speak text=Right now, it is still in a dormant state, but if it spreads, all of Erithven could be in danger!
+        yusie wait t=400
+            yusie speak text=Thus far, only a few people know of it so as to prevent mass hysteria.
+
+frame
+    charles changeSprite thinking
+    sophie changeSprite scared
+    yusie speak text=Our sage is working hard at a cure, but he is still searching for a few critical ingredients.
+
+frame
+    yusie changeSprite sad_speak
+    yusie speak text=That's why we need to deliver a stablizer to buy a bit more time.
+
+frame
+    yusie speak Having the town guards make this delivery would have drawn too much attention, so...
+        yusie changeSprite explain
+frame
+    yusie changeSprite worried_speak
+    sophie changeSprite serious
+    charles changeSprite impatient
+    yusie speak I would really appreciate it if you could help me out.
+        yusie wait 300
+            yusie contSpeak Regardless, please keep this a secret from the townspeople...
+                yusie changeSprite worried
+frame
+    sophie changeSprite smileexclaim_speak
+    charles changeSprite upset
+    sophie preSpeak
+        sophie speak text=Sure!
+            sophie wait t=200
+                sophie contSpeak text=We can help, right Charles?
+                    sophie changeSprite smile
+frame
+    charles changeSprite upset_speak
+    charles preSpeak
+        charles speak I don't know, we don't have much-
+            yusie changeSprite overjoyed
+            charles changeSprite mildtakenaback
+            yusie preSpeak
+                yusie speak Great! I'll need you to deliver it to his mother's house!
+                    yusie changeSprite smile
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak text=But how're supposed to know which house the lady lives in?
+            charles wait t=200
+                charles contSpeak text=It's our first time going to Erithven after all...
+                    charles changeSprite impatient
+frame
+    yusie changeSprite awkward_speak
+    yusie preSpeak
+        yusie speak text=Oh yeah... s=false
+frame
+    yusie changeSprite awkward
+    yusie speak text=Hmm...
+        yusie wait t=300
+frame
+    yusie changeSprite awkward_speak
+    yusie speak text=I-I haven't really figured that out...
+frame
+    yusie changeSprite awkward
+    yusie speak text=... s=false time=500
+        sophie changeSprite awkward
+frame
+    yusie changeSprite awkward_speak
+    yusie speak Well, you could walk past the tall house, and-
+        yusie wait 300
+            yusie contSpeak uhh...
+frame
+    yusie speak I think...
+        yusie wait 300
+            yusie contSpeak you then make a right until you reach a street.
+
+frame
+    yusie speak Then you can make a turn and walk up the other street before making a-
+        yusie wait 300
+            yusie contSpeak umm,
+                yusie wait 300
+                    yusie contSpeak right turn and then walk straight down...
+                        yusie wait 300
+                            yusie contSpeak I think.
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak text=Well, you could just tell us the color of the roof or the relative position of the house...
+            charles wait 300
+                charles contSpeak Street names would also help...
+                    charles changeSprite impatient
+frame
+    yusie changeSprite surprised_speak
+    yusie preSpeak
+        yusie speak text=Actually...
+            charles,sophie changeSprite curious
+frame
+        yusie changeSprite proud_speak
+        yusie speak text=Never mind!
+            yusie wait t=200
+                yusie contSpeak text=You all seem terrible at directions.
+                    yusie wait t=500
+                        yusie speak text=I'll just bring the three of you to Erithven, so you don't get lost!
+                            yusie changeSprite proud
+                            sophie changeSprite smile
+frame
+    brostika changeOverlay o=0.55
+        charles bringAboveOverlay
+        charles changeSprite disgusted_speak
+        charles preSpeak
+            charles setItalic
+            charles setFontSize 1.2vw
+            charles speak msg=Yeah, sure...
+                charles changeSprite disgusted
+frame
+    brostika changeOverlay o=0
+    sophie changeSprite overjoyed
+    sophie preSpeak
+        charles setNormalText
+        charles setFontSize 1.7vw
+        sophie speak Great! Let's all go together!
+            sophie changeSprite smile
+frame
+    charles changeSprite impatient_speak
+    charles preSpeak
+        charles speak Whatever happened to town guards attracting too much attention?
+            charles changeSprite impatient
+            yusie changeSprite surprised
+frame
+    yusie changeSprite awkward_speak
+    yusie preSpeak
+        yusie speak I-
+            yusie wait 300
+                yusie speak I'll think of something...!
+frame
+    yusie changeSprite curious_speak
+    yusie speak text=#playName , can you hold onto this stabilizer? I'll lead all of you to Erithven!
+        yusie changeSprite smile
+frame
+    yusie endSpeak
+        charles bringAboveOverlay
+        sophie bringAboveOverlay
+        brostika changeOverlay t=0 o=0.55 color=black
+            charles changeSprite disgusted_speak
+            charles preSpeak
+                charles speak text=She's really one of a kind, isn't she?
+                    charles changeSprite disgusted
+frame
+    sophie changeSprite smileexclaim_speak
+    sophie preSpeak
+        sophie speak text=On the bright side, I'm sure things will be more lively!
+            sophie changeSprite smile
